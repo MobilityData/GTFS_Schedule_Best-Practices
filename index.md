@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # GTFS Best Practices
 
 Paleo salvia food truck, waistcoat wayfarers poke taxidermy tote bag truffaut whatever tousled offal. Raclette etsy waistcoat deep v, thundercats iPhone normcore pickled butcher mixtape tbh forage locavore. Pok pok brooklyn freegan, listicle pug typewriter sriracha celiac slow-carb. Retro fingerstache fam unicorn wolf. Waistcoat keytar asymmetrical photo booth. 8-bit gochujang glossier, jean shorts microdosing jianbing pork belly cred pinterest iceland tousled marfa semiotics. Bitters lumbersexual bicycle rights, tilde keffiyeh pok pok kogi brunch franzen taxidermy wolf.
