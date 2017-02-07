@@ -82,8 +82,11 @@ All customer-facing text strings (including stop names, route names, and headsig
 <h3 id="agency">agency.txt</h3>
 
 ###### Trip Planners
+
 ###### Human Readability
+
 ###### Timetables
+
 ###### Planning and Analysis
 
 agency_id <!-- 15 --> | Should be included, even if there is only one agency in the feed. (See also: recommendation to include agency_id in `routes.txt` and `fare_attributes.txt`.)
