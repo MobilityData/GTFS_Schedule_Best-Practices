@@ -80,6 +80,7 @@ All customer-facing text strings (including stop names, route names, and headsig
 14.  Abbreviations: Avoid use of abbreviations throughout the feed for names and other text (e.g. St. for Street) unless a location is called by its abbreviated name (e.g. “JFK Airport”). Abbreviations may be problematic for accessibility by screen reader software and voice/audio user interfaces. Consuming software can be engineered to reliably convert full words to abbreviations for display, but converting from abbreviations to full words is prone to more risk of error.
 
 <h3 id="agency">agency.txt</h3>
+
 ###### Trip Planners
 ###### Human Readability
 ###### Timetables
@@ -92,6 +93,7 @@ agency_email <!-- 18 --> | Should be included unless no such customer service em
 agency_fare_url <!-- 19 --> | Should be included unless the agency is fully fare-free, and `fare_attributes.txt` is included to indicate that the system is fare-free.
 
 <h3 id="feed-info">feed_info.txt</h3>
+
 ###### Trip Planners
 ###### Human Readability
 20.  **feed_info.txt** should be included, with all fields, below.
