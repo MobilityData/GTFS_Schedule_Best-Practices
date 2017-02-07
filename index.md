@@ -8,8 +8,12 @@ layout: best-practices
 
 This is an example of an inserted photo:
 
-![Lucille looks mad!](/best-practices/images/lucille.jpg)
-<figcaption>Caption text?</figcaption>
+![Lucille looks mad!]({{ "/best-practices/images/lucille.jpg" | prepend: site.baseurl }})
+<figcaption style="text-align: center; margin-bottom: 50px;">"You want me to ride the <em>what?</em>"</figcaption>
+
+
+
+
 
 These are recommended practices for describing public transportation services in the [General Transit Feed Specification (GTFS)](https://developers.google.com/transit/gtfs/reference/). These practices have been synthesized from the experience of the [GTFS Best Practices working group]() members and [application-specific GTFS practice recommendations](http://www.transitwiki.org/TransitWiki/index.php/Best_practices_for_creating_GTFS).
 
@@ -89,11 +93,11 @@ All customer-facing text strings (including stop names, route names, and headsig
 
 ###### Planning and Analysis
 
-agency_id <!-- 15 --> | Should be included, even if there is only one agency in the feed. (See also: recommendation to include agency_id in `routes.txt` and `fare_attributes.txt`.)
-agency_lang <!-- 16 --> | Field should be included.
-agency_phone <!-- 17 --> | Should be included unless no such customer service phone exists.
-agency_email <!-- 18 --> | Should be included unless no such customer service email exists.
-agency_fare_url <!-- 19 --> | Should be included unless the agency is fully fare-free, and `fare_attributes.txt` is included to indicate that the system is fare-free.
+__agency_id__ <!-- 15 --> | Should be included, even if there is only one agency in the feed. (See also: recommendation to include agency_id in `routes.txt` and `fare_attributes.txt`.)
+__agency_lang__ <!-- 16 --> | Field should be included.
+__agency_phone__ <!-- 17 --> | Should be included unless no such customer service phone exists.
+__agency_email__ <!-- 18 --> | Should be included unless no such customer service email exists.
+__agency_fare_url__ <!-- 19 --> | Should be included unless the agency is fully fare-free, and `fare_attributes.txt` is included to indicate that the system is fare-free.
 
 <h3 id="feed-info">feed_info.txt</h3>
 
