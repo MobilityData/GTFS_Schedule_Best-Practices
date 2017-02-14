@@ -6,33 +6,6 @@ layout: best-practices
 
 <h2 id="introduction">Introduction</h2>
 
-<!-- This is an example of an inserted photo:
-
-![Lucille looks mad!]({{ "/best-practices/images/lucille.jpg" | prepend: site.baseurl }})
-<figcaption style="text-align: center; margin-bottom: 50px;">"You want me to ride the <em>what?</em>"</figcaption>
-
-
-```
-Code line 1
-Code line 2
-Code line 3
-```
-
-And an inline svg! God save us...
-
-<svg width="0" height="0" style="display:none;">
-  <symbol id="kiwi-svg">
-    <path fill="black" d="m213.888556,1.330997c-105.966,0.774 -222.682,85.306 -209.277,211.118c4.303,40.393 18.533,63.704 52.171,79.03c36.307,16.544 57.022,54.556 50.406,112.954c-9.935,4.88 -17.405,11.031 -19.132,20.015c7.531,-0.17 14.943,-0.312 22.59,4.341c20.333,12.375 31.296,27.363 42.979,51.72c1.714,3.572 8.192,2.849 8.312,-3.078c0.17,-8.467 -1.856,-17.454 -5.226,-26.933c-2.955,-8.313 3.059,-7.985 6.917,-6.106c6.399,3.115 16.334,9.43 30.39,13.098c5.392,1.407 5.995,-3.877 5.224,-6.991c-1.864,-7.522 -11.009,-10.862 -24.519,-19.229c-4.82,-2.984 -0.927,-9.736 5.168,-8.351l20.234,2.415c3.359,0.763 4.555,-6.114 0.882,-7.875c-14.198,-6.804 -28.897,-10.098 -53.864,-7.799c-11.617,-29.265 -29.811,-61.617 -15.674,-81.681c12.639,-17.938 31.216,-20.74 39.147,43.489c-5.002,3.107 -11.215,5.031 -11.332,13.024c7.201,-2.845 11.207,-1.399 14.791,0c17.912,6.998 35.462,21.826 52.982,37.309c3.739,3.303 8.413,-1.718 6.991,-6.034c-2.138,-6.494 -8.053,-10.659 -14.791,-20.016c-3.239,-4.495 5.03,-7.045 10.886,-6.876c13.849,0.396 22.886,8.268 35.177,11.218c4.483,1.076 9.741,-1.964 6.917,-6.917c-3.472,-6.085 -13.015,-9.124 -19.18,-13.413c-4.357,-3.029 -3.025,-7.132 2.697,-6.602c3.905,0.361 8.478,2.271 13.908,1.767c9.946,-0.925 7.717,-7.169 -0.883,-9.566c-19.036,-5.304 -39.891,-6.311 -61.665,-5.225c-43.837,-8.358 -31.554,-84.887 0,-90.363c29.571,-5.132 62.966,-13.339 99.928,-32.156c32.668,-5.429 64.835,-12.446 92.939,-33.85c48.106,-14.469 111.903,16.113 204.241,149.695c3.926,5.681 15.819,9.94 9.524,-6.351c-15.893,-41.125 -68.176,-93.328 -92.13,-132.085c-24.581,-39.774 -14.34,-61.243 -39.957,-91.247c-21.326,-24.978 -47.502,-25.803 -77.339,-17.365c-23.461,6.634 -39.234,-7.117 -52.98,-31.273c-29.365,-51.617 -81.947,-74.215 -137.452,-73.811zm235.398,137.679c6.12,0 11.112,4.919 11.112,11.038c0,6.119 -4.994,11.111 -11.112,11.111s-11.038,-4.994 -11.038,-11.111c0,-6.119 4.92,-11.038 11.038,-11.038z" id="bird"/>
-    <text xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_2" y="319.159355" x="332.666668" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#000000">&#x27;sup I'm a kiwi</text>
-  </symbol>
-</svg>
-
-<svg id="kiwi-actual" width="630" height="485">
-  <title>Kiwi</title>
-  <desc>It's a kiwi</desc>
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#kiwi-svg"></use>
-</svg> -->
-
 These are recommended practices for describing public transportation services in the [General Transit Feed Specification (GTFS)](https://developers.google.com/transit/gtfs/reference/). These practices have been synthesized from the experience of the [GTFS Best Practices working group]() members and [application-specific GTFS practice recommendations](http://www.transitwiki.org/TransitWiki/index.php/Best_practices_for_creating_GTFS).
 
 ### Document Structure
@@ -194,7 +167,7 @@ __feed_contact_email__ & __feed_contact_url__ <!-- (26) --> | Provide at least o
 ###### Timetables
 
 * Many stations or terminals have multiple boarding facilities (depending on mode, they might be called a bus bay, platform, wharf, gate, or other term). In such cases, feed producers should describe stations, boarding facilities (also called child stops), and their relation. <!-- (40) -->
-  * The station or terminal should be defined as a record in [`stops.txt`](#stops) with `location_type = 1`.
+  * The station or terminal should be defined as a record in `stops.txt` with `location_type = 1`.
   * Each boarding facility should be defined as a stop with `location_type = 0`. The e parent_station field should reference the stop_id of the station the boarding is in.
 * When naming the station and child stops, set names that are well recognized by riders, and can help riders to identify the station and boarding facility (bus bay, platform, wharf, gate, etc.). <!-- (41) -->
 
@@ -327,7 +300,7 @@ If in-seat (block) transfers are allowed between trips, then the last stop of th
 
 ###### Human Readability
 
-* Actual stop times are ignored for trips referenced by `frequencies.txt`; only travel time intervals between stops are significant for frequency-based trips. For clarity/human readability, it is recommended that the first stop time of a trip referenced in frequencies.txt should begin at 00:00:00 (first __arrival_time__ value of 00:00:00). <!-- (99) -->
+* Actual stop times are ignored for trips referenced by `frequencies.txt`; only travel time intervals between stops are significant for frequency-based trips. For clarity/human readability, it is recommended that the first stop time of a trip referenced in `frequencies.txt` should begin at 00:00:00 (first __arrival_time__ value of 00:00:00). <!-- (99) -->
 
 * __block_id__ can be provided for frequency-based trips. <!-- (101) -->
 
@@ -338,7 +311,7 @@ If in-seat (block) transfers are allowed between trips, then the last stop of th
 ###### Timetables
 
 #### agency_id
-* Must be included if it is defined in agency.txt. <!-- (68) -->
+* Must be included if it is defined in `agency.txt`. <!-- (68) -->
 
 #### route_short_name
 * Should be the commonly-known passenger name of the service, no longer than 12 characters. Include __route_short_name__ if there is a brief service designation. <!-- (71) -->
@@ -366,7 +339,7 @@ Examples of types of long names are below:  <!-- (73) -->
 * All trips on a given named route should reference the same __route_id__. <!-- (74) -->
   * Different directions of a route should not be separated into different __route_id__ values.
   * Different spans of operation of a route should not be separated into different __route_id__ values (do not do “Transit Center - Downtown AM” and “Transit Center - Downtown PM”).
-  * For further discussion of when to add new records in routes.txt, see [Branches](#branches).
+  * For further discussion of when to add new records in `routes.txt`, see [Branches](#branches).
 * If a route group includes distinctly named branches (e.g. 1A and 1B), follow recommendations in the route [branches](#branches) case to determine __route_short_name__ and __route_long_name__. <!-- (70) -->
 * Maintain consistent identifiers (ID values) from one version to the next of the same feed. <!-- (75) -->
 
