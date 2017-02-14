@@ -6,10 +6,17 @@ layout: best-practices
 
 <h2 id="introduction">Introduction</h2>
 
-This is an example of an inserted photo:
+<!-- This is an example of an inserted photo:
 
 ![Lucille looks mad!]({{ "/best-practices/images/lucille.jpg" | prepend: site.baseurl }})
 <figcaption style="text-align: center; margin-bottom: 50px;">"You want me to ride the <em>what?</em>"</figcaption>
+
+
+```
+Code line 1
+Code line 2
+Code line 3
+```
 
 And an inline svg! God save us...
 
@@ -24,11 +31,11 @@ And an inline svg! God save us...
   <title>Kiwi</title>
   <desc>It's a kiwi</desc>
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#kiwi-svg"></use>
-</svg>
+</svg> -->
 
 These are recommended practices for describing public transportation services in the [General Transit Feed Specification (GTFS)](https://developers.google.com/transit/gtfs/reference/). These practices have been synthesized from the experience of the [GTFS Best Practices working group]() members and [application-specific GTFS practice recommendations](http://www.transitwiki.org/TransitWiki/index.php/Best_practices_for_creating_GTFS).
 
-#### Document Structure
+### Document Structure
 
 Recommended practices are organized into three primary sections
 
@@ -36,7 +43,7 @@ Recommended practices are organized into three primary sections
 * __[Practice Recommendations Organized by File](#by-file):__ Recommendations are organized by file and field in the GTFS to facilitate mapping practices back to the official GTFS reference.
 * __[Practice Recommendations Organized by Case](#by-case):__ With particular cases, such as loop routes, practices may need to be applied across several files and fields. Such recommendations are consolidated in this section.
 
-#### System Tags
+### System Tags
 
 Five different tags are included throughout the list of practices. These tags indicate the type of systems that require the practice being described.
 
@@ -109,7 +116,7 @@ Avoid use of abbreviations throughout the feed for names and other text (e.g. St
 
 Field Name | Recommendation
 ---------- | --------------
-__agency_id__ <!-- (15) --> | Should be included, even if there is only one agency in the feed. (See also: recommendation to include agency_id in [`routes.txt`](#routes) and [`fare_attributes.txt`](#fare-rules).)
+__agency_id__ <!-- (15) --> | Should be included, even if there is only one agency in the feed. (See also: recommendation to include __agency_id__ in [`routes.txt`](#routes) and [`fare_attributes.txt`](#fare-rules))
 __agency_lang__ <!-- (16) --> | Field should be included.
 __agency_phone__ <!-- (17) --> | Should be included unless no such customer service phone exists.
 __agency_email__ <!-- (18) --> | Should be included unless no such customer service email exists.
@@ -199,7 +206,11 @@ __feed_contact_email__ & __feed_contact_url__ <!-- (26) --> | Provide at least o
 
 <h3 id="stop-times">stop_times.txt</h3>
 
+#### pickup_type & drop_off_type
+
 * Non-revenue (deadhead) trips that do not provide passenger service should be marked with __pickup_type__ and __drop_off_type__ value of `1` for all __stop_times__ rows.<!-- 13 -->
+
+#### timepoint
 * The __timepoint__ field should be provided. It specifies which __stop_times__ the operator will attempt to strictly adhere to (`timepoint=1`), and that other stop times are estimates (`timepoint=0`).<!-- (44) -->
 
 #### arrival_time & departure_time
@@ -211,13 +222,6 @@ __feed_contact_email__ & __feed_contact_url__ <!-- (26) --> | Provide at least o
 ###### Arrival Predictions
 
 * Should specify times whenever possible, including non-binding estimated or interpolated times between timepoints. <!-- (45) -->
-
-###### Trip Planners
-
-###### Timetables
-
-###### Arrival Predictions
-
 * Internal “timing points” for monitoring operational performance and other places such as garages that a passenger cannot board should be marked with `pickup_type = 1` (no pickup available) and `drop_off_type = 1` (no drop off available). <!-- (46) -->
 
 #### stop_headsign
@@ -247,7 +251,7 @@ In those two cases, “Southbound” would mislead customers, since it isn’t u
 
 #### shape_dist_traveled
 
-* Must be provided for routes that have looping or inlining (the vehicle crosses or travels over the same portion of alignment in one trip). [See: shapes.shape_dist_traveled recommendation.] <!-- (48) -->
+* Must be provided for routes that have looping or inlining (the vehicle crosses or travels over the same portion of alignment in one trip). See: [__shapes.shape_dist_traveled__ recommendation.] <!-- (48) -->
 
 [Case] Loop routes: Loop routes require special __stop_times__ considerations. (See: [Loop route case](#loop-routes))
 
@@ -267,7 +271,7 @@ __transfers.transfer_type__ can be one of four values [defined in the GTFS](http
 
   * This transfer type overrides a required interval to reliably make transfers.  As an example, Google Maps assumes that passengers need 3 minutes to safely make a transfer. Other applications may assume other defaults. <!-- (51) -->
 
-<q>2: This transfer requires a minimum amount of time between arrival and departure to ensure a connection. The time required to transfer is specified by min_transfer_time.</q>
+<q>2: This transfer requires a minimum amount of time between arrival and departure to ensure a connection. The time required to transfer is specified by __min_transfer_time__.</q>
 
   * Specify minimum transfer time if there are obstructions or other factors which increase the time to travel between stops. <!-- (52) -->
 
@@ -288,12 +292,14 @@ If in-seat (block) transfers are allowed between trips, then the last stop of th
 
 * Do not provide route names (matching __route_short_name__ and __route_long_name__) in the __trip_headsign__ or __stop_headsign__ fields. <!-- (98) -->
 * Should contain destination, direction, and/or other trip designation text shown on the headsign of the vehicle which may be used to distinguish amongst trips in a route. Consistency with direction information shown on the vehicle is the primary and overriding goal for determining headsigns supplied in GTFS datasets. Other information should be included only if it does not compromise this primary goal. If headsigns change during a trip, override __trip_headsign__ with __stop_times.stop_headsign__. Below are recommendations for some possible cases. <!-- (58) -->
+
   * Destination-only: Provide the terminus destination, e.g. “Transit Center”, “Portland City Center”, or “Jantzen Beach” <!-- (58A) -->
-  * Destinations with waypoints: <destination> via <waypoint> “Highgate via Charing Cross”. If waypoint(s) are removed from the headsign show to passengers after the vehicle passes those waypoints, use stop_times.stop_headsign to set an updated headsign. <!-- (58B) -->
-  * Regional placename with local stops: If there will be multiple stops inside the city or borough of destination, use stop_times.stop_headsign once reaching the destination city. <!-- (58C) -->
+  * Destinations with waypoints: <destination> via <waypoint> “Highgate via Charing Cross”. If waypoint(s) are removed from the headsign show to passengers after the vehicle passes those waypoints, use __stop_times.stop_headsign__ to set an updated headsign. <!-- (58B) -->
+  * Regional placename with local stops: If there will be multiple stops inside the city or borough of destination, use __stop_times.stop_headsign__ once reaching the destination city. <!-- (58C) -->
   * Direction-only: Indicate using terms such as “Northbound”, “Inbound”, “Clockwise,” or similar directions. <!-- (58D) -->
   * Direction with destination: <direction> to <terminus name> e.g. “Southbound to San Jose” <!-- (58E) -->
   * Direction with destination and waypoints: <direction> via <waypoint> to <destination> (“Northbound via Charing Cross to Highgate”). <!-- (58F) -->
+
 * Do not begin a headsign with the words “To” or “Towards”.
 
 
@@ -342,13 +348,14 @@ If in-seat (block) transfers are allowed between trips, then the last stop of th
 
 <q>This name is generally more descriptive than the __route_short_name__ and will often include the route's destination or stop. At least one of __route_short_name__ or __route_long_name__ must be specified, or potentially both if appropriate. If the route does not have a long name, please specify a __route_short_name__ and use an empty string as the value for this field.</q>
 
-* Examples of types of long names are below:  <!-- (73) -->
-  * Primary travel path or corridor. Examples:
-    * (using “route_short_name” / “route_long_name” notation): [“N”/“Judah”](https://www.sfmta.com/getting-around/transit/routes-stops/n-judah) in San Francisco, Cal. (agency: Muni)
-    * [“6”/“ML King Jr Blvd”](https://trimet.org/schedules/r006.htm) in Portland, Or. (agency: TriMet) List of primary destinations or termini.
-    * (using “route_short_name” / “route_long_name” notation): [“6”/“Nation - Étoile”](http://www.ratp.fr/informer/pdf/orienter/f_plan.php?nompdf=m6) in Paris, France (agency RATP)
-    * [“U2”-“Pankow – Ruhleben”](http://www.bvg.de/images/content/linienverlaeufe/LinienverlaufU2.pdf) in Berlin, Germany (agency BVG).
-  * description of the service (e.g. [“Hartwell Area Shuttle”](http://128bc.org/rev-hartwell-area-shuttle/))
+Examples of types of long names are below:  <!-- (73) -->
+
+> * Primary travel path or corridor. Examples:
+>    * (using “route_short_name” / “route_long_name” notation): [“N”/“Judah”](https://www.sfmta.com/getting-around/transit/routes-stops/n-judah) in San Francisco, Cal. (agency: Muni)
+>    * [“6”/“ML King Jr Blvd”](https://trimet.org/schedules/r006.htm) in Portland, Or. (agency: TriMet) List of primary destinations or termini.
+>    * (using “route_short_name” / “route_long_name” notation): [“6”/“Nation - Étoile”](http://www.ratp.fr/informer/pdf/orienter/f_plan.php?nompdf=m6) in Paris, France (agency RATP)
+>    * [“U2”-“Pankow – Ruhleben”](http://www.bvg.de/images/content/linienverlaeufe/LinienverlaufU2.pdf) in Berlin, Germany (agency BVG).
+>  * Description of the service (e.g. [“Hartwell Area Shuttle”](http://128bc.org/rev-hartwell-area-shuttle/))
 * __route_long_name__ should not contain the __route_short_name__. <!-- (72) -->
 * Include the full designation including a service identity when populating __route_long_name__. Examples: <!-- (69) -->
   * In Portland, Oregon, USA the TriMet’s light rail services are branded as “MAX Light Rail”. The __route_long_name__ should include the brand (MAX) and the more-specific route designation i.e.b “MAX Red Line”, “MAX Blue Line”, etc.
@@ -419,7 +426,7 @@ On loop routes, vehicles’ trips begin and end at the same location (sometimes 
 * Model the complete round-trip for the loop with a single trip.  <!-- (102) -->
 
 #### stop_times.stop_id
-* Include the first/last stop twice in stop_times.txt for the trip that is a loop. Example below. <!-- (87) -->
+* Include the first/last stop twice in `stop_times.txt` for the trip that is a loop. Example below. <!-- (87) -->
 
 | trip_id | stop_id | stop_sequence |
 | ------- | ------- | ------------- |
@@ -441,6 +448,7 @@ Often, a loop route may include first and last trips that do not travel the enti
 <h3 id="lasso-routes">Lasso Routes</h3>
 
 Lasso routes are loop-routes from A to A via B with three sections:
+
 * straight section from A to B;
 * loop from and to B;
 * straight section from B to A.
@@ -506,7 +514,7 @@ GTFS applications and practice evolve, and so this document may need to be amend
 
 <h2 id="working-group">GTFS Best Practices Working Group</h2>
 
-The GTFS Best Practices Working Group consists of public transportation providers, developers of GTFS-consuming applications, consultants, and academic organizations to define common practices and expectations for GTFS data. The goals of this working group are to support greater interoperability of data data. Further goals are defined in the “Objectives”.
+The GTFS Best Practices Working Group consists of public transportation providers, developers of GTFS-consuming applications, consultants, and academic organizations to define common practices and expectations for GTFS data. The goals of this working group are to support greater interoperability of data data. Further goals are defined in the “[Objectives](#objectives)”.
 
 Members of this working group include:
 
@@ -529,7 +537,6 @@ Members of this working group include:
 
 To join the working group, email [gtfs-wg@rmi.org](mailto:gtfs-wg@rmi.org).
 
-The GTFS Best Practices Working Group is convened and facilitated by Rocky Mountain Institute, a non-profit organization transforming global energy use.
+<!-- RMI Logo http://www.nwp.com/energysummit16/images/RockyMountainInstitute.png -->
 
-
-<!-- [Logo file: http://www.nwp.com/energysummit16/images/RockyMountainInstitute.png] -->
+The GTFS Best Practices Working Group is convened and facilitated by [Rocky Mountain Institute](http://www.rmi.org/ITD), a non-profit organization transforming global energy use.

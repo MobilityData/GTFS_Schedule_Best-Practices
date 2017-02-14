@@ -32,6 +32,32 @@ GTFS Field names (e.g. stop_lat, direction_id) should be bold, nested between do
 
 * Example: `__field_name__`
 
+### Example Data
+
+Example information will be displayed with Markdown blockquotes, which can be achieved by prepending each line with a (>) symbol.
+
+* Example:
+
+```
+> Example one
+> * Bulleted example
+>   * Subbullet example
+```
+
+### Image additions
+
+Images will be formatted automatically. Simply add the image to the images folder and reference it in Markdown in the following way.
+
+* Example:
+
+`![Image description goes here]( {{ "/best-practices/images/image_name.jpg" | prepend: site.baseurl }} )`
+
+### Figure Captions
+
+Image captions will help better explain the image and incorporate it into the document.
+
+`<figcaption>My caption text</figcaption>`
+
 ### Hyperlinks
 
 Hyperlinks will automatically format. Only the appropriate Markdown is needed.
