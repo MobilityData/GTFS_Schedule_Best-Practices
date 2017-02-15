@@ -37,7 +37,7 @@ Software and projects such as OpenTripPlanner Analyst, Open Transit Indicators, 
 ###### Timetables
 These practices support the creation of HTML timetables based on GTFS, such as with the GTFS-to-HTML software.
 
-<h1 id="practices">Practices</h2>
+<h1 id="practices">Practices</h1>
 
 <h2 id="publishing">Dataset Publishing & General Practices</h2>
 
@@ -51,7 +51,7 @@ __4.__ One GTFS dataset should contain current and upcoming service (sometimes c
 
   * At any time, the published GTFS dataset should be valid for for at least the next 7 days, and ideally for as long as the operator is confident that the schedule will continue to be operated.
   * If possible, the GTFS dataset should cover at least the next 30 days of service.
-  
+
 __5.__ Remove old services (expired calendars) from the feed. <!-- (10) -->
 
 __6.__ If a service modification will go into effect in 7 days or fewer, express this service change through a [GTFS-realtime](https://developers.google.com/transit/gtfs-realtime/) feed (service advisories or trip updates) rather than static GTFS dataset. <!-- (8) -->
@@ -68,6 +68,7 @@ __1.__ __Mixed Case__: <!-- (12) -->
 All customer-facing text strings (including stop names, route names, and headsigns) should use Mixed Case (not ALL CAPS), following local conventions for capitalization of place names on displays capable of displaying lower case characters.
 
 <!-- We need a style to designate this is an example table. -->
+
 | Examples: |
 | --------- |
 | Brighton Churchill Square |
@@ -271,12 +272,41 @@ __1.__ Do not provide route names (matching `route_short_name` and `route_long_n
 __2.__ Should contain destination, direction, and/or other trip designation text shown on the headsign of the vehicle which may be used to distinguish amongst trips in a route. Consistency with direction information shown on the vehicle is the primary and overriding goal for determining headsigns supplied in GTFS datasets. Other information should be included only if it does not compromise this primary goal. If headsigns change during a trip, override `trip_headsign` with `stop_times.stop_headsign`. Below are recommendations for some possible cases. <!-- (58) -->
 
 <!-- Make this into a table that makes it easy to look up examples for particular cases -->
-  __2A.__ Destination-only: Provide the terminus destination, e.g. “Transit Center”, “Portland City Center”, or “Jantzen Beach” <!-- (58A) -->
-  __2B.__ Destinations with waypoints: <destination> via <waypoint> “Highgate via Charing Cross”. If waypoint(s) are removed from the headsign show to passengers after the vehicle passes those waypoints, use `stop_times.stop_headsign` to set an updated headsign. <!-- (58B) -->
-  __2C.__ Regional placename with local stops: If there will be multiple stops inside the city or borough of destination, use `stop_times.stop_headsign` once reaching the destination city. <!-- (58C) -->
-  __2D.__ Direction-only: Indicate using terms such as “Northbound”, “Inbound”, “Clockwise,” or similar directions. <!-- (58D) -->
-  __2E.__ Direction with destination: <direction> to <terminus name> e.g. “Southbound to San Jose” <!-- (58E) -->
-  __2F.__ Direction with destination and waypoints: <direction> via <waypoint> to <destination> (“Northbound via Charing Cross to Highgate”). <!-- (58F) -->
+
+<table class="example">
+  <thead>
+    <tr>
+      <th>Route Description</th>
+      <th>Recommendation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2A. Destination-only</td>
+      <td>Provide the terminus destination. e.g. "Transit Center", “Portland City Center”, or “Jantzen Beach” <!-- (58A) --> </td>
+    </tr>
+    <tr>
+      <td>2B. Destinations with waypoints</td>
+      <td>&lt;destination&gt; via &lt;waypoint&gt; “Highgate via Charing Cross”. If waypoint(s) are removed from the headsign show to passengers after the vehicle passes those waypoints, use `stop_times.stop_headsign` to set an updated headsign. <!-- (58B) --> </td>
+    </tr>
+    <tr>
+      <td>2C. Regional placename with local stops</td>
+      <td>If there will be multiple stops inside the city or borough of destination, use `stop_times.stop_headsign` once reaching the destination city. <!-- (58C) --> </td>
+    </tr>
+    <tr>
+      <td>2D. Direction-only</td>
+      <td>Indicate using terms such as “Northbound”, “Inbound”, “Clockwise,” or similar directions. <!-- (58D) --></td>
+    </tr>
+    <tr>
+      <td>2E. Direction with destination</td>
+      <td>&lt;direction&gt; to &lt;terminus name&gt; e.g. “Southbound to San Jose” <!-- (58E) --></td>
+    </tr>
+    <tr>
+      <td>2F. Direction with destination and waypoints</td>
+      <td>&lt;direction&gt; via &lt;waypoint&gt; to &lt;destination&gt; (“Northbound via Charing Cross to Highgate”). <!-- (58F) --></td>
+    </tr>
+  </tbody>
+</table>
 
 __3.__ Do not begin a headsign with the words “To” or “Towards”.
 
@@ -329,6 +359,7 @@ __3.__ The definition from Specification reference:
 <q>This name is generally more descriptive than the `route_short_name` and will often include the route's destination or stop. At least one of `route_short_name` or `route_long_name` must be specified, or potentially both if appropriate. If the route does not have a long name, please specify a `route_short_name` and use an empty string as the value for this field.</q>
 
 Examples of types of long names are below:  <!-- (73) -->
+
 <!-- This needs to be cleaned up - there should be another “route_short_name” / “route_long_name” -->
 
 | Primary Travel Path or Corridor | |
@@ -500,6 +531,7 @@ __1.__ In naming branch routes, it is recommended to follow other passenger info
 __1A.__ If timetables and on-street signage represent two distinctly named routes (e.g. 1A and 1B), then present this as such in the GTFS, using the `route_short_name` and/or `route_long_name` fields. <!-- (97A) -->
 
 __Example__: GoDurham Transit [routes 2, 2A, and 2B](http://admin.gotransitnc.org/sites/default/files/godurham/aug2016/Route%202%20PDF%20August%202016.pdf) share a common alignment throughout the majority of the route, but they vary in several different aspects.
+
   * Route 2B serves additional stops in a spur of the shared alignment path.
   * Routes 2A and 2B operate daytime hours M-Sat.
   * Route 2 runs nights, Sundays, and holidays.
