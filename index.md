@@ -287,11 +287,11 @@ __2.__ Should contain destination, direction, and/or other trip designation text
     </tr>
     <tr>
       <td>2B. Destinations with waypoints</td>
-      <td>&lt;destination&gt; via &lt;waypoint&gt; “Highgate via Charing Cross”. If waypoint(s) are removed from the headsign show to passengers after the vehicle passes those waypoints, use `stop_times.stop_headsign` to set an updated headsign. <!-- (58B) --> </td>
+      <td>&lt;destination&gt; via &lt;waypoint&gt; “Highgate via Charing Cross”. If waypoint(s) are removed from the headsign show to passengers after the vehicle passes those waypoints, use <code>stop_times.stop_headsign</code> to set an updated headsign. <!-- (58B) --> </td>
     </tr>
     <tr>
       <td>2C. Regional placename with local stops</td>
-      <td>If there will be multiple stops inside the city or borough of destination, use `stop_times.stop_headsign` once reaching the destination city. <!-- (58C) --> </td>
+      <td>If there will be multiple stops inside the city or borough of destination, use <code>stop_times.stop_headsign</code> once reaching the destination city. <!-- (58C) --> </td>
     </tr>
     <tr>
       <td>2D. Direction-only</td>
