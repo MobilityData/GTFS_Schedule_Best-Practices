@@ -21,16 +21,18 @@ Recommended practices are organized into three primary sections
 Five different tags are included throughout the list of practices. These tags indicate the type of systems that require the practice being described.
 
 ###### Trip Planners
+
 * These practices improve customer experience in applications like Google Maps that are used for trip planning.
 
 ###### Human Readability
+
 * These practices help maintain the ability for a human reader to unzip and examine GTFS files.
 
 ###### Arrival Predictions
 * These practices allow arrival prediction software to create real-time arrival estimates related to the schedules in [`trips.txt`](#trips) and [`stop_times.txt`](#stop-times).
 
 ###### Planning and Analysis
-* Software and projects such as OpenTripPlanner Analyst, Open Transit Indicators, Accessibility Observatory, National Transit Map, AllTransit and Remix provide summaries and attributes of service based on GTFS data that follow these practices.
+* Software and projects such as OpenTripPlanner Analyst, Open Transit Indicators, Accessibility Observatory, National Transit Map, AllTransit and Remix provide summaries and attributes of service based on GTFS data that follow these practices. {% octicon link name:"link" %}
 
 ###### Timetables
 * These practices support the creation of HTML timetables based on GTFS, such as with the GTFS-to-HTML software.
@@ -44,7 +46,7 @@ Five different tags are included throughout the list of practices. These tags in
 
 * GTFS data is published in iterations so that a single file at a stable location always contains the latest official description of service for a transit agency (or agencies). <!-- (3) -->
 
-* Maintain persistent identifiers (id fields) for __stop_id__, __route_id__, and __agency_id__ across data iterations whenever possible. <!-- (4) -->
+* Maintain persistent identifiers (id fields) for `stop_id`, `route_id`, and `agency_id` across data iterations whenever possible. <!-- (4) -->
 
 * One GTFS dataset should contain current and upcoming service (sometimes called a “merged” dataset). <!-- (5) -->
 
@@ -58,12 +60,13 @@ Five different tags are included throughout the list of practices. These tags in
 * Remove old services (expired calendars) from the feed. <!-- (10) -->
 
 
-
-<h2 id="by-file">Practice Recommendations Organized by File</h2>
+## {% octicon link id:"by-file" class:"gtfs-tag" %} Practice Recommendations Organized by File
 
 This section shows practices organized by file & field, aligning with the GTFS reference.
 
 ### All Files
+
+{% octicon link id:"all_files_1" class:"gtfs-tag" %}
 
 __Mixed Case__: <!-- (12) -->
 All customer-facing text strings (including stop names, route names, and headsigns) should use Mixed Case (not ALL CAPS), following local conventions for capitalization of place names on displays capable of displaying lower case characters.
@@ -73,6 +76,8 @@ All customer-facing text strings (including stop names, route names, and headsig
 | Brighton Churchill Square |
 | Villiers-sur-Marne |
 | Market Street |
+
+{% octicon link id:"all_files_2" class:"gtfs-tag" %}
 
 __Abbreviations__: <!-- (14) -->
 Avoid use of abbreviations throughout the feed for names and other text (e.g. St. for Street) unless a location is called by its abbreviated name (e.g. “JFK Airport”). Abbreviations may be problematic for accessibility by screen reader software and voice user interfaces. Consuming software can be engineered to reliably convert full words to abbreviations for display, but converting from abbreviations to full words is prone to more risk of error.
@@ -87,13 +92,15 @@ Avoid use of abbreviations throughout the feed for names and other text (e.g. St
 
 ###### Planning and Analysis
 
+{% octicon link id:"agency_1" class:"gtfs-tag" %}
+
 Field Name | Recommendation
 ---------- | --------------
-__agency_id__ <!-- (15) --> | Should be included, even if there is only one agency in the feed. (See also: recommendation to include __agency_id__ in [`routes.txt`](#routes) and [`fare_attributes.txt`](#fare-rules))
-__agency_lang__ <!-- (16) --> | Field should be included.
-__agency_phone__ <!-- (17) --> | Should be included unless no such customer service phone exists.
-__agency_email__ <!-- (18) --> | Should be included unless no such customer service email exists.
-__agency_fare_url__ <!-- (19) --> | Should be included unless the agency is fully fare-free, and `fare_attributes.txt` is included to indicate that the system is fare-free.
+`agency_id` <!-- (15) --> | Should be included, even if there is only one agency in the feed. (See also: recommendation to include `agency_id` in [`routes.txt`](#routes) and [`fare_attributes.txt`](#fare-rules))
+`agency_lang` <!-- (16) --> | Field should be included.
+`agency_phone` <!-- (17) --> | Should be included unless no such customer service phone exists.
+`agency_email` <!-- (18) --> | Should be included unless no such customer service email exists.
+`agency_fare_url` <!-- (19) --> | Should be included unless the agency is fully fare-free, and `fare_attributes.txt` is included to indicate that the system is fare-free.
 
 <h3 id="feed-info">feed_info.txt</h3>
 
@@ -103,14 +110,16 @@ __agency_fare_url__ <!-- (19) --> | Should be included unless the agency is full
 
 `feed_info.txt` should be included, with all fields below. <!-- (20) -->
 
+{% octicon link id:"feed_info_1" class:"gtfs-tag" %}
+
 Field Name | Recommendation
 ---------- | --------------
-__feed_publisher_name__ <!-- (21) --> | Should be included
-__feed_publisher_url__ <!-- (22) --> | Should be included
-__feed_lang__ <!-- (23) --> | Should be included
-__feed_start_date__ & __feed_end_date__ <!-- (24) -->| Should be included
-__feed_version__ <!-- (25) --> | Should be included
-__feed_contact_email__ & __feed_contact_url__ <!-- (26) --> | Provide at least one
+`feed_publisher_name` <!-- (21) --> | Should be included
+`feed_publisher_url` <!-- (22) --> | Should be included
+`feed_lang` <!-- (23) --> | Should be included
+`feed_start_date` & `feed_end_date` <!-- (24) -->| Should be included
+`feed_version` <!-- (25) --> | Should be included
+`feed_contact_email` & `feed_contact_url` <!-- (26) --> | Provide at least one
 
 <h3 id="stops">stops.txt</h3>   
 
@@ -120,8 +129,9 @@ __feed_contact_email__ & __feed_contact_url__ <!-- (26) --> | Provide at least o
 
 ###### Arrival Predictions
 
-* Stops that are in different physical locations (i.e., different designated precise locations for vehicles on designated routes to stop, potentially distinguished by signs, shelters, or other such public information, located on different street corners or representing different boarding facility such as a platform or bus bay, even if nearby each other) should have different __stop_ids__. <!-- (27) -->
-* Maintain consistent __stop_id__ for the same stops across data iterations (see: [Dataset Publishing & General Practices](#publishing)). <!-- (28) -->
+1. {% octicon link id:"stops_1" class:"gtfs-tag" %} Stops that are in different physical locations (i.e., different designated precise locations for vehicles on designated routes to stop, potentially distinguished by signs, shelters, or other such public information, located on different street corners or representing different boarding facility such as a platform or bus bay, even if nearby each other) should have different `stop_id`. <!-- (27) -->
+2. {% octicon link id:"stops_2" class:"gtfs-tag" %} Maintain consistent `stop_id` for the same stops across data iterations (see: [Dataset Publishing & General Practices](#publishing)). <!-- (28) -->
+
 
 #### stop_name
 
@@ -131,16 +141,13 @@ __feed_contact_email__ & __feed_contact_url__ <!-- (26) --> | Provide at least o
 
 ###### Human Readability
 
-* The __stop_name__ should match the agency's public name for the stop, station, or boarding facility, e.g. what is printed on a timetable, published online, and/or presented at the location. <!-- (29) -->
-* When there is not a published stop name, follow consistent stop naming conventions throughout the feed. <!-- (30) -->
-* Avoid use of abbreviations other than for places that are most commonly called by an abbreviated name. See Abbreviations under [All Files](#all-files). <!-- (31) -->
-
-* Provide stop names in mixed case, following local conventions, as per recommendation for all customer-facing text fields. <!-- (32) -->
-
-* By default, __stop_name__ should not contain generic or redundant words like “Station” or “Stop”, but some edge cases are allowed:
-
-  * When it is actually part of the name (Union Station, Central Station)
-  * When the __stop_name__ is too generic (like the name of the city). “Station” emphasizes that the stop is the train station of that city.
+1. {% octicon link id:"stops_3" class:"gtfs-tag" %} The `stop_name` should match the agency's public name for the stop, station, or boarding facility, e.g. what is printed on a timetable, published online, and/or presented at the location. <!-- (29) -->
+2. {% octicon link id:"stops_4" class:"gtfs-tag" %} When there is not a published stop name, follow consistent stop naming conventions throughout the feed. <!-- (30) -->
+3. {% octicon link id:"stops_5" class:"gtfs-tag" %} Avoid use of abbreviations other than for places that are most commonly called by an abbreviated name. See Abbreviations under [All Files](#all-files). <!-- (31) -->
+4. {% octicon link id:"stops_6" class:"gtfs-tag" %} Provide stop names in mixed case, following local conventions, as per recommendation for all customer-facing text fields. <!-- (32) -->
+5. {% octicon link id:"stops_7" class:"gtfs-tag" %} By default, `stop_name` should not contain generic or redundant words like “Station” or “Stop”, but some edge cases are allowed:
+    * When it is actually part of the name (Union Station, Central Station)
+    * When the `stop_name` is too generic (like the name of the city). “Station” emphasizes that the stop is the train station of that city.
 
 #### stop_lat & stop_lon
 
@@ -148,7 +155,7 @@ __feed_contact_email__ & __feed_contact_url__ <!-- (26) --> | Provide at least o
 
 * Stop locations should be as accurate possible. Stop locations should have an error of **_no more_** than four meters when compared to the actual stop position. <!-- (34) -->
 * Stop locations should be placed very near to the pedestrian right of way where a passenger will board (i.e. correct side of the street) <!-- (35) -->
-* If a stop location is shared across separate feeds (i.e. two agencies use exactly the same stop / boarding facility), indicate the stop is shared by using the exact same __stop_lat__ and __stop_lon__ for both stops. <!-- (36) -->
+* If a stop location is shared across separate feeds (i.e. two agencies use exactly the same stop / boarding facility), indicate the stop is shared by using the exact same `stop_lat` and `stop_lon` for both stops. <!-- (36) -->
 
 #### stop_code
 
@@ -156,7 +163,7 @@ __feed_contact_email__ & __feed_contact_url__ <!-- (26) --> | Provide at least o
 
 #### stop_id
 
-* __stop_id__ is an internal ID, not intended to be shown to passengers. <!-- (38) -->
+* `stop_id` is an internal ID, not intended to be shown to passengers. <!-- (38) -->
 
 #### parent_station & location_type
 
@@ -181,10 +188,10 @@ __feed_contact_email__ & __feed_contact_url__ <!-- (26) --> | Provide at least o
 
 #### pickup_type & drop_off_type
 
-* Non-revenue (deadhead) trips that do not provide passenger service should be marked with __pickup_type__ and __drop_off_type__ value of `1` for all __stop_times__ rows.<!-- 13 -->
+* Non-revenue (deadhead) trips that do not provide passenger service should be marked with `pickup_type` and `drop_off_type` value of `1` for all `stop_times` rows.<!-- 13 -->
 
 #### timepoint
-* The __timepoint__ field should be provided. It specifies which __stop_times__ the operator will attempt to strictly adhere to (`timepoint=1`), and that other stop times are estimates (`timepoint=0`).<!-- (44) -->
+* The `timepoint` field should be provided. It specifies which `stop_times` the operator will attempt to strictly adhere to (`timepoint=1`), and that other stop times are estimates (`timepoint=0`).<!-- (44) -->
 
 #### arrival_time & departure_time
 
@@ -205,9 +212,19 @@ __feed_contact_email__ & __feed_contact_url__ <!-- (26) --> | Provide at least o
 
 ###### Accessibility Analysis  
 
-* Provide __stop_headsign__ values in cases when the text displayed on the headsign changes during a trip. The headsign in the GTFS should also correspond to signs in the stations. __stop_headsign__ values override the __trip_headsign__ (in `trips.txt`). __stop_headsign__ values do not “carry down” to subsequent stops, and therefore values must be repeated if the stop headsign remains the same. <!-- (47) -->
+{% octicon link id:"stop_headsign_1" class:"gtfs-tag" %}
 
+* Provide `stop_headsign` values in cases when the text displayed on the headsign changes during a trip. The headsign in the GTFS should also correspond to signs in the stations. `stop_headsign` values override the `trip_headsign` (in `trips.txt`). `stop_headsign` values do not “carry down” to subsequent stops, and therefore values must be repeated if the stop headsign remains the same. <!-- (47) -->
+
+{% octicon link id:"stop_headsign_ex" class:"gtfs-tag" %}
 Examples:
+
+In NYC, for the 2 going Southbound: | In Boston, for the Red Line going Southbound, for the Braintree branch:
+--- | ---
+“Manhattan & Brooklyn” until Manhattan is reached. | “Inbound to Braintree” until downtown is reached.
+“Downtown & Brooklyn” until Downtown Manhattan is reached. | “Braintree” when in downtown.
+“Brooklyn” until Brooklyn is reached. | “Outbound to Braintree” after downtown.
+“Brooklyn (New Lots Av)” once Brooklyn is reached. | |
 
 > * In NYC, for the 2 going southbound:
 >   * “Manhattan & Brooklyn” until Manhattan is reached.
@@ -224,9 +241,9 @@ In those two cases, “Southbound” would mislead customers, since it isn’t u
 
 #### shape_dist_traveled
 
-* Must be provided for routes that have looping or inlining (the vehicle crosses or travels over the same portion of alignment in one trip). See: [__shapes.shape_dist_traveled__ recommendation.] <!-- (48) -->
+* Must be provided for routes that have looping or inlining (the vehicle crosses or travels over the same portion of alignment in one trip). See: [`shapes.shape_dist_traveled` recommendation.] <!-- (48) -->
 
-[Case] Loop routes: Loop routes require special __stop_times__ considerations. (See: [Loop route case](#loop-routes))
+[Case] Loop routes: Loop routes require special `stop_times` considerations. (See: [Loop route case](#loop-routes))
 
 <h3 id="transfers">transfers.txt</h3>
 
@@ -234,7 +251,7 @@ In those two cases, “Southbound” would mislead customers, since it isn’t u
 
 #### transfers.transfer_type
 
-__transfers.transfer_type__ can be one of four values [defined in the GTFS](https://developers.google.com/transit/gtfs/reference/transfers-file). These __transfer_type__ definitions are quoted from the GTFS Specification below, _in italics_, with additional practice recommendations. <!-- (49) -->
+`transfers.transfer_type` can be one of four values [defined in the GTFS](https://developers.google.com/transit/gtfs/reference/transfers-file). These `transfer_type` definitions are quoted from the GTFS Specification below, _in italics_, with additional practice recommendations. <!-- (49) -->
 
 <q>0 or (empty): This is a recommended transfer point between two routes.</q> <!-- (50) -->
 
@@ -244,7 +261,7 @@ __transfers.transfer_type__ can be one of four values [defined in the GTFS](http
 
   * This transfer type overrides a required interval to reliably make transfers.  As an example, Google Maps assumes that passengers need 3 minutes to safely make a transfer. Other applications may assume other defaults. <!-- (51) -->
 
-<q>2: This transfer requires a minimum amount of time between arrival and departure to ensure a connection. The time required to transfer is specified by __min_transfer_time__.</q>
+<q>2: This transfer requires a minimum amount of time between arrival and departure to ensure a connection. The time required to transfer is specified by `min_transfer_time`.</q>
 
   * Specify minimum transfer time if there are obstructions or other factors which increase the time to travel between stops. <!-- (52) -->
 
@@ -256,19 +273,19 @@ If in-seat (block) transfers are allowed between trips, then the last stop of th
 
 <h3 id="trips">trips.txt</h3>
 
-* **_See special case for loop routes:_** Loop routes are cases where trips start and end at the same stop, as opposed to linear routes, which have two distinct termini. Loop routes must be described following specific practices. [See Loop route case below.](#loop-routes)
-* **_See special case for lasso routes:_** Lasso routes are a hybrid of linear and loop geometries, in which vehicles travel on a loop for only a portion of the route. Lasso routes must be described following specific practices. [See Lasso route case below.](#lasso-routes)
+* __See special case for loop routes:__ Loop routes are cases where trips start and end at the same stop, as opposed to linear routes, which have two distinct termini. Loop routes must be described following specific practices. [See Loop route case below.](#loop-routes)
+* __See special case for lasso routes:__ Lasso routes are a hybrid of linear and loop geometries, in which vehicles travel on a loop for only a portion of the route. Lasso routes must be described following specific practices. [See Lasso route case below.](#lasso-routes)
 
 #### trips.trip_headsign
 
 ###### Trip Planners
 
-* Do not provide route names (matching __route_short_name__ and __route_long_name__) in the __trip_headsign__ or __stop_headsign__ fields. <!-- (98) -->
-* Should contain destination, direction, and/or other trip designation text shown on the headsign of the vehicle which may be used to distinguish amongst trips in a route. Consistency with direction information shown on the vehicle is the primary and overriding goal for determining headsigns supplied in GTFS datasets. Other information should be included only if it does not compromise this primary goal. If headsigns change during a trip, override __trip_headsign__ with __stop_times.stop_headsign__. Below are recommendations for some possible cases. <!-- (58) -->
+* Do not provide route names (matching `route_short_name` and `route_long_name`) in the `trip_headsign` or `stop_headsign` fields. <!-- (98) -->
+* Should contain destination, direction, and/or other trip designation text shown on the headsign of the vehicle which may be used to distinguish amongst trips in a route. Consistency with direction information shown on the vehicle is the primary and overriding goal for determining headsigns supplied in GTFS datasets. Other information should be included only if it does not compromise this primary goal. If headsigns change during a trip, override `trip_headsign` with `stop_times.stop_headsign`. Below are recommendations for some possible cases. <!-- (58) -->
 
   * Destination-only: Provide the terminus destination, e.g. “Transit Center”, “Portland City Center”, or “Jantzen Beach” <!-- (58A) -->
-  * Destinations with waypoints: <destination> via <waypoint> “Highgate via Charing Cross”. If waypoint(s) are removed from the headsign show to passengers after the vehicle passes those waypoints, use __stop_times.stop_headsign__ to set an updated headsign. <!-- (58B) -->
-  * Regional placename with local stops: If there will be multiple stops inside the city or borough of destination, use __stop_times.stop_headsign__ once reaching the destination city. <!-- (58C) -->
+  * Destinations with waypoints: <destination> via <waypoint> “Highgate via Charing Cross”. If waypoint(s) are removed from the headsign show to passengers after the vehicle passes those waypoints, use `stop_times.stop_headsign` to set an updated headsign. <!-- (58B) -->
+  * Regional placename with local stops: If there will be multiple stops inside the city or borough of destination, use `stop_times.stop_headsign` once reaching the destination city. <!-- (58C) -->
   * Direction-only: Indicate using terms such as “Northbound”, “Inbound”, “Clockwise,” or similar directions. <!-- (58D) -->
   * Direction with destination: <direction> to <terminus name> e.g. “Southbound to San Jose” <!-- (58E) -->
   * Direction with destination and waypoints: <direction> via <waypoint> to <destination> (“Northbound via Charing Cross to Highgate”). <!-- (58F) -->
@@ -284,7 +301,7 @@ If in-seat (block) transfers are allowed between trips, then the last stop of th
 
 ###### Human Readability
 
-* If trips on a route service opposite directions, distinguish these groups of trips with the __direction_id__ field, using values 0 and 1. <!-- (64) -->
+* If trips on a route service opposite directions, distinguish these groups of trips with the `direction_id` field, using values 0 and 1. <!-- (64) -->
 * Use values 0 and 1 consistently throughout the dataset. i.e. <!-- (65) -->
   * if 1 = Outbound on the Red route, then 1 = Outbound on the Green route
   * if 1 = Northbound on Route X, then 1 = Northbound on Route Y
@@ -300,9 +317,9 @@ If in-seat (block) transfers are allowed between trips, then the last stop of th
 
 ###### Human Readability
 
-* Actual stop times are ignored for trips referenced by `frequencies.txt`; only travel time intervals between stops are significant for frequency-based trips. For clarity/human readability, it is recommended that the first stop time of a trip referenced in `frequencies.txt` should begin at 00:00:00 (first __arrival_time__ value of 00:00:00). <!-- (99) -->
+* Actual stop times are ignored for trips referenced by `frequencies.txt`; only travel time intervals between stops are significant for frequency-based trips. For clarity/human readability, it is recommended that the first stop time of a trip referenced in `frequencies.txt` should begin at 00:00:00 (first `arrival_time` value of 00:00:00). <!-- (99) -->
 
-* __block_id__ can be provided for frequency-based trips. <!-- (101) -->
+* `block_id` can be provided for frequency-based trips. <!-- (101) -->
 
 <h3 id="routes">routes.txt</h3>
 
@@ -314,12 +331,12 @@ If in-seat (block) transfers are allowed between trips, then the last stop of th
 * Must be included if it is defined in `agency.txt`. <!-- (68) -->
 
 #### route_short_name
-* Should be the commonly-known passenger name of the service, no longer than 12 characters. Include __route_short_name__ if there is a brief service designation. <!-- (71) -->
+* Should be the commonly-known passenger name of the service, no longer than 12 characters. Include `route_short_name` if there is a brief service designation. <!-- (71) -->
 
 #### route_long_name
 * The definition from Specification reference:
 
-<q>This name is generally more descriptive than the __route_short_name__ and will often include the route's destination or stop. At least one of __route_short_name__ or __route_long_name__ must be specified, or potentially both if appropriate. If the route does not have a long name, please specify a __route_short_name__ and use an empty string as the value for this field.</q>
+<q>This name is generally more descriptive than the `route_short_name` and will often include the route's destination or stop. At least one of `route_short_name` or `route_long_name` must be specified, or potentially both if appropriate. If the route does not have a long name, please specify a `route_short_name` and use an empty string as the value for this field.</q>
 
 Examples of types of long names are below:  <!-- (73) -->
 
@@ -329,18 +346,19 @@ Examples of types of long names are below:  <!-- (73) -->
 >    * (using “route_short_name” / “route_long_name” notation): [“6”/“Nation - Étoile”](http://www.ratp.fr/informer/pdf/orienter/f_plan.php?nompdf=m6) in Paris, France (agency RATP)
 >    * [“U2”-“Pankow – Ruhleben”](http://www.bvg.de/images/content/linienverlaeufe/LinienverlaufU2.pdf) in Berlin, Germany (agency BVG).
 >  * Description of the service (e.g. [“Hartwell Area Shuttle”](http://128bc.org/rev-hartwell-area-shuttle/))
-* __route_long_name__ should not contain the __route_short_name__. <!-- (72) -->
-* Include the full designation including a service identity when populating __route_long_name__. Examples: <!-- (69) -->
-  * In Portland, Oregon, USA the TriMet’s light rail services are branded as “MAX Light Rail”. The __route_long_name__ should include the brand (MAX) and the more-specific route designation i.e.b “MAX Red Line”, “MAX Blue Line”, etc.
-  * In Albuquerque, New Mexico USA, ABQ Ride in has special express routes called Rapid Ride. __route_long_name__ for these routes should be Rapid Ride Red Line, Rapid Ride Blue Line, etc.
+
+* `route_long_name` should not contain the `route_short_name`. <!-- (72) -->
+* Include the full designation including a service identity when populating `route_long_name`. Examples: <!-- (69) -->
+  * In Portland, Oregon, USA the TriMet’s light rail services are branded as “MAX Light Rail”. The `route_long_name` should include the brand (MAX) and the more-specific route designation i.e.b “MAX Red Line”, “MAX Blue Line”, etc.
+  * In Albuquerque, New Mexico USA, ABQ Ride in has special express routes called Rapid Ride. `route_long_name` for these routes should be Rapid Ride Red Line, Rapid Ride Blue Line, etc.
 
 #### route_id
 
-* All trips on a given named route should reference the same __route_id__. <!-- (74) -->
-  * Different directions of a route should not be separated into different __route_id__ values.
-  * Different spans of operation of a route should not be separated into different __route_id__ values (do not do “Transit Center - Downtown AM” and “Transit Center - Downtown PM”).
+* All trips on a given named route should reference the same `route_id`. <!-- (74) -->
+  * Different directions of a route should not be separated into different `route_id` values.
+  * Different spans of operation of a route should not be separated into different `route_id` values (do not do “Transit Center - Downtown AM” and “Transit Center - Downtown PM”).
   * For further discussion of when to add new records in `routes.txt`, see [Branches](#branches).
-* If a route group includes distinctly named branches (e.g. 1A and 1B), follow recommendations in the route [branches](#branches) case to determine __route_short_name__ and __route_long_name__. <!-- (70) -->
+* If a route group includes distinctly named branches (e.g. 1A and 1B), follow recommendations in the route [branches](#branches) case to determine `route_short_name` and `route_long_name`. <!-- (70) -->
 * Maintain consistent identifiers (ID values) from one version to the next of the same feed. <!-- (75) -->
 
 #### route_color & route_text_color
@@ -363,7 +381,7 @@ Examples of types of long names are below:  <!-- (73) -->
 
 * Must be provided in both `shapes.txt` and `stop_times.txt` if an alignment includes looping or inlining (the vehicle crosses or travels over the same portion of alignment in one trip). <!-- (79) -->
 
-* The __shape_dist_traveled__ field allows the agency to specify exactly how the stops in the `stop_times.txt` file fit into their respective shape. A common value to use for the __shape_dist_traveled__ field is the distance from the beginning of the shape as traveled by the vehicle (think something like an odometer reading).
+* The `shape_dist_traveled` field allows the agency to specify exactly how the stops in the `stop_times.txt` file fit into their respective shape. A common value to use for the `shape_dist_traveled` field is the distance from the beginning of the shape as traveled by the vehicle (think something like an odometer reading).
 * Route alignments (in `shapes.txt`) should be within 100 meters of stop locations which a trip serves.  <!-- (80) -->
 * Simplify alignments so that `shapes.txt` does not contain extraneous points (i.e. remove extra points on straight-line segments; see discussion of line simplification problem). <!-- (81) -->
 
@@ -374,7 +392,7 @@ Examples of types of long names are below:  <!-- (73) -->
 ###### Timetables
 
 * `calendar_dates.txt` should only contain a limited number of exceptions to the schedule. Regularly-scheduled service should be configured using `calendar.txt`.
-* Including a __calendar.service_name__ field can also increase the human readability of GTFS, although this is not adopted in the spec.
+* Including a `calendar.service_name` field can also increase the human readability of GTFS, although this is not adopted in the spec.
 
 <h3 id="fare-rules">fare_rules.txt and fare_attributes.txt</h3>
 
@@ -382,7 +400,7 @@ Examples of types of long names are below:  <!-- (73) -->
 
 ###### Accessibility Analysis
 
-* __agency_id__ should be included in `fare_attributes.txt` if it the field is included in `agency.txt`. <!-- (84) -->
+* `agency_id` should be included in `fare_attributes.txt` if it the field is included in `agency.txt`. <!-- (84) -->
 * If a fare system cannot be accurately modeled, avoid further confusion and leave it blank. <!-- (85) -->
 * Include fares (`fare_attributes.txt` and `fare_rules.txt`) and model them as accurately as possible. In edge cases where fares cannot be accurately modeled, the fare should be represented as more expensive rather than less expensive so customers will not attempt to board with insufficient fare. If the vast majority of fares cannot be modeled correctly, do not include fare information in the feed. <!-- (86) -->
 
@@ -412,11 +430,11 @@ Often, a loop route may include first and last trips that do not travel the enti
 
 #### trips.direction_id
 
-* If loop operates in opposite directions (i.e. clockwise and counterclockwise), then designate __direction_id__ as `0` or `1`. <!-- (89) -->
+* If loop operates in opposite directions (i.e. clockwise and counterclockwise), then designate `direction_id` as `0` or `1`. <!-- (89) -->
 
 #### trips.block_id
 
-* Indicate continuous loop trips with the same __block_id__. <!-- (90) -->
+* Indicate continuous loop trips with the same `block_id`. <!-- (90) -->
 
 <h3 id="lasso-routes">Lasso Routes</h3>
 
@@ -429,8 +447,13 @@ Lasso routes are loop-routes from A to A via B with three sections:
 Examples: subway routes ([Chicago](http://www.transitchicago.com/assets/1/maps/L_Map_March_2016_s_lite.pdf)) or bus suburb to downtown routes ([St. Albert](https://stalbert.ca/uploads/PDF-infosheets/201_207_Fall_2016.pdf) or [Edmonton](http://webdocs.edmonton.ca/transit/route_schedules_and_maps/future/RT039.pdf)).  
 See CTA Brown Line ([CTA website](http://www.transitchicago.com/brownline/) and [TransitFeeds](https://transitfeeds.com/p/chicago-transit-authority/165/latest/route/Brn))
 
+#### trips.trip_id: <!-- (103) -->
+* The full extent of a “vehicle round-trip” (see illustration above) consists of travel from A to B to B and back to A. An entire vehicle round-trip may be expressed by:
+  * __*A single*__ `trip_id`/record in `trips.txt`
+  * __*Multiple*__ `trip_id` values/records in `trips.txt`, with continuous travel indicated by `block_id`.
+
 #### stop_times.stop_headsign <!-- (94) -->
-* The stops along the A-B section will be passed through in both directions. __stop_headsign__ facilitates distinguishing travel direction. Therefore, providing __stop_headsign__ is recommended for these trips. Examples:
+* The stops along the A-B section will be passed through in both directions. `stop_headsign` facilitates distinguishing travel direction. Therefore, providing `stop_headsign` is recommended for these trips. Examples:
   * “A via B”
   * “A”
 For Chicago Transit Authority’s [Purple Line](http://www.transitchicago.com/purpleline/):
@@ -452,13 +475,13 @@ For Edmonton Transit Service bus lines, for example [the 39](http://webdocs.edmo
 Some routes may share significant portions of alignment and stops, but also include sections that serve distinct stops and alignments. The primary route name and relationship to its branches may be indicated by route name(s), headsigns, and trip short name.
 
 In naming branch routes, it is recommended to follow other passenger information materials. Below are descriptions and examples of two cases: <!-- (97) -->
-* If timetables and on-street signage represent two distinctly named routes (e.g. 1A and 1B), then present this as such in the GTFS, using the __route_short_name__ and/or __route_long_name__ fields. <!-- (97A) -->
+* If timetables and on-street signage represent two distinctly named routes (e.g. 1A and 1B), then present this as such in the GTFS, using the `route_short_name` and/or `route_long_name` fields. <!-- (97A) -->
 * __Example__: GoDurham Transit [routes 2, 2A, and 2B](http://admin.gotransitnc.org/sites/default/files/godurham/aug2016/Route%202%20PDF%20August%202016.pdf) share a common alignment throughout the majority of the route, but they vary in several different aspects.
   * Route 2B serves additional stops in a spur of the shared alignment path.
   * Routes 2A and 2B operate daytime hours M-Sat.
   * Route 2 runs nights, Sundays, and holidays.
 
-* If agency-provided information describes branches as the same named route, then utilize the __trips.headsign__, __stop_times.headsign__, and/or __trips.trip_short_name__ fields. <!-- (97B) -->
+* If agency-provided information describes branches as the same named route, then utilize the `trips.headsign`, `stop_times.headsign`, and/or `trips.trip_short_name` fields. <!-- (97B) -->
 * __Example__: GoTriangle [route 300](http://admin.gotransitnc.org/sites/default/files/maps-and-schedules/gotriangle/RoutesAndSchedules-1561.pdf) travels to different locations depending on the time of day. During peak commuter hours extra legs are added onto the standard route to accommodate workers entering and leaving the city.
 
 
