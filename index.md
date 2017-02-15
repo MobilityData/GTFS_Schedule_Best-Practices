@@ -351,7 +351,7 @@ __2.__ `block_id` can be provided for frequency-based trips. <!-- (101) -->
 __1.__ Must be included if it is defined in `agency.txt`. <!-- (68) -->
 
 #### route_short_name
-__2.__ Should be the commonly-known passenger name of the service, no longer than 12 characters. Include `route_short_name` if there is a brief service designation. <!-- (71) -->
+__2.__ Include `route_short_name` if there is a brief service designation. This should be the commonly-known passenger name of the service, no longer than 12 characters. <!-- (71) -->
 
 #### route_long_name
 __3.__ The definition from Specification reference:
@@ -377,7 +377,9 @@ Examples of types of long names are below:  <!-- (73) -->
 
 __4.__ `route_long_name` should not contain the `route_short_name`. <!-- (72) -->
 
-__5.__ Include the full designation including a service identity when populating `route_long_name`. Examples: <!-- (69) -->
+__5.__ Include the full designation including a service identity when populating `route_long_name`.
+
+Examples: <!-- (69) --><!-- Examples need to be quoted here -->
 
   * In Portland, Oregon, USA the TriMet’s light rail services are branded as “MAX Light Rail”. The `route_long_name` should include the brand (MAX) and the more-specific route designation i.e.b “MAX Red Line”, “MAX Blue Line”, etc.
   * In Albuquerque, New Mexico USA, ABQ Ride in has special express routes called Rapid Ride. `route_long_name` for these routes should be Rapid Ride Red Line, Rapid Ride Blue Line, etc.
@@ -483,13 +485,15 @@ Lasso routes are loop-routes from A to A via B with three sections:
 * loop from and to B;
 * straight section from B to A.
 
+##### Insert diagram here.
+
 | Examples: |
 | --------- |
 | Subway Routes ([Chicago](http://www.transitchicago.com/assets/1/maps/L_Map_March_2016_s_lite.pdf)) |
 | Bus Suburb to Downtown Routes ([St. Albert](https://stalbert.ca/uploads/PDF-infosheets/201_207_Fall_2016.pdf) or [Edmonton](http://webdocs.edmonton.ca/transit/route_schedules_and_maps/future/RT039.pdf)). |
 | See CTA Brown Line ([CTA website](http://www.transitchicago.com/brownline/) and [TransitFeeds](https://transitfeeds.com/p/chicago-transit-authority/165/latest/route/Brn)) |
 
-#### trips.trip_id: <!-- (103) -->
+#### trips.trip_id <!-- (103) -->
 
 __1.__ The full extent of a “vehicle round-trip” (see illustration above) consists of travel from A to B to B and back to A. An entire vehicle round-trip may be expressed by:
 
@@ -540,12 +544,6 @@ __1B.__ If agency-provided information describes branches as the same named rout
 
 __Example__: GoTriangle [route 300](http://admin.gotransitnc.org/sites/default/files/maps-and-schedules/gotriangle/RoutesAndSchedules-1561.pdf) travels to different locations depending on the time of day. During peak commuter hours extra legs are added onto the standard route to accommodate workers entering and leaving the city.
 
-
-<!-- {To-do: illustrate with examples of branching; find two types of branching -- one where there should be a single routes.txt record and variants are indicated with trip_headsign and/or trip_short_name, and another where there should be two different records in routes.txt}
-Gold Coast Transit Route 1A/1B
-
-Como Connect Route 2 {remove this; directions are branded differently -- somewhat irregular/obscure} (Direction A = Clockwise; Direction B = Counterclockwise) -->
-
 <h2 id="about">About This Document</h2>
 
 <h3 id="objectives">Objectives</h3>
@@ -566,7 +564,7 @@ GTFS applications and practice evolve, and so this document may need to be amend
 
 <h2 id="working-group">GTFS Best Practices Working Group</h2>
 
-The GTFS Best Practices Working Group consists of public transportation providers, developers of GTFS-consuming applications, consultants, and academic organizations to define common practices and expectations for GTFS data. The goals of this working group are to support greater interoperability of data data. Further goals are defined in the “[Objectives](#objectives)”.
+The GTFS Best Practices Working Group consists of public transportation providers, developers of GTFS-consuming applications, consultants, and academic organizations to define common practices and expectations for GTFS data. The goals of this working group are to support greater interoperability of data data.
 
 Members of this working group include:
 
