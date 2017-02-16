@@ -69,11 +69,24 @@ All customer-facing text strings (including stop names, route names, and headsig
 
 <!-- We need a style to designate this is an example table. -->
 
-| Examples: |
-| --------- |
-| Brighton Churchill Square |
-| Villiers-sur-Marne |
-| Market Street |
+<table class="example">
+  <thead>
+    <tr>
+      <th>Examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Brighton Churchill Square</td>
+    </tr>
+    <tr>
+      <td>Villiers-sur-Marne</td>
+    </tr>
+    <tr>
+      <td>Market Street</td>
+    </tr>
+  </tbody>
+</table>
 
 __2.__ __Abbreviations__: <!-- (14) -->
 Avoid use of abbreviations throughout the feed for names and other text (e.g. St. for Street) unless a location is called by its abbreviated name (e.g. “JFK Airport”). Abbreviations may be problematic for accessibility by screen reader software and voice user interfaces. Consuming software can be engineered to reliably convert full words to abbreviations for display, but converting from abbreviations to full words is prone to more risk of error.
@@ -113,7 +126,7 @@ __4.__ `feed_start_date` & `feed_end_date` <!-- (24) -->| Should be included
 __5.__ `feed_version` <!-- (25) --> | Should be included
 __6.__ `feed_contact_email` & `feed_contact_url` <!-- (26) --> | Provide at least one
 
-<h3 id="stops">stops.txt</h3>  
+<h3 id="stops">stops.txt</h3>
 
 #### stop_id
 
@@ -176,17 +189,35 @@ __13.__ Many stations or terminals have multiple boarding facilities (depending 
 
 __14.__ When naming the station and child stops, set names that are well-recognized by riders, and can help riders to identify the station and boarding facility (bus bay, platform, wharf, gate, etc.). <!-- (41) -->
 
-| Parent Station Name | Child Stop Name |
-| ------------------- | --------------- |
-| Chicago Union Station | Chicago Union Station Platform 19 |
-| [San Francisco Ferry Building Terminal](/best-practices/images/sf-ferry-building.png) | San Francisco Ferry Building Terminal Gate E |
-| Downtown Transit Center | Downtown Transit Center Bay B |
+<table class="example">
+  <thead>
+    <tr>
+      <th>Parent Station Name</th>
+      <th>Child Stop Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Chicago Union Station</td>
+      <td>Chicago Union Station Platform 19</td>
+    </tr>
+    <tr>
+      <td><a href="/best-practices/images/sf-ferry">San Francisco Ferry Building Terminal</a></td>
+      <td>San Francisco Ferry Building Terminal</td>
+    </tr>
+    <tr>
+      <td><a href="/best-practices/images/transit-center">Downtown Transit Center</a></td>
+      <td>Downtown Transit Center Bay B</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="stop-times">stop_times.txt</h3>
 
 #### pickup_type & drop_off_type
 
 __1.__ Non-revenue (deadhead) trips that do not provide passenger service should be marked with `pickup_type` and `drop_off_type` value of `1` for all `stop_times` rows.<!-- 13 -->
+
 __2.__ On revenue trips, internal “timing points” for monitoring operational performance and other places such as garages that a passenger cannot board should be marked with `pickup_type = 1` (no pickup available) and `drop_off_type = 1` (no drop off available). <!-- (46) -->
 
 
@@ -209,20 +240,63 @@ __5.__ `stop_headsign` values override the `trip_headsign` (in `trips.txt`). `st
 
 Examples:
 
-| In NYC, for the 2 going Southbound: | |
-| For `stop_times.txt` rows: | Use This `stop_headsign` Value: |
-| --- | --- |
-| Until Manhattan is Reached | `Manhattan & Brooklyn` |
-| Until Downtown is Reached | `Downtown & Brooklyn` |
-| Until Brooklyn is Reached | `Brooklyn` |
-| Once Brooklyn is Reached | `Brooklyn (New Lots Av)` |
+<table class="example">
+  <thead>
+    <tr>
+      <th colspan="2">In NYC, for the 2 going Southbound:</th>
+    </tr>
+    <tr>
+      <th>For <code>stop_times.txt</code> rows:</th>
+      <th>Use this <code>stop_headsign</code> Value: </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Until Manhattan is Reached</td>
+      <td><code>Manhattan & Brooklyn</code></td>
+    </tr>
+    <tr>
+      <td>Until Downtown is Reached</td>
+      <td><code>Downtown & Brooklyn</code></td>
+    </tr>
+    <tr>
+      <td>Until Brooklyn is Reached</td>
+      <td><code>Brooklyn</code></td>
+    </tr>
+    <tr>
+      <td>Once Brooklyn is Reached</td>
+      <td><code>Brooklyn (New Lots Av)</code></td>
+    </tr>
+  </tbody>
+</table>
 
-| In Boston, for the Red Line going southbound, for the Braintree branch: | |
-| For `stop_times.txt` rows: | Use This `stop_headsign` Value: |
-| --- | --- |
-| Until Downtown is Reached | `Inbound to Braintree` |
-| Once Downtown is Reached | `Braintree` |
-| After Downtown | `Outbound to Braintree` |
+<table class="example">
+  <thead>
+    <tr>
+      <th colspan="2">In Boston, for the Red Line going Southbound, for the Braintree branch:</th>
+    </tr>
+    <tr>
+      <th>For <code>stop_times.txt</code> rows:</th>
+      <th>Use this <code>stop_headsign</code> Value: </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Until Downtown is Reached</td>
+      <td><code>Inbound to Braintree</code></td>
+    </tr>
+    <tr>
+      <td>Once Downtown is Reached</td>
+      <td><code>Braintree</code></td>
+    </tr>
+    <tr>
+      <td>After Downtown</td>
+      <td><code>Outbound to Braintree</code></td>
+    </tr>
+  </tbody>
+</table>
+
+
 
 In the above two cases, “Southbound” would mislead customers because it is not used in the station signs.
 
@@ -362,18 +436,53 @@ Examples of types of long names are below:  <!-- (73) -->
 
 <!-- This needs to be cleaned up - there should be another “route_short_name” / “route_long_name” -->
 
-| Primary Travel Path or Corridor | |
-| Route Name | Form | Agency |
-| --- | --- |
-| [“N”/“Judah”](https://www.sfmta.com/getting-around/transit/routes-stops/n-judah) | `route_short_name`/`route_long_name` | Muni, in San Francisco <!-- add link --> |
-| [“6”/“ML King Jr Blvd”](https://trimet.org/schedules/r006.htm) | `route_short_name`/`route_long_name` | TriMet, in Portland, Or. |
-| [“6”/“Nation - Étoile”](http://www.ratp.fr/informer/pdf/orienter/f_plan.php?nompdf=m6) | `route_short_name`/`route_long_name` |  RATP, in Paris France |
-| [“U2”-“Pankow – Ruhleben”](http://www.bvg.de/images/content/linienverlaeufe/LinienverlaufU2.pdf) | `route_short_name`-`route_long_name` | BVG, in Berlin, Germany |
+<table class="example">
+  <thead>
+    <tr>
+      <th colspan="3">Primary Travel Path or Corridor</th>
+    </tr>
+    <tr>
+      <th>Route Name</th>
+      <th>Form</th>
+      <th>Agency</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://www.sfmta.com/getting-around/transit/routes-stops/n-judah">“N”/“Judah”</a></td>
+      <td><code>route_short_name</code>/<code>route_long_name</code></td>
+      <td><a href="https://www.sfmta.com/">Muni</a>, in San Francisco</td>
+    </tr>
+    <tr>
+      <td><a href="https://trimet.org/schedules/r006.htm">"6"/"ML King Jr Blvd"</a></td>
+      <td><code>route_short_name</code>/<code>route_long_name</code></td>
+      <td><a href="https://trimet.org/">TriMet</a>, in Portland, Or.</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.ratp.fr/informer/pdf/orienter/f_plan.php?nompdf=m6">“6”/“Nation - Étoile”</a></td>
+      <td><code>route_short_name</code>/<code>route_long_name</code></td>
+      <td><a href="http://www.ratp.fr/">RATP</a>, in Paris France.</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.bvg.de/images/content/linienverlaeufe/LinienverlaufU2.pdf">“U2”-“Pankow – Ruhleben”</a></td>
+      <td><code>route_short_name</code>-<code>route_long_name</code></td>
+      <td><a href="http://www.bvg.de/">BVG</a>, in Berlin, Germany</td>
+    </tr>
+  </tbody>
+</table>
 
-| Description of the Service |
-| --- |
-| [“Hartwell Area Shuttle”](http://128bc.org/rev-hartwell-area-shuttle/) |
-
+<table class="example">
+  <thead>
+    <tr>
+      <th>Description of the Service</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://128bc.org/rev-hartwell-area-shuttle/">"Hartwell Area Shuttle"</a></td>
+    </tr>
+  </tbody>
+</table>
 
 __4.__ `route_long_name` should not contain the `route_short_name`. <!-- (72) -->
 
@@ -418,6 +527,8 @@ __2.__ Alignments should follow the centerline of the right of way on which the 
 
 __3.__ Must be provided in both `shapes.txt` and `stop_times.txt` if an alignment includes looping or inlining (the vehicle crosses or travels over the same portion of alignment in one trip). <!-- (79) -->
 
+An example diagram of inlining may be found <a href="/best-practices/images/inlining">here</a>.
+
 __4.__ The `shape_dist_traveled` field allows the agency to specify exactly how the stops in the `stop_times.txt` file fit into their respective shape. A common value to use for the `shape_dist_traveled` field is the distance from the beginning of the shape as traveled by the vehicle (think something like an odometer reading).
 
 * Route alignments (in `shapes.txt`) should be within 100 meters of stop locations which a trip serves.  <!-- (80) -->
@@ -454,18 +565,45 @@ This section covers particular cases with implications across files and fields.
 
 On loop routes, vehicles’ trips begin and end at the same location (sometimes a transit or transfer center). Vehicles usually operate continuously and allow passengers to stay onboard as the vehicle continues its loop.
 
+An example diagram of a loop route may be found <a href="/best-practices/images/loop-route">here</a>.
+
 #### trips.trip_id
 __1.__ Model the complete round-trip for the loop with a single trip.  <!-- (102) -->
 
 #### stop_times.stop_id
 __2.__ Include the first/last stop twice in `stop_times.txt` for the trip that is a loop. Example below. <!-- (87) -->
 
-| trip_id | stop_id | stop_sequence |
-| ------- | ------- | ------------- |
-|   9000  |   101   |       1       |
-|   9000  |   102   |       2       |
-|   9000  |   103   |       3       |
-|   9000  |   101   |       4       |
+<table class="example">
+  <thead>
+    <tr>
+      <th><code>trip_id</code></th>
+      <th><code>stop_id</code></th>
+      <th><code>stop_sequence</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>9000</td>
+      <td>101</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>9000</td>
+      <td>102</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>9000</td>
+      <td>103</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>9000</td>
+      <td>101</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
 
 Often, a loop route may include first and last trips that do not travel the entire loop. Include these trips as well.
 
@@ -485,13 +623,26 @@ Lasso routes are loop-routes from A to A via B with three sections:
 * loop from and to B;
 * straight section from B to A.
 
-##### Insert diagram here.
+An example diagram of a lasso route may be found <a href="/best-practices/images/lasso-route">here</a>.
 
-| Examples: |
-| --------- |
-| Subway Routes ([Chicago](http://www.transitchicago.com/assets/1/maps/L_Map_March_2016_s_lite.pdf)) |
-| Bus Suburb to Downtown Routes ([St. Albert](https://stalbert.ca/uploads/PDF-infosheets/201_207_Fall_2016.pdf) or [Edmonton](http://webdocs.edmonton.ca/transit/route_schedules_and_maps/future/RT039.pdf)). |
-| See CTA Brown Line ([CTA website](http://www.transitchicago.com/brownline/) and [TransitFeeds](https://transitfeeds.com/p/chicago-transit-authority/165/latest/route/Brn)) |
+<table class="example">
+  <thead>
+    <tr>
+      <th>Examples:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Subway Routes (<a href="http://www.transitchicago.com/assets/1/maps/L_Map_March_2016_s_lite.pdf">Chicago</a>)</td>
+    </tr>
+    <tr>
+      <td>Bus Suburb to Downtown Routes (<a href="https://stalbert.ca/uploads/PDF-infosheets/201_207_Fall_2016.pdf">St. Albert</a> or <a href="http://webdocs.edmonton.ca/transit/route_schedules_and_maps/future/RT039.pdf">Edmonton</a>)</td>
+    </tr>
+    <tr>
+      <td>See CTA Brown Line (<a href="http://www.transitchicago.com/brownline/">CTA Website</a> and <a href="https://transitfeeds.com/p/chicago-transit-authority/165/latest/route/Brn">TransitFeeds</a>)</td>
+    </tr>
+  </tbody>
+</table>
 
 #### trips.trip_id <!-- (103) -->
 
@@ -504,21 +655,56 @@ __1.__ The full extent of a “vehicle round-trip” (see illustration above) co
 
 __2.__ The stops along the A-B section will be passed through in both directions. `stop_headsign` facilitates distinguishing travel direction. Therefore, providing `stop_headsign` is recommended for these trips.
 
-| Examples: |
-| --------- |
-| "A via B" |
-|    "A"    |
+<table class="example">
+  <thead>
+    <tr>
+      <th>Examples:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>"A via B"</td>
+    </tr>
+    <tr>
+      <td>"A"</td>
+    </tr>
+  </tbody>
+</table>
 
-| Chicago Transit Authority’s [Purple Line](http://www.transitchicago.com/purpleline/): |
-| -------------------- |
-| “Southbound to Loop” |
-| “Northbound via Loop” |
-| “Northbound to Linden” |
+<table class="example">
+  <thead>
+    <tr>
+      <th>Chicago Transit Authority's <a href="http://www.transitchicago.com/purpleline/">Purple Line</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>"Southbound to Loop"</td>
+    </tr>
+    <tr>
+      <td>"Northbound via Loop"</td>
+    </tr>
+    <tr>
+      <td>"Northbound to Linden"</td>
+    </tr>
+  </tbody>
+</table>
 
-|Edmonton Transit Service bus lines, for example [the 39](http://webdocs.edmonton.ca/transit/route_schedules_and_maps/future/RT039.pdf): |
-| ------------ |
-| “Rutherford” |
-| “Century Park” |
+<table class="example">
+  <thead>
+    <tr>
+      <th>Edmonton Transit Service Bus Lines, here <a href="http://webdocs.edmonton.ca/transit/route_schedules_and_maps/future/RT039.pdf">the 39</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>"Rutherford"</td>
+    </tr>
+    <tr>
+      <td>"Century Park"</td>
+    </tr>
+  </tbody>
+</table>
 
 
 
@@ -529,6 +715,8 @@ __3.__ The trip headsign should be a global description of the trip, like displa
 <h3 id="branches">Branches</h3>
 
 Some routes may include branches. Alignment and stops are shared amongst these branches, but each also serves distinct stops and alignment sections. The relationship among branches may be indicated by route name(s), headsigns, and trip short name using the further guidelines below.
+
+Example branching may be seen <a href="/best-practices/images/branching">here</a>.
 
 __1.__ In naming branch routes, it is recommended to follow other passenger information materials. Below are descriptions and examples of two cases: <!-- (97) -->
 
