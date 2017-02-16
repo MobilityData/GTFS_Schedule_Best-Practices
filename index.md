@@ -107,7 +107,7 @@ __1.__ `agency_id` <!-- (15) --> | Should be included, even if there is only one
 __2.__ `agency_lang` <!-- (16) --> | Field should be included.
 __3.__ `agency_phone` <!-- (17) --> | Should be included unless no such customer service phone exists.
 __4.__ `agency_email` <!-- (18) --> | Should be included unless no such customer service email exists.
-__5.__ `agency_fare_url` <!-- (19) --> | Should be included unless the agency is fully fare-free, and `fare_attributes.txt` is included to indicate that the system is fare-free.
+__5.__ `agency_fare_url` <!-- (19) --> | Should be included unless the agency is fully fare-free.
 
 <h3 id="feed-info">feed_info.txt</h3>
 
@@ -356,27 +356,27 @@ __2.__ Should contain destination, direction, and/or other trip designation text
   </thead>
   <tbody>
     <tr>
-      <td>2A. Destination-only</td>
+      <td><nobr>2A. Destination-only</nobr></td>
       <td>Provide the terminus destination. e.g. "Transit Center", “Portland City Center”, or “Jantzen Beach” <!-- (58A) --> </td>
     </tr>
     <tr>
-      <td>2B. Destinations with waypoints</td>
+      <td><nobr>2B. Destinations with waypoints</nobr></td>
       <td>&lt;destination&gt; via &lt;waypoint&gt; “Highgate via Charing Cross”. If waypoint(s) are removed from the headsign show to passengers after the vehicle passes those waypoints, use <code>stop_times.stop_headsign</code> to set an updated headsign. <!-- (58B) --> </td>
     </tr>
     <tr>
-      <td>2C. Regional placename with local stops</td>
+      <td><nobr>2C. Regional placename with local stops</nobr></td>
       <td>If there will be multiple stops inside the city or borough of destination, use <code>stop_times.stop_headsign</code> once reaching the destination city. <!-- (58C) --> </td>
     </tr>
     <tr>
-      <td>2D. Direction-only</td>
+      <td><nobr>2D. Direction-only</nobr></td>
       <td>Indicate using terms such as “Northbound”, “Inbound”, “Clockwise,” or similar directions. <!-- (58D) --></td>
     </tr>
     <tr>
-      <td>2E. Direction with destination</td>
+      <td><nobr>2E. Direction with destination</nobr></td>
       <td>&lt;direction&gt; to &lt;terminus name&gt; e.g. “Southbound to San Jose” <!-- (58E) --></td>
     </tr>
     <tr>
-      <td>2F. Direction with destination and waypoints</td>
+      <td><nobr>2F. Direction with destination and waypoints</nobr></td>
       <td>&lt;direction&gt; via &lt;waypoint&gt; to &lt;destination&gt; (“Northbound via Charing Cross to Highgate”). <!-- (58F) --></td>
     </tr>
   </tbody>
@@ -521,12 +521,9 @@ __6.__ All trips on a given named route should reference the same `route_id`. <!
 
 __7.__ If a route group includes distinctly named branches (e.g. 1A and 1B), follow recommendations in the route [branches](#branches) case to determine `route_short_name` and `route_long_name`. <!-- (70) -->
 
-<!-- revisit below-->
-__8.__ Maintain consistent route_id values from one version to the next of the same feed. <!-- (75) -->
-
 #### route_color & route_text_color
 
-__9.__ Should be consistent with signage and printed and online customer information (and thus not included if they do not exist in other places).  <!-- (76) -->
+__8.__ Should be consistent with signage and printed and online customer information (and thus not included if they do not exist in other places).  <!-- (76) -->
 
 <h3 id="shapes">shapes.txt (alignments)</h3>
 
