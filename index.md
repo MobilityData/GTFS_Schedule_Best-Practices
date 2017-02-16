@@ -546,7 +546,8 @@ __2.__ Alignments should follow the centerline of the right of way on which the 
 
 __3.__ Must be provided in both `shapes.txt` and `stop_times.txt` if an alignment includes looping or inlining (the vehicle crosses or travels over the same portion of alignment in one trip). <!-- (79) -->
 
-An example diagram of inlining may be found <a href="{{ "/best-practices/images/inlining" | prepend: site.baseurl }}">here</a>.
+<img src="{{ "/best-practices/images/inlining.svg" | prepend: site.baseurl }}" alt="An Inlining Route">
+<figcaption>Above: If a vehicle retraces or crosses the route alignment at points in the course of a trip, <code>shape_dist_traveled</code> is important to clarify how portions of the points in <code>shapes.txt</code> line up correspond with records in <code>stop_times.txt</code>.</figcaption>
 
 __4.__ The `shape_dist_traveled` field allows the agency to specify exactly how the stops in the `stop_times.txt` file fit into their respective shape. A common value to use for the `shape_dist_traveled` field is the distance from the beginning of the shape as traveled by the vehicle (think something like an odometer reading).
 
@@ -642,7 +643,7 @@ Lasso routes are loop-routes from A to A via B with three sections:
 * loop from and to B;
 * straight section from B to A.
 
-An example diagram of a lasso route may be found <a href="{{ "/best-practices/images/lasso-route" | prepend: site.baseurl }}">here</a>.
+<img style="max-width: 30%" src="{{ "/best-practices/images/lasso-route.svg" | prepend: site.baseurl }}" alt="A Lasso Route">
 
 <table class="example">
   <thead>
@@ -735,7 +736,8 @@ __3.__ The trip headsign should be a global description of the trip, like displa
 
 Some routes may include branches. Alignment and stops are shared amongst these branches, but each also serves distinct stops and alignment sections. The relationship among branches may be indicated by route name(s), headsigns, and trip short name using the further guidelines below.
 
-Example branching may be seen <a href="{{ "/best-practices/images/branching" | prepend: site.baseurl }}">here</a>.
+<img src="{{ "/best-practices/images/branching.svg" | prepend: site.baseurl }}" alt="Configurations of Route Branches">
+<figcaption>Three potential configurations of route branches</figcaption>
 
 __1.__ In naming branch routes, it is recommended to follow other passenger information materials. Below are descriptions and examples of two cases: <!-- (97) -->
 
