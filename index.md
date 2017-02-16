@@ -157,8 +157,9 @@ __6.__ Avoid use of abbreviations other than for places that are most commonly c
 __7.__ Provide stop names in mixed case, following local conventions, as per recommendation for all customer-facing text fields. <!-- (32) -->
 
 __8.__ By default, `stop_name` should not contain generic or redundant words like “Station” or “Stop”, but some edge cases are allowed:
-    * When it is actually part of the name (Union Station, Central Station)
-    * When the `stop_name` is too generic (such as if it is the name of the city). “Station”, “Terminal”, or other words make the meaning clear.
+
+  * When it is actually part of the name (Union Station, Central Station)
+  * When the `stop_name` is too generic (such as if it is the name of the city). “Station”, “Terminal”, or other words make the meaning clear.
 
 #### stop_lat & stop_lon
 
@@ -202,11 +203,11 @@ __14.__ When naming the station and child stops, set names that are well-recogni
       <td>Chicago Union Station Platform 19</td>
     </tr>
     <tr>
-      <td><a href="{{ "/best-practices/images/sf-ferry" | prepend: site.baseurl }}">San Francisco Ferry Building Terminal</a></td>
+      <td><a href="{{ "/images/sf-ferry" | prepend: site.baseurl }}">San Francisco Ferry Building Terminal</a></td>
       <td>San Francisco Ferry Building Terminal</td>
     </tr>
     <tr>
-      <td><a href="{{ "/best-practices/images/transit-center" | prepend: site.baseurl }}">Downtown Transit Center</a></td>
+      <td><a href="{{ "/images/transit-center" | prepend: site.baseurl }}">Downtown Transit Center</a></td>
       <td>Downtown Transit Center Bay B</td>
     </tr>
   </tbody>
@@ -787,22 +788,22 @@ The GTFS Best Practices Working Group consists of public transportation provider
 
 Members of this working group include:
 
-* Apple
-* Cambridge Systematics
-* Capital Metro
-* Center for Urban Transportation Research at University of South Florida
-* Conveyal
-* Google
-* IBI Group
-* Mapzen
-* Microsoft
-* Moovel
-* Oregon Department of Transportation
-* Swiftly
-* Transit
-* Trillium
-* TriMet
-* World Bank
+* [Apple](http://www.apple.com/)
+* [Cambridge Systematics](https://www.camsys.com/)
+* [Capital Metro](https://www.capmetro.org/)
+* [Center for Urban Transportation Research at University of South Florida](https://www.cutr.usf.edu/)
+* [Conveyal](http://conveyal.com/)
+* [Google](https://www.google.com/)
+* [IBI Group](http://www.ibigroup.com/)
+* [Mapzen](https://mapzen.com/)
+* [Microsoft](https://www.microsoft.com/)
+* [Moovel](https://www.moovel.com/)
+* [Oregon Department of Transportation](http://www.oregon.gov/odot/)
+* [Swiftly](https://goswift.ly/)
+* [Transit](https://transitapp.com/)
+* [Trillium](http://trilliumtransit.com/)
+* [TriMet](https://trimet.org/)
+* [World Bank](http://www.worldbank.org/)
 
 To join the working group, email [gtfs-wg@rmi.org](mailto:gtfs-wg@rmi.org).
 
