@@ -202,11 +202,11 @@ __14.__ When naming the station and child stops, set names that are well-recogni
       <td>Chicago Union Station Platform 19</td>
     </tr>
     <tr>
-      <td><a href="/best-practices/images/sf-ferry">San Francisco Ferry Building Terminal</a></td>
+      <td><a href="{{ /best-practices/images/sf-ferry | prepend: site.baseurl }}">San Francisco Ferry Building Terminal</a></td>
       <td>San Francisco Ferry Building Terminal</td>
     </tr>
     <tr>
-      <td><a href="/best-practices/images/transit-center">Downtown Transit Center</a></td>
+      <td><a href="{{ /best-practices/images/transit-center | prepend: site.baseurl }}">Downtown Transit Center</a></td>
       <td>Downtown Transit Center Bay B</td>
     </tr>
   </tbody>
@@ -527,7 +527,7 @@ __2.__ Alignments should follow the centerline of the right of way on which the 
 
 __3.__ Must be provided in both `shapes.txt` and `stop_times.txt` if an alignment includes looping or inlining (the vehicle crosses or travels over the same portion of alignment in one trip). <!-- (79) -->
 
-An example diagram of inlining may be found <a href="/best-practices/images/inlining">here</a>.
+An example diagram of inlining may be found <a href="{{ /best-practices/images/inlining | prepend: site.baseurl }}">here</a>.
 
 __4.__ The `shape_dist_traveled` field allows the agency to specify exactly how the stops in the `stop_times.txt` file fit into their respective shape. A common value to use for the `shape_dist_traveled` field is the distance from the beginning of the shape as traveled by the vehicle (think something like an odometer reading).
 
@@ -565,7 +565,7 @@ This section covers particular cases with implications across files and fields.
 
 On loop routes, vehicles’ trips begin and end at the same location (sometimes a transit or transfer center). Vehicles usually operate continuously and allow passengers to stay onboard as the vehicle continues its loop.
 
-An example diagram of a loop route may be found <a href="/best-practices/images/loop-route">here</a>.
+An example diagram of a loop route may be found <a href="{{ /best-practices/images/loop-route | prepend: site.baseurl }}">here</a>.
 
 #### trips.trip_id
 __1.__ Model the complete round-trip for the loop with a single trip.  <!-- (102) -->
@@ -623,7 +623,7 @@ Lasso routes are loop-routes from A to A via B with three sections:
 * loop from and to B;
 * straight section from B to A.
 
-An example diagram of a lasso route may be found <a href="/best-practices/images/lasso-route">here</a>.
+An example diagram of a lasso route may be found <a href="{{ /best-practices/images/lasso-route | prepend: site.baseurl }}">here</a>.
 
 <table class="example">
   <thead>
@@ -716,7 +716,7 @@ __3.__ The trip headsign should be a global description of the trip, like displa
 
 Some routes may include branches. Alignment and stops are shared amongst these branches, but each also serves distinct stops and alignment sections. The relationship among branches may be indicated by route name(s), headsigns, and trip short name using the further guidelines below.
 
-Example branching may be seen <a href="/best-practices/images/branching">here</a>.
+Example branching may be seen <a href="{{ /best-practices/images/branching | prepend: site.baseurl }}">here</a>.
 
 __1.__ In naming branch routes, it is recommended to follow other passenger information materials. Below are descriptions and examples of two cases: <!-- (97) -->
 
