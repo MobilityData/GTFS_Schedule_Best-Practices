@@ -744,11 +744,7 @@ __1.__ In naming branch routes, it is recommended to follow other passenger info
 
 __1A.__ If timetables and on-street signage represent two distinctly named routes (e.g. 1A and 1B), then present this as such in the GTFS, using the `route_short_name` and/or `route_long_name` fields. <!-- (97A) -->
 
-__Example__: GoDurham Transit [routes 2, 2A, and 2B](http://admin.gotransitnc.org/sites/default/files/godurham/aug2016/Route%202%20PDF%20August%202016.pdf) share a common alignment throughout the majority of the route, but they vary in several different aspects.
-
-  * Route 2B serves additional stops in a spur of the shared alignment path.
-  * Routes 2A and 2B operate daytime hours M-Sat.
-  * Route 2 runs nights, Sundays, and holidays.
+__Example__: [GoDurham Transit routes 2, 2A, and 2B](branch-example-godurham) demonstrate branched routes with deviations and extensions.
 
 __1B.__ If agency-provided information describes branches as the same named route, then utilize the `trips.headsign`, `stop_times.headsign`, and/or `trips.trip_short_name` fields. <!-- (97B) -->
 
