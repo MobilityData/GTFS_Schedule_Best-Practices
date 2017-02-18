@@ -797,6 +797,4 @@ Members of this working group include:
 
 To join the working group, email [gtfs-wg@rmi.org](mailto:gtfs-wg@rmi.org).
 
-<!-- RMI Logo http://www.nwp.com/energysummit16/images/RockyMountainInstitute.png -->
-
-The GTFS Best Practices Working Group is convened and facilitated by [Rocky Mountain Institute](http://www.rmi.org/ITD), a non-profit organization transforming global energy use.
+The GTFS Best Practices Working Group is convened and facilitated by [Rocky Mountain Institute](http://www.rmi.org/ITD), a non-profit organization transforming global energy use to create a clean, prosperous, and secure low-carbon future.
