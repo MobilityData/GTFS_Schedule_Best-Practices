@@ -579,8 +579,8 @@ This section covers particular cases with implications across files and fields.
 On loop routes, vehicles’ trips begin and end at the same location (sometimes a transit or transfer center). Vehicles usually operate continuously and allow passengers to stay onboard as the vehicle continues its loop.
 
 <figure id="loop-route-fig">
+  <figcaption>Below: Loop route. The vehicle returns to the starting point in one trip. Some loop routes offer travel in one direction, and others in two directions.</figcaption>
   <img src="{{ "/best-practices/images/loop-route.svg" | prepend: site.baseurl }}" alt="A Loop Route">
-  <figcaption>A loop route</figcaption>
 </figure>
 
 #### trips.trip_id
@@ -633,15 +633,15 @@ __4.__ Indicate continuous loop trips with the same `block_id`. <!-- (90) -->
 
 <h3 id="lasso-routes">Lasso Routes</h3>
 
-Lasso routes are loop-routes from A to A via B with three sections:
+Lasso routes combine aspects of a loop route and directional route.
+
+<figure id="lasso-route-fig">
+  <figcaption>Below: Lasso routes are loop-routes from A to A via B with three sections:
 
 * straight section from A to B;
 * loop from and to B;
-* straight section from B to A.
-
-<figure id="lasso-route-fig">
+* straight section from B to A.</figcaption>
   <img style="max-width: 30%" src="{{ "/best-practices/images/lasso-route.svg" | prepend: site.baseurl }}" alt="A Lasso Route">
-  <figcaption>A lasso route</figcaption>
 </figure>
 
 <table class="example">
@@ -736,8 +736,8 @@ __3.__ The trip headsign should be a global description of the trip, like displa
 Some routes may include branches. Alignment and stops are shared amongst these branches, but each also serves distinct stops and alignment sections. The relationship among branches may be indicated by route name(s), headsigns, and trip short name using the further guidelines below.
 
 <figure id="branching-fig">
+<figcaption>Below: Three potential configurations of route branches. Primary alignment is in black. Branch is colored gold.</figcaption>
   <img src="{{ "/best-practices/images/branching.svg" | prepend: site.baseurl }}" alt="Configurations of Route Branches">
-  <figcaption>Three potential configurations of route branches</figcaption>
 </figure>
 
 __1.__ In naming branch routes, it is recommended to follow other passenger information materials. Below are descriptions and examples of two cases: <!-- (97) -->
