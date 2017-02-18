@@ -31,9 +31,6 @@ These practices help maintain the ability for a human reader to unzip and examin
 ###### Arrival Predictions
 These practices allow arrival prediction software to create real-time arrival estimates related to the schedules in [`trips.txt`](#trips) and [`stop_times.txt`](#stop-times).
 
-###### Planning and Analysis
-Software and projects such as OpenTripPlanner Analyst, Open Transit Indicators, Accessibility Observatory, National Transit Map, AllTransit and Remix provide summaries and attributes of service based on GTFS data that follow these practices.
-
 ###### Timetables
 These practices support the creation of HTML timetables based on GTFS, such as with the GTFS-to-HTML software.
 
@@ -921,8 +918,8 @@ This section covers particular cases with implications across files and fields.
 On loop routes, vehicles’ trips begin and end at the same location (sometimes a transit or transfer center). Vehicles usually operate continuously and allow passengers to stay onboard as the vehicle continues its loop.
 
 <figure id="loop-route-fig">
+  <figcaption>Below: Loop route. The vehicle returns to the starting point in one trip. Some loop routes offer travel in one direction, and others in two directions.</figcaption>
   <img src="{{ "/best-practices/images/loop-route.svg" | prepend: site.baseurl }}" alt="A Loop Route">
-  <figcaption>A loop route</figcaption>
 </figure>
 
 <table class="recommendation">
@@ -1000,15 +997,15 @@ On loop routes, vehicles’ trips begin and end at the same location (sometimes 
 
 <h3 id="lasso-routes">Lasso Routes</h3>
 
-Lasso routes are loop-routes from A to A via B with three sections:
+Lasso routes combine aspects of a loop route and directional route.
+
+<figure id="lasso-route-fig">
+  <figcaption>Below: Lasso routes are loop-routes from A to A via B with three sections:
 
 * straight section from A to B;
 * loop from and to B;
-* straight section from B to A.
-
-<figure id="lasso-route-fig">
+* straight section from B to A.</figcaption>
   <img style="max-width: 30%" src="{{ "/best-practices/images/lasso-route.svg" | prepend: site.baseurl }}" alt="A Lasso Route">
-  <figcaption>A lasso route</figcaption>
 </figure>
 
 <table class="example">
@@ -1123,92 +1120,20 @@ Lasso routes are loop-routes from A to A via B with three sections:
   </tbody>
 </table>
 
-#### trips.trip_id <!-- (103) -->
-
-__1.__ The full extent of a “vehicle round-trip” (see illustration [above](#lasso-route-fig)) consists of travel from A to B to B and back to A. An entire vehicle round-trip may be expressed by:
-
-  * __*A single*__ `trip_id`/record in `trips.txt`
-  * __*Multiple*__ `trip_id` values/records in `trips.txt`, with continuous travel indicated by `block_id`.
-
-#### stop_times.stop_headsign <!-- (94) -->
-
-__2.__ The stops along the A-B section will be passed through in both directions. `stop_headsign` facilitates distinguishing travel direction. Therefore, providing `stop_headsign` is recommended for these trips.
-
-<table class="example">
-  <thead>
-    <tr>
-      <th>Examples:</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>"A via B"</td>
-    </tr>
-    <tr>
-      <td>"A"</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="example">
-  <thead>
-    <tr>
-      <th>Chicago Transit Authority's <a href="http://www.transitchicago.com/purpleline/">Purple Line</a></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>"Southbound to Loop"</td>
-    </tr>
-    <tr>
-      <td>"Northbound via Loop"</td>
-    </tr>
-    <tr>
-      <td>"Northbound to Linden"</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="example">
-  <thead>
-    <tr>
-      <th>Edmonton Transit Service Bus Lines, here <a href="http://webdocs.edmonton.ca/transit/route_schedules_and_maps/future/RT039.pdf">the 39</a></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>"Rutherford"</td>
-    </tr>
-    <tr>
-      <td>"Century Park"</td>
-    </tr>
-  </tbody>
-</table>
-
-
-
-#### trip.trip_headsign <!-- (95) -->
-
-__3.__ The trip headsign should be a global description of the trip, like displayed in the schedules. Could be “Linden to Linden via Loop” (Chicago example), or “A to A via B” (generic example).
-
 <h3 id="branches">Branches</h3>
 
 Some routes may include branches. Alignment and stops are shared amongst these branches, but each also serves distinct stops and alignment sections. The relationship among branches may be indicated by route name(s), headsigns, and trip short name using the further guidelines below.
 
 <figure id="branching-fig">
+<figcaption>Below: Three potential configurations of route branches. Primary alignment is in black. Branch is colored gold.</figcaption>
   <img src="{{ "/best-practices/images/branching.svg" | prepend: site.baseurl }}" alt="Configurations of Route Branches">
-  <figcaption>Three potential configurations of route branches</figcaption>
 </figure>
 
 __1.__ In naming branch routes, it is recommended to follow other passenger information materials. Below are descriptions and examples of two cases: <!-- (97) -->
 
 __1A.__ If timetables and on-street signage represent two distinctly named routes (e.g. 1A and 1B), then present this as such in the GTFS, using the `route_short_name` and/or `route_long_name` fields. <!-- (97A) -->
 
-__Example__: GoDurham Transit [routes 2, 2A, and 2B](http://admin.gotransitnc.org/sites/default/files/godurham/aug2016/Route%202%20PDF%20August%202016.pdf) share a common alignment throughout the majority of the route, but they vary in several different aspects.
-
-  * Route 2B serves additional stops in a spur of the shared alignment path.
-  * Routes 2A and 2B operate daytime hours M-Sat.
-  * Route 2 runs nights, Sundays, and holidays.
+__Example__: [GoDurham Transit routes 2, 2A, and 2B](branch-example-godurham) demonstrate branched routes with deviations and extensions.
 
 __1B.__ If agency-provided information describes branches as the same named route, then utilize the `trips.headsign`, `stop_times.headsign`, and/or `trips.trip_short_name` fields. <!-- (97B) -->
 
@@ -1257,6 +1182,4 @@ Members of this working group include:
 
 To join the working group, email [gtfs-wg@rmi.org](mailto:gtfs-wg@rmi.org).
 
-<!-- RMI Logo http://www.nwp.com/energysummit16/images/RockyMountainInstitute.png -->
-
-The GTFS Best Practices Working Group is convened and facilitated by [Rocky Mountain Institute](http://www.rmi.org/ITD), a non-profit organization transforming global energy use.
+The GTFS Best Practices Working Group is convened and facilitated by [Rocky Mountain Institute](http://www.rmi.org/ITD), a non-profit organization transforming global energy use to create a clean, prosperous, and secure low-carbon future.
