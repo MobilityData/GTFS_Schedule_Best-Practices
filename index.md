@@ -31,9 +31,6 @@ These practices help maintain the ability for a human reader to unzip and examin
 ###### Arrival Predictions
 These practices allow arrival prediction software to create real-time arrival estimates related to the schedules in [`trips.txt`](#trips) and [`stop_times.txt`](#stop-times).
 
-###### Planning and Analysis
-Software and projects such as OpenTripPlanner Analyst, Open Transit Indicators, Accessibility Observatory, National Transit Map, AllTransit and Remix provide summaries and attributes of service based on GTFS data that follow these practices.
-
 ###### Timetables
 These practices support the creation of HTML timetables based on GTFS, such as with the GTFS-to-HTML software.
 
@@ -530,8 +527,6 @@ __8.__ Should be consistent with signage and printed and online customer informa
 
 ###### Trip Planners
 
-###### Accessibility
-
 ###### Arrival Predictions
 
 __1.__ Ideally, for alignments that are shared (i.e. in a case where Routes 1 and 2 operate on the same segment of roadway or track) then the shared portion of alignment should match exactly. This helps to facilitate high-quality transit cartography. <!-- (77) -->
@@ -567,8 +562,6 @@ __2.__ Including a `calendar.service_name` field can also increase the human rea
 <h3 id="fare-rules">fare_rules.txt and fare_attributes.txt</h3>
 
 ###### Trip Planners
-
-###### Accessibility Analysis
 
 __1.__ `agency_id` should be included in `fare_attributes.txt` if it the field is included in `agency.txt`. <!-- (84) -->
 
