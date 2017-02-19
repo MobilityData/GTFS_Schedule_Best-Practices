@@ -20,40 +20,71 @@ Recommended practices are organized into three primary sections
 
 Five different tags are included throughout the list of practices. These tags indicate the type of systems that require the practice being described.
 
-###### Trip Planners
+<span class="tag trip-planners"></span>
 
 These practices improve customer experience in applications like Google Maps that are used for trip planning.
 
-###### Human Readability
+<span class="tag human-readability"></span>
 
 These practices help maintain the ability for a human reader to unzip and examine GTFS files.
 
-###### Arrival Predictions
+<span class="tag arrival-predictions"></span>
+
 These practices allow arrival prediction software to create real-time arrival estimates related to the schedules in [`trips.txt`](#trips) and [`stop_times.txt`](#stop-times).
 
-###### Timetables
+<span class="tag timetables"></span>
+
 These practices support the creation of HTML timetables based on GTFS, such as with the GTFS-to-HTML software.
 
 <h1 id="practices">Practices</h1>
 
 <h2 id="publishing">Dataset Publishing & General Practices</h2>
 
-__1.__ Datasets should be published at a public, permanent URL, including the zip file name. (e.g., [www.agency.org/gtfs/gtfs.zip](http://www.agency.org/gtfs/gtfs.zip)).  Ideally, the URL should be directly downloadable without requiring login to access the file, to facilitate download by consuming software applications.<!-- (1) --> While it is recommended (and the most common practice) to make a GTFS dataset openly downloadable, if a data provider does need to control access to GTFS for licensing or other reasons, it is recommended to control access to the GTFS dataset using API keys, which will facilitate automatic downloads. <!-- (2) -->
+<table class="recommendation">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Recommendation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr id="publishing_1" class="anchor-row">
+      <td>1</td>
+      <td>Datasets should be published at a public, permanent URL, including the zip file name. (e.g., <a href="http://www.agency.org/gtfs/gtfs.zip">www.agency.org/gtfs/gtfs.zip</a>).  Ideally, the URL should be directly downloadable without requiring login to access the file, to facilitate download by consuming software applications.<!-- (1) --> While it is recommended (and the most common practice) to make a GTFS dataset openly downloadable, if a data provider does need to control access to GTFS for licensing or other reasons, it is recommended to control access to the GTFS dataset using API keys, which will facilitate automatic downloads. <!-- (2) --></td>
+    </tr>
+    <tr id="publishing_2" class="anchor-row">
+      <td>2</td>
+      <td>GTFS data is published in iterations so that a single file at a stable location always contains the latest official description of service for a transit agency (or agencies). <!-- (3) --></td>
+    </tr>
+    <tr id="publishing_3" class="anchor-row">
+      <td>3</td>
+      <td>Maintain persistent identifiers (id fields) for <code>stop_id</code>, <code>route_id</code>, and <code>agency_id</code> across data iterations whenever possible. <!-- (4) --></td>
+    </tr>
+    <tr id="publishing_4" class="anchor-row">
+      <td>4</td>
+      <td>One GTFS dataset should contain current and upcoming service (sometimes called a “merged” dataset). <!-- (5) -->
 
-__2.__ GTFS data is published in iterations so that a single file at a stable location always contains the latest official description of service for a transit agency (or agencies). <!-- (3) -->
+        <ul>
+          <li>At any time, the published GTFS dataset should be valid for for at least the next 7 days, and ideally for as long as the operator is confident that the schedule will continue to be operated.</li>
+          <li>If possible, the GTFS dataset should cover at least the next 30 days of service.</li>
+        </ul>
 
-__3.__ Maintain persistent identifiers (id fields) for `stop_id`, `route_id`, and `agency_id` across data iterations whenever possible. <!-- (4) -->
-
-__4.__ One GTFS dataset should contain current and upcoming service (sometimes called a “merged” dataset). <!-- (5) -->
-
-  * At any time, the published GTFS dataset should be valid for for at least the next 7 days, and ideally for as long as the operator is confident that the schedule will continue to be operated.
-  * If possible, the GTFS dataset should cover at least the next 30 days of service.
-
-__5.__ Remove old services (expired calendars) from the feed. <!-- (10) -->
-
-__6.__ If a service modification will go into effect in 7 days or fewer, express this service change through a [GTFS-realtime](https://developers.google.com/transit/gtfs-realtime/) feed (service advisories or trip updates) rather than static GTFS dataset. <!-- (8) -->
-
-__7.__ The web-server hosting GTFS data should be configured to correctly report the file modification date (see [HTTP/1.1 - Request for Comments 2616](https://tools.ietf.org/html/rfc2616#section-14.29), under Section 14.29). <!-- (9) -->
+      </td>
+    </tr>
+    <tr id="publishing_5" class="anchor-row">
+      <td>5</td>
+      <td>Remove old services (expired calendars) from the feed. <!-- (10) --></td>
+    </tr>
+    <tr id="publishing_6" class="anchor-row">
+      <td>6</td>
+      <td>If a service modification will go into effect in 7 days or fewer, express this service change through a <a href="https://developers.google.com/transit/gtfs-realtime/">GTFS-realtime</a> feed (service advisories or trip updates) rather than static GTFS dataset. <!-- (8) --></td>
+    </tr>
+    <tr id="publishing_7" class="anchor-row">
+      <td>7</td>
+      <td>The web-server hosting GTFS data should be configured to correctly report the file modification date (see <a href="https://tools.ietf.org/html/rfc2616#section-14.29">HTTP/1.1 - Request for Comments 2616</a>, under Section 14.29). <!-- (9) --></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Practice Recommendations Organized by File
 
@@ -110,8 +141,6 @@ This section shows practices organized by file and field, aligning with the [GTF
 <span class="tag trip-planners"></span>
 <span class="tag human-readability"></span>
 <span class="tag timetables"></span>
-<span class="tag planning-and-analysis"></span>
-
 
 <table class="recommendation">
   <thead>
@@ -535,7 +564,7 @@ Loop routes: Loop routes require special `stop_times` considerations. (See: [Loo
   </thead>
   <tbody>
     <tr id="trips_1" class="anchor-row">
-      <td rowspan="3"><code>trips.trip_headsign</code></td>
+      <td rowspan="3"><code>trip_headsign</code></td>
       <td><span class="tag trip-planners"></span></td>
       <td>1</td>
       <td>Do not provide route names (matching <code>route_short_name</code> and <code>route_long_name</code>) in the <code>trip_headsign</code> or <code>stop_headsign</code> fields. <!-- (98) --></td>
@@ -553,27 +582,27 @@ Loop routes: Loop routes require special `stop_times` considerations. (See: [Loo
           </thead>
           <tbody>
             <tr>
-              <td><nobr>2A. Destination-only</nobr></td>
+              <td>2A. Destination-only</td>
               <td>Provide the terminus destination. e.g. "Transit Center", “Portland City Center”, or “Jantzen Beach” <!-- (58A) --> </td>
             </tr>
             <tr>
-              <td><nobr>2B. Destinations with waypoints</nobr></td>
+              <td>2B. Destinations with waypoints</td>
               <td>&lt;destination&gt; via &lt;waypoint&gt; “Highgate via Charing Cross”. If waypoint(s) are removed from the headsign show to passengers after the vehicle passes those waypoints, use <code>stop_times.stop_headsign</code> to set an updated headsign. <!-- (58B) --> </td>
             </tr>
             <tr>
-              <td><nobr>2C. Regional placename with local stops</nobr></td>
+              <td>2C. Regional placename with local stops</td>
               <td>If there will be multiple stops inside the city or borough of destination, use <code>stop_times.stop_headsign</code> once reaching the destination city. <!-- (58C) --> </td>
             </tr>
             <tr>
-              <td><nobr>2D. Direction-only</nobr></td>
+              <td>2D. Direction-only</td>
               <td>Indicate using terms such as “Northbound”, “Inbound”, “Clockwise,” or similar directions. <!-- (58D) --></td>
             </tr>
             <tr>
-              <td><nobr>2E. Direction with destination</nobr></td>
+              <td>2E. Direction with destination</td>
               <td>&lt;direction&gt; to &lt;terminus name&gt; e.g. “Southbound to San Jose” <!-- (58E) --></td>
             </tr>
             <tr>
-              <td><nobr>2F. Direction with destination and waypoints</nobr></td>
+              <td>2F. Direction with destination and waypoints</td>
               <td>&lt;direction&gt; via &lt;waypoint&gt; to &lt;destination&gt; (“Northbound via Charing Cross to Highgate”). <!-- (58F) --></td>
             </tr>
           </tbody>
@@ -1000,11 +1029,13 @@ On loop routes, vehicles’ trips begin and end at the same location (sometimes 
 Lasso routes combine aspects of a loop route and directional route.
 
 <figure id="lasso-route-fig">
-  <figcaption>Below: Lasso routes are loop-routes from A to A via B with three sections:
-
-* straight section from A to B;
-* loop from and to B;
-* straight section from B to A.</figcaption>
+  <figcaption>Below: Lasso routes are loop-routes from A to A via B with three sections:<br>
+    <ul>
+      <li>straight section from A to B;</li>
+      <li>loop from and to B;</li>
+      <li>straight section from B to A.</li>
+    </ul>
+  </figcaption>
   <img style="max-width: 30%" src="{{ "/best-practices/images/lasso-route.svg" | prepend: site.baseurl }}" alt="A Lasso Route">
 </figure>
 
@@ -1044,8 +1075,8 @@ Lasso routes combine aspects of a loop route and directional route.
       <td>The full extent of a “vehicle round-trip” (see illustration <a href="#lasso-route-fig">above</a>) consists of travel from A to B to B and back to A. An entire vehicle round-trip may be expressed by: <!-- (103) -->
 
         <ul>
-          <li>A <strong>single</strong> `trip_id` value/record in `trips.txt`</li>
-          <li><strong>Multiple</strong> `trip_id` values/records in `trips.txt`, with continuous travel indicated by `block_id`.</li>
+          <li>A <strong>single</strong> <code>trip_id</code> value/record in <code>trips.txt</code></li>
+          <li><strong>Multiple</strong> <code>trip_id</code> values/records in <code>trips.txt</code>, with continuous travel indicated by <code>block_id</code>.</li>
         </ul>
 
       </td>
@@ -1054,7 +1085,7 @@ Lasso routes combine aspects of a loop route and directional route.
       <td><code>stop_times.stop_headsign</code></td>
       <td></td>
       <td>2</td>
-      <td>The stops along the A-B section will be passed through in both directions. `stop_headsign` facilitates distinguishing travel direction. Therefore, providing `stop_headsign` is recommended for these trips. <!-- (94) -->
+      <td>The stops along the A-B section will be passed through in both directions. <code>stop_headsign</code> facilitates distinguishing travel direction. Therefore, providing <code>stop_headsign</code> is recommended for these trips. <!-- (94) -->
 
         <table class="example">
           <thead>
@@ -1129,15 +1160,43 @@ Some routes may include branches. Alignment and stops are shared amongst these b
   <img src="{{ "/best-practices/images/branching.svg" | prepend: site.baseurl }}" alt="Configurations of Route Branches">
 </figure>
 
-__1.__ In naming branch routes, it is recommended to follow other passenger information materials. Below are descriptions and examples of two cases: <!-- (97) -->
+<table class="recommendation">
+  <thead>
+    <tr>
+      <th>Field Name</th>
+      <th>Tags</th>
+      <th>#</th>
+      <th>Recommendation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr id="branches_1" class="anchor-row">
+      <td rowspan="3"><code></code></td>
+      <td>
+      </td>
+      <td>1</td>
+      <td>In naming branch routes, it is recommended to follow other passenger information materials. Below are descriptions and examples of two cases: <!-- (97) --></td>
+    </tr>
+    <tr id="branches_1A" class="anchor-row">
+      <td></td>
+      <td>1A</td>
+      <td>If timetables and on-street signage represent two distinctly named routes (e.g. 1A and 1B), then present this as such in the GTFS, using the <code>route_short_name</code> and/or <code>route_long_name</code> fields. <!-- (97A) -->
 
-__1A.__ If timetables and on-street signage represent two distinctly named routes (e.g. 1A and 1B), then present this as such in the GTFS, using the `route_short_name` and/or `route_long_name` fields. <!-- (97A) -->
+      Example: <a href="branch-example-godurham">GoDurham Transit routes 2, 2A, and 2B</a> demonstrate branched routes with deviations and extensions.
 
-__Example__: [GoDurham Transit routes 2, 2A, and 2B](branch-example-godurham) demonstrate branched routes with deviations and extensions.
+      </td>
+    </tr>
+    <tr id="branches_1B" class="anchor-row">
+      <td></td>
+      <td>1B</td>
+      <td>If agency-provided information describes branches as the same named route, then utilize the <code>trips.headsign</code>, <code>stop_times.headsign</code>, and/or <code>trips.trip_short_name</code> fields. <!-- (97B) -->
 
-__1B.__ If agency-provided information describes branches as the same named route, then utilize the `trips.headsign`, `stop_times.headsign`, and/or `trips.trip_short_name` fields. <!-- (97B) -->
+      Example: GoTriangle <a href="http://admin.gotransitnc.org/sites/default/files/maps-and-schedules/gotriangle/RoutesAndSchedules-1561.pdf">route 300</a> travels to different locations depending on the time of day. During peak commuter hours extra legs are added onto the standard route to accommodate workers entering and leaving the city.
 
-__Example__: GoTriangle [route 300](http://admin.gotransitnc.org/sites/default/files/maps-and-schedules/gotriangle/RoutesAndSchedules-1561.pdf) travels to different locations depending on the time of day. During peak commuter hours extra legs are added onto the standard route to accommodate workers entering and leaving the city.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="about">About This Document</h2>
 
