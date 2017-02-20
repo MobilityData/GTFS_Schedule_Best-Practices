@@ -86,11 +86,11 @@ These practices support the creation of HTML timetables based on GTFS, such as w
   </tbody>
 </table>
 
-## Practice Recommendations Organized by File
+<h2 id="by-file">Practice Recommendations Organized by File</h2>
 
 This section shows practices organized by file and field, aligning with the [GTFS reference](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md).
 
-### All Files
+<h3 id="all-files">All Files</h3>
 
 <table class="recommendation">
   <thead>
@@ -358,12 +358,12 @@ This section shows practices organized by file and field, aligning with the [GTF
           </thead>
           <tbody>
             <tr>
-              <td>Chicago Union Station</td>
+              <td><a href="{{ "/images/chicago-union" | prepend: site.baseurl }}">Chicago Union Station</a></td>
               <td>Chicago Union Station Platform 19</td>
             </tr>
             <tr>
               <td><a href="{{ "/images/sf-ferry" | prepend: site.baseurl }}">San Francisco Ferry Building Terminal</a></td>
-              <td>San Francisco Ferry Building Terminal</td>
+              <td>San Francisco Ferry Building Terminal Gate E</td>
             </tr>
             <tr>
               <td><a href="{{ "/images/transit-center" | prepend: site.baseurl }}">Downtown Transit Center</a></td>
@@ -721,22 +721,22 @@ Loop routes: Loop routes require special `stop_times` considerations. (See: [Loo
           <tbody>
             <tr>
               <td><a href="https://www.sfmta.com/getting-around/transit/routes-stops/n-judah">“N”/“Judah”</a></td>
-              <td><code>route_short_name</code>/<code>route_long_name</code></td>
+              <td><code>route_short_name</code>/<br><code>route_long_name</code></td>
               <td><a href="https://www.sfmta.com/">Muni</a>, in San Francisco</td>
             </tr>
             <tr>
               <td><a href="https://trimet.org/schedules/r006.htm">"6"/"ML King Jr Blvd"</a></td>
-              <td><code>route_short_name</code>/<code>route_long_name</code></td>
+              <td><code>route_short_name</code>/<br><code>route_long_name</code></td>
               <td><a href="https://trimet.org/">TriMet</a>, in Portland, Or.</td>
             </tr>
             <tr>
               <td><a href="http://www.ratp.fr/informer/pdf/orienter/f_plan.php?nompdf=m6">“6”/“Nation - Étoile”</a></td>
-              <td><code>route_short_name</code>/<code>route_long_name</code></td>
+              <td><code>route_short_name</code>/<br><code>route_long_name</code></td>
               <td><a href="http://www.ratp.fr/">RATP</a>, in Paris France.</td>
             </tr>
             <tr>
               <td><a href="http://www.bvg.de/images/content/linienverlaeufe/LinienverlaufU2.pdf">“U2”-“Pankow – Ruhleben”</a></td>
-              <td><code>route_short_name</code>-<code>route_long_name</code></td>
+              <td><code>route_short_name</code>-<br><code>route_long_name</code></td>
               <td><a href="http://www.bvg.de/">BVG</a>, in Berlin, Germany</td>
             </tr>
           </tbody>
@@ -1241,4 +1241,7 @@ Members of this working group include:
 
 To join the working group, email [gtfs-wg@rmi.org](mailto:gtfs-wg@rmi.org).
 
-The GTFS Best Practices Working Group is convened and facilitated by [Rocky Mountain Institute](http://www.rmi.org/ITD), a non-profit organization transforming global energy use to create a clean, prosperous, and secure low-carbon future.
+<figure>
+  <img id="rmi-logo" src="/best-practices/images/rmi.png" alt="The Rocky Mountain Institute logo">
+  <figcaption>The GTFS Best Practices Working Group is convened and facilitated by <a href="http://www.rmi.org/ITD">Rocky Mountain Institute</a>, a non-profit organization transforming global energy use to create a clean, prosperous, and secure low-carbon future.</figcaption>
+</figure>
