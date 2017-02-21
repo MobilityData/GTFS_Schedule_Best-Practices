@@ -1214,11 +1214,11 @@ Please link here in order to provide feed producers with guidance for correct fo
 
 <h3 id="amend">How to propose or amend published GTFS Best Practices</h3>
 
-GTFS applications and practice evolve, and so this document may need to be amended from time to time. To propose an amendment to this document, open a pull request in GitHub and advocate for the change. The GTFS Best Practices Working Group will meet quarterly to discuss and approve selected changes.
+GTFS applications and practice evolve, and so this document may need to be amended from time to time. To propose an amendment to this document, open a pull request [in the GTFS Best Practices GitHub repository](https://github.com/rocky-mountain-institute/gtfs-best-practices) and advocate for the change. The GTFS Best Practices Working Group will meet quarterly to discuss and approve selected changes.
 
 <h2 id="working-group">GTFS Best Practices Working Group</h2>
 
-The GTFS Best Practices Working Group consists of public transportation providers, developers of GTFS-consuming applications, consultants, and academic organizations to define common practices and expectations for GTFS data. The goals of this working group are to support greater interoperability of data data.
+The GTFS Best Practices Working Group consists of public transportation providers, developers of GTFS-consuming applications, consultants, and academic organizations to define common practices and expectations for GTFS data. The goals of this working group are to support greater interoperability of data data. To join the working group, email [gtfs@rmi.org](mailto:gtfs@rmi.org).
 
 Members of this working group include:
 
@@ -1239,9 +1239,7 @@ Members of this working group include:
 * [TriMet](https://trimet.org/)
 * [World Bank](http://www.worldbank.org/)
 
-To join the working group, email [gtfs-wg@rmi.org](mailto:gtfs-wg@rmi.org).
-
 <figure>
-  <img id="rmi-logo" src="/best-practices/images/rmi.png" alt="The Rocky Mountain Institute logo">
+  <a href="http://www.rmi.org/mobility"><img id="rmi-logo" src="/best-practices/images/rmi-small.png" alt="The Rocky Mountain Institute Mobility Transformation" width="240" height="63" border="0" style="padding:15px"></a>
   <figcaption>The GTFS Best Practices Working Group is convened and facilitated by <a href="http://www.rmi.org/ITD">Rocky Mountain Institute</a>, a nonprofit organization transforming global energy use to create a clean, prosperous, and secure low-carbon future.</figcaption>
 </figure>
