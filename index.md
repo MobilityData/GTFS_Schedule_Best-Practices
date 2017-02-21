@@ -1182,7 +1182,7 @@ Some routes may include branches. Alignment and stops are shared amongst these b
       <td>1A</td>
       <td>If timetables and on-street signage represent two distinctly named routes (e.g. 1A and 1B), then present this as such in the GTFS, using the <code>route_short_name</code> and/or <code>route_long_name</code> fields. <!-- (97A) -->
 
-      Example: <a href="branch-example-godurham">GoDurham Transit routes 2, 2A, and 2B</a> demonstrate branched routes with deviations and extensions.
+      Example: <a href="{{ "/branch-example-godurham" | prepend: site.baseurl }}">GoDurham Transit routes 2, 2A, and 2B</a> demonstrate branched routes with deviations and extensions.
 
       </td>
     </tr>
