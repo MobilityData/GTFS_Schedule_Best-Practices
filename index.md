@@ -1214,7 +1214,7 @@ Please link here in order to provide feed producers with guidance for correct fo
 
 <h3 id="amend">How to propose or amend published GTFS Best Practices</h3>
 
-GTFS applications and practice evolve, and so this document may need to be amended from time to time. To propose an amendment to this document, open a pull request [in the GTFS Best Practices GitHub repository](https://github.com/rocky-mountain-institute/gtfs-best-practices) and advocate for the change. The GTFS Best Practices Working Group will meet quarterly to discuss and approve selected changes.
+GTFS applications and practice evolve, and so this document may need to be amended from time to time. To propose an amendment to this document, open a pull request [in the GTFS Best Practices GitHub repository](https://github.com/rocky-mountain-institute/gtfs-best-practices) and advocate for the change. The GTFS Best Practices Working Group will meet quarterly to discuss and approve selected changes. Please send other questions or suggestions to [gtfs@rmi.org](mailto:gtfs@rmi.org).
 
 <h2 id="working-group">GTFS Best Practices Working Group</h2>
 
