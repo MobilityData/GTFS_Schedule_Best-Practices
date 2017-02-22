@@ -1240,6 +1240,6 @@ Members of this working group include:
 * [World Bank](http://www.worldbank.org/)
 
 <figure>
-  <a href="http://www.rmi.org/mobility"><img id="rmi-logo" src="/best-practices/images/rmi-small.png" alt="The Rocky Mountain Institute Mobility Transformation" width="240" height="63" border="0" style="padding:15px;height:63px;width:240px;"></a>
+  <a href="http://www.rmi.org/mobility"><img id="rmi-logo" src="/best-practices/images/rmi-small.png" alt="The Rocky Mountain Institute Mobility Transformation" width="240" height="63" border="0" style="height:63px;width:240px;"></a>
   <figcaption>The GTFS Best Practices Working Group is convened and facilitated by <a href="http://www.rmi.org/ITD">Rocky Mountain Institute</a>, a nonprofit organization transforming global energy use to create a clean, prosperous, and secure low-carbon future.</figcaption>
 </figure>
