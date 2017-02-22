@@ -8,6 +8,12 @@ layout: best-practices
 
 These are recommended practices for describing public transportation services in the [General Transit Feed Specification (GTFS)](https://gtfs.org). These practices have been synthesized from the experience of the [GTFS Best Practices working group](#working-group) members and [application-specific GTFS practice recommendations](http://www.transitwiki.org/TransitWiki/index.php/Best_practices_for_creating_GTFS).
 
+### Linking to This Document
+
+Please link here in order to provide feed producers with guidance for correct formation of GTFS data. Each individual recommendation has an anchor link. Click the recommendation to get the URL for the in-page anchor link.
+
+If your GTFS-consuming application involves particular requirements or recommendations for GTFS data practices, it is recommended to publish a document with those requirements or recommendations to supplement these common best practices.
+
 ### Document Structure
 
 Recommended practices are organized into three primary sections
@@ -1207,10 +1213,6 @@ The objectives of maintaining GTFS Best Practices is to:
 * Improve end-user customer experience in public transportation apps
 * Make it easier for software developers to deploy and scale applications, products, and services
 * Facilitate the use of GTFS in various application categories (beyond its original focus on trip planning)
-
-<h3 id="linking">Linking to This Document</h3>
-
-Please link here in order to provide feed producers with guidance for correct formation of GTFS data. If your GTFS-consuming application involves particular requirements or recommendations for GTFS data practices, it is recommended to publish a document with those requirements or recommendations to supplement these common best practices.
 
 <h3 id="amend">How to propose or amend published GTFS Best Practices</h3>
 
