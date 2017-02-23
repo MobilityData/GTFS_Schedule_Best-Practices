@@ -26,7 +26,7 @@ The working group anticipates that some GTFS Best Practices will eventually beco
 
 ### Do GTFS validator tools check for conformance with these Best Practices?
 
-No validator tool currently checks for conformance with all Best Practices.
+No validator tool currently checks for conformance with all Best Practices. Various validator tools check for conformance with some of these best practices. For a list of GTFS validator tools, see [Testing Feeds](http://gtfs.org/testing/). If you write a GTFS validator tool that references these Best Practices, please email [gtfs@rmi.org](mailto:gtfs@rmi.org).
 
 ### I represent a transit agency. What steps can I take so that our software service providers and vendors follow these Best Practices?
 
@@ -42,4 +42,4 @@ Email [gtfs@rmi.org](mailto:gtfs@rmi.org) or open an issue or pull request in th
 
 ### How do I get involved?
 
-Email gtfs@rmi.org.
+Email [gtfs@rmi.org](mailto:gtfs@rmi.org).
