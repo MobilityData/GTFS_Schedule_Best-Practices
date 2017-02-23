@@ -4,9 +4,9 @@
 
 ### Why are these GTFS Best Practices important?
 
-The objectives of publishing GTFS Best Practices are to:
+The objectives of GTFS Best Practices are:
 
-* Improve end-user customer experience in public transportation apps
+* To improve end-user customer experience in public transportation apps
 * Support broad data interoperability to make it easier for software developers to deploy and scale applications, products, and services
 * Facilitate the use of GTFS in various application categories (beyond its original focus on trip planning)
 
@@ -34,7 +34,7 @@ Refer your vendor or software service provider to these Best Practices. We recom
 
 ### What should I do if I notice a GTFS data feed does not conform to these Best Practices?
 
-Identify the contact for the feed, using the (https://github.com/google/transit/pull/31/files)[proposed feed\_contact\_email or feed\_contact\_url] fields in *feed_info.txt* if they exist, or looking up contact information on the transit agency or feed producer website. When communicating the issue to the feed producer, link to the specific GTFS Best Practice under discussion. (See ["Linking to this Document"](http://gtfs.org/best-practices/#linking-to-this-document)).
+Identify the contact for the feed, using the [proposed feed\_contact\_email or feed\_contact\_url](https://github.com/google/transit/pull/31/files) fields in *feed_info.txt* if they exist, or looking up contact information on the transit agency or feed producer website. When communicating the issue to the feed producer, link to the specific GTFS Best Practice under discussion. (See ["Linking to this Document"](http://gtfs.org/best-practices/#linking-to-this-document)).
 
 ### I would like to propose a modification/addition to the Best Practices. How do I do this?
 
