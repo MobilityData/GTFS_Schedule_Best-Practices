@@ -38,7 +38,7 @@ Refer your vendor or software service provider to these Best Practices. We recom
 
 ### What should I do if I notice a GTFS data feed does not conform to these Best Practices?
 
-Identify the contact for the feed, using the [proposed ](https://github.com/google/transit/pull/31/files)*[feed_contact_emai*l](https://github.com/google/transit/pull/31/files)[ or ](https://github.com/google/transit/pull/31/files)*[feed_contact_ur*l](https://github.com/google/transit/pull/31/files) fields in *feed_info.txt* if they exist, or looking up contact information on the transit agency or feed producer website. When communicating the issue to the feed producer, link to the specific GTFS Best Practice under discussion. (See ["Linking to this Document"](http://gtfs.org/best-practices/#linking-to-this-document)).
+Identify the contact for the feed, using the (https://github.com/google/transit/pull/31/files)[proposed feed\_contact\_email or feed\_contact\_url] fields in *feed_info.txt* if they exist, or looking up contact information on the transit agency or feed producer website. When communicating the issue to the feed producer, link to the specific GTFS Best Practice under discussion. (See ["Linking to this Document"](http://gtfs.org/best-practices/#linking-to-this-document)).
 
 ### I would like to propose a modification/addition to the Best Practices. How do I do this?
 
