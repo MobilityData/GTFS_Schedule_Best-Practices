@@ -1195,7 +1195,7 @@ Some routes may include branches. Alignment and stops are shared amongst these b
     <tr id="branches_1B" class="anchor-row">
       <td></td>
       <td>1B</td>
-      <td>If agency-provided information describes branches as the same named route, then utilize the <code>trips.headsign</code>, <code>stop_times.headsign</code>, and/or <code>trips.trip_short_name</code> fields. <!-- (97B) -->
+      <td>If agency-provided information describes branches as the same named route, then utilize the <code>trips.trip_headsign</code>, <code>stop_times.stop_headsign</code>, and/or <code>trips.trip_short_name</code> fields. <!-- (97B) -->
 
       Example: GoTriangle <a href="http://admin.gotransitnc.org/sites/default/files/maps-and-schedules/gotriangle/RoutesAndSchedules-1561.pdf">route 300</a> travels to different locations depending on the time of day. During peak commuter hours extra legs are added onto the standard route to accommodate workers entering and leaving the city.
 
