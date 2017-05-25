@@ -71,7 +71,7 @@ These practices support the creation of HTML timetables based on GTFS, such as w
       <td>One GTFS dataset should contain current and upcoming service (sometimes called a “merged” dataset). <!-- (5) -->
 
         <ul>
-          <li>At any time, the published GTFS dataset should be valid for for at least the next 7 days, and ideally for as long as the operator is confident that the schedule will continue to be operated.</li>
+          <li>At any time, the published GTFS dataset should be valid for at least the next 7 days, and ideally for as long as the operator is confident that the schedule will continue to be operated.</li>
           <li>If possible, the GTFS dataset should cover at least the next 30 days of service.</li>
         </ul>
 
