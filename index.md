@@ -518,8 +518,8 @@ Loop routes: Loop routes require special `stop_times` considerations. (See: [Loo
       </td>
       <td>1</td>
       <td>
-        <q>0 or (empty): This is a recommended transfer point between two routes.</q>
-        <br>If there are multiple transfer opportunities that include a superior option (i.e. a transit center with additional amenities or a station with adjacent or connected boarding facilities/platforms), specify a recommended transfer point. A change to the Specification — “recommended transfer point between <del>two</del> routes” — would make this definition more precise, as a recommended transfer point applies to all routes. <!-- (50) -->
+        <q>0 or (empty): This is a recommended transfer point between routes.</q>
+        <br>If there are multiple transfer opportunities that include a superior option (i.e. a transit center with additional amenities or a station with adjacent or connected boarding facilities/platforms), specify a recommended transfer point.<!-- (50) -->
       </td>
     </tr>
     <tr id="transfers_2" class="anchor-row">
