@@ -68,7 +68,7 @@ These practices support the creation of HTML timetables based on GTFS, such as w
     </tr>
     <tr id="publishing_4" class="anchor-row">
       <td>4</td>
-      <td>One GTFS dataset should contain current and upcoming service (sometimes called a “merged” dataset). <!-- (5) -->
+      <td>One GTFS dataset should contain current and upcoming service (sometimes called a “merged” dataset). You can create a merged dataset from two different GTFS feeds using the <a href="https://github.com/google/transitfeed/wiki/Merge">Google transitfeed tool's Merge function</a> <!-- (5) -->
 
         <ul>
           <li>At any time, the published GTFS dataset should be valid for at least the next 7 days, and ideally for as long as the operator is confident that the schedule will continue to be operated.</li>
