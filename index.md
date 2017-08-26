@@ -12,7 +12,7 @@ These are recommended practices for describing public transportation services in
 
 Please link here in order to provide feed producers with guidance for correct formation of GTFS data. Each individual recommendation has an anchor link. Click the recommendation to get the URL for the in-page anchor link.
 
-If your GTFS-consuming application involves particular requirements or recommendations for GTFS data practices, it is recommended to publish a document with those requirements or recommendations to supplement these common best practices.
+If a GTFS-consuming application makes requirements or recommendations for GTFS data practices that are not described here, it is recommended to publish a document with those requirements or recommendations to supplement these common best practices.
 
 ### Document Structure
 
@@ -68,7 +68,7 @@ These practices support the creation of HTML timetables based on GTFS, such as w
     </tr>
     <tr id="publishing_4" class="anchor-row">
       <td>4</td>
-      <td>One GTFS dataset should contain current and upcoming service (sometimes called a “merged” dataset). <!-- (5) -->
+      <td>One GTFS dataset should contain current and upcoming service (sometimes called a “merged” dataset). Google transitfeed tool's <a href="https://github.com/google/transitfeed/wiki/Merge">merge function</a> can be used to create a merged dataset from two different GTFS feeds. <!-- (5) -->
 
         <ul>
           <li>At any time, the published GTFS dataset should be valid for at least the next 7 days, and ideally for as long as the operator is confident that the schedule will continue to be operated.</li>
