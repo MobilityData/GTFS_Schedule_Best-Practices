@@ -1,6 +1,6 @@
 ---
 ---
-<h3 id="stops">stops.txt</h3>
+### stops.txt {#stops}
 
 <table class="recommendation">
   <thead>

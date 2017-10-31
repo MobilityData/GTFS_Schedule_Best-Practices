@@ -1,6 +1,6 @@
 ---
 ---
-<h3 id="frequencies">frequencies.txt</h3>
+### frequencies.txt {#frequencies}
 
 <table class="recommendation">
   <thead>

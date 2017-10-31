@@ -1,6 +1,6 @@
 ---
 ---
-<h3 id="feed-info">feed_info.txt</h3>
+### feed_info.txt {#feed_info}
 
 <span class="tag trip-planners"></span>
 <span class="tag human-readability"></span>

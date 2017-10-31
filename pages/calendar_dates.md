@@ -1,6 +1,6 @@
 ---
 ---
-<h3 id="calendar_dates">calendar_dates.txt</h3>
+### calendar_dates.txt {#calendar_dates}
 
 <table class="recommendation">
   <thead>

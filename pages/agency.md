@@ -1,6 +1,49 @@
 ---
+table_data:
+  - field_name: agency_id
+    recommendations:
+      - number: 1
+        tags: ['human-readability', 'trip-planners', 'timetables']
+        text: "Should be included, even if there is only one agency in the feed. (See also: recommendation to include <code>agency_id</code> in <a href='/best-practices/#routes'><code>routes.txt</code></a> and <a href='/best-practices/#fare-attributes'><code>fare_attributes.txt</code></a>)"
+  - field_name: agency_lang
+    recommendations:
+      - number: 2
+        text: "Should be included."
+  - field_name: agency_phone
+    recommendations:
+      - number: 3
+        text: "Should be included unless no such customer service phone exists."
+  - field_name: agency_email
+    recommendations:
+      - number: 4
+        text: "Should be included unless no such customer service email exists."
+  - field_name: agency_fare_url
+    recommendations:
+      - number: 5
+        text: "Should be included unless the agency is fully fare-free."
 ---
-<h3 id="agency">agency.txt</h3>
+### agency.txt {#agency}
+
+<table class="recommendation">
+  <thead>
+    <tr>
+      <th>Field Name</th>
+      <th>ID</th>
+      <th>Recommendation</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for field in page.table_data %}
+      {% for recommendation in field.recommendations %}
+    <tr id="{{ field.field_name }}_{{ recommendation.number }}" class="anchor-row {% for tag in recommendation.tags %}{{ tag }} {% endfor %}">
+      <td>{% if forloop.first %}<code>{{ field.field_name }}</code>{% endif %}</td>
+      <td>{{ recommendation.number }}</td>
+      <td>{{ recommendation.text }}</td>
+    </tr>
+      {% endfor %}
+    {% endfor %}
+  </tbody>
+</table>
 
 <span class="tag trip-planners"></span>
 <span class="tag human-readability"></span>

@@ -1,6 +1,6 @@
 ---
 ---
-<h3 id="fare-attributes">fare_attributes.txt</h3>
+### fare_attributes.txt {#fare_attributes}
 
 <table class="recommendation">
   <thead>

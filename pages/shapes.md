@@ -1,6 +1,6 @@
 ---
 ---
-<h3 id="shapes">shapes.txt (alignments)</h3>
+### shapes.txt {#shapes}
 
 <table class="recommendation">
   <thead>

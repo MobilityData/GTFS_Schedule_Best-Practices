@@ -1,6 +1,6 @@
 ---
 ---
-<h3 id="fare-rules">fare_rules.txt</h3>
+### fare_rules.txt {#fare_rules}
 
 <table class="recommendation">
   <thead>
