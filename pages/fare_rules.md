@@ -1,35 +1,35 @@
 ---
+table_data:
+  - field_name: "All Fields"
+    recommendations:
+      - ID: 1
+        tags: ['trip-planners','accessibility']
+        text: "`agency_id` should be included in `fare_attributes.txt` if it the field is included in `agency.txt`. <!-- (84) -->"
+      - ID: 2
+        tags: []
+        text: "If a fare system cannot be accurately modeled, avoid further confusion and leave it blank. <!-- (85) -->"
+      - ID: 3
+        tags: []
+        text: "Include fares (`fare_attributes.txt` and `fare_rules.txt`) and model them as accurately as possible. In edge cases where fares cannot be accurately modeled, the fare should be represented as more expensive rather than less expensive so customers will not attempt to board with insufficient fare. If the vast majority of fares cannot be modeled correctly, do not include fare information in the feed. <!-- (86) -->"
 ---
-<h3 id="fare-rules">fare_rules.txt</h3>
 
 <table class="recommendation">
   <thead>
     <tr>
       <th>Field Name</th>
-      <th>Tags</th>
-      <th>#</th>
+      <th>ID</th>
       <th>Recommendation</th>
     </tr>
   </thead>
   <tbody>
-    <tr id="fare_rules_1" class="anchor-row">
-      <td rowspan="3"><code></code></td>
-      <td>
-        <span class="tag trip-planners"></span>
-        <span class="tag accessibility"></span>
-      </td>
-      <td>1</td>
-      <td><code>agency_id</code> should be included in <code>fare_attributes.txt</code> if it the field is included in <code>agency.txt</code>. <!-- (84) --></td>
+    {% for field in page.table_data %}
+      {% for recommendation in field.recommendations %}
+    <tr id="{{ page.slug }}_{{ recommendation.ID }}" class="anchor-row{% if forloop.first %} field-row{% endif %}{% for tag in recommendation.tags %} {{ tag }}{% endfor %}">
+      <td>{% if forloop.first %}<code>{{ field.field_name }}</code>{% endif %}</td>
+      <td>{{ recommendation.ID }}</td>
+      <td>{{ recommendation.text | markdownify }}{{ recommendation.example_table }}</td>
     </tr>
-    <tr id="fare_rules_2" class="anchor-row">
-      <td></td>
-      <td>2</td>
-      <td>If a fare system cannot be accurately modeled, avoid further confusion and leave it blank. <!-- (85) --></td>
-    </tr>
-    <tr id="fare_rules_3" class="anchor-row">
-      <td></td>
-      <td>3</td>
-      <td>Include fares (<code>fare_attributes.txt</code> and <code>fare_rules.txt</code>) and model them as accurately as possible. In edge cases where fares cannot be accurately modeled, the fare should be represented as more expensive rather than less expensive so customers will not attempt to board with insufficient fare. If the vast majority of fares cannot be modeled correctly, do not include fare information in the feed. <!-- (86) --></td>
-    </tr>
+      {% endfor %}
+    {% endfor %}
   </tbody>
 </table>

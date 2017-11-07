@@ -1,3 +1,7 @@
+---
+layout: best-practices
+---
+
 # GTFS Best Practices
 
 ## Frequently Asked Questions (FAQ)

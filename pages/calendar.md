@@ -1,30 +1,33 @@
 ---
+table_data:
+  - field_name: "All Fields"
+    recommendations:
+      - ID: 1
+        tags: ['human-readability','timetables']
+        text: "`calendar_dates.txt` should only contain a limited number of exceptions to the schedule. Regularly-scheduled service should be configured using `calendar.txt`."
+      - ID: 2
+        tags: []
+        text: "Including a `calendar.service_name` field can also increase the human readability of GTFS, although this is not adopted in the spec."
+
 ---
-<h3 id="calendar">calendar.txt</h3>
 
 <table class="recommendation">
   <thead>
     <tr>
       <th>Field Name</th>
-      <th>Tags</th>
-      <th>#</th>
+      <th>ID</th>
       <th>Recommendation</th>
     </tr>
   </thead>
   <tbody>
-    <tr id="calendar_1" class="anchor-row">
-      <td rowspan="2"><code></code></td>
-      <td>
-        <span class="tag human-readability"></span>
-        <span class="tag timetables"></span>
-      </td>
-      <td>1</td>
-      <td><code>calendar_dates.txt</code> should only contain a limited number of exceptions to the schedule. Regularly-scheduled service should be configured using <code>calendar.txt</code>.</td>
+    {% for field in page.table_data %}
+      {% for recommendation in field.recommendations %}
+    <tr id="{{ page.slug }}_{{ recommendation.ID }}" class="anchor-row{% if forloop.first %} field-row{% endif %}{% for tag in recommendation.tags %} {{ tag }}{% endfor %}">
+      <td>{% if forloop.first %}<code>{{ field.field_name }}</code>{% endif %}</td>
+      <td>{{ recommendation.ID }}</td>
+      <td>{{ recommendation.text | markdownify }}{{ recommendation.example_table }}</td>
     </tr>
-    <tr id="calendar_2" class="anchor-row">
-      <td></td>
-      <td>2</td>
-      <td>Including a <code>calendar.service_name</code> field can also increase the human readability of GTFS, although this is not adopted in the spec.</td>
-    </tr>
+      {% endfor %}
+    {% endfor %}
   </tbody>
 </table>
