@@ -1,6 +1,36 @@
 ---
+table_data:
+  - field_name: feed_publisher_name
+    recommendations:
+      - ID: 1
+        tags: []
+        text: "Should be included <!--(21)-->"
+  - field_name: feed_publisher_url
+    recommendations:
+      - ID: 2
+        tags: []
+        text: "Should be included <!--(22)-->"
+  - field_name: feed_lang
+    recommendations:
+      - ID: 3
+        tags: []
+        text: "Should be included <!--(23)-->"
+  - field_name: feed_start_date & feed_end_date
+    recommendations:
+      - ID: 4
+        tags: []
+        text: "Should be included <!--(24)-->"
+  - field_name: feed_version
+    recommendations:
+      - ID: 5
+        tags: []
+        text: "Should be included <!--(25)-->"
+  - field_name: feed_contact_email & feed_contact_url
+    recommendations:
+      - ID: 6
+        tags: []
+        text: "Provide at least one <!--(26)-->"
 ---
-### feed_info.txt {#feed_info}
 
 <span class="tag trip-planners"></span>
 <span class="tag human-readability"></span>
@@ -11,47 +41,19 @@
   <thead>
     <tr>
       <th>Field Name</th>
-      <th>Tags</th>
-      <th>#</th>
+      <th>ID</th>
       <th>Recommendation</th>
     </tr>
   </thead>
   <tbody>
-    <tr id="feed_info_1" class="anchor-row">
-      <td><code>feed_publisher_name</code></td> <!-- (21) -->
-      <td></td>
-      <td>1</td>
-      <td>Should be included</td>
+    {% for field in page.table_data %}
+      {% for recommendation in field.recommendations %}
+    <tr id="{{ page.slug }}_{{ recommendation.ID }}" class="anchor-row{% if forloop.first %} field-row{% endif %}{% for tag in recommendation.tags %} {{ tag }}{% endfor %}">
+      <td>{% if forloop.first %}<code>{{ field.field_name }}</code>{% endif %}</td>
+      <td>{{ recommendation.ID }}</td>
+      <td>{{ recommendation.text | markdownify }}{{ recommendation.example_table }}</td>
     </tr>
-    <tr id="feed_info_2" class="anchor-row">
-      <td><code>feed_publisher_url</code></td> <!-- (22) -->
-      <td></td>
-      <td>2</td>
-      <td>Should be included</td>
-    </tr>
-    <tr id="feed_info_3" class="anchor-row">
-      <td><code>feed_lang</code></td> <!-- (23) -->
-      <td></td>
-      <td>3</td>
-      <td>Should be included</td>
-    </tr>
-    <tr id="feed_info_4" class="anchor-row">
-      <td><code>feed_start_date</code> & <code>feed_end_date</code></td> <!-- (24) -->
-      <td></td>
-      <td>4</td>
-      <td>Should be included</td>
-    </tr>
-    <tr id="feed_info_5" class="anchor-row">
-      <td><code>feed_version</code></td> <!-- (25) -->
-      <td></td>
-      <td>5</td>
-      <td>Should be included</td>
-    </tr>
-    <tr id="feed_info_6" class="anchor-row">
-      <td><code>feed_contact_email</code> & <code>feed_contact_url</code></td> <!-- (26) -->
-      <td></td>
-      <td>6</td>
-      <td>Provide at least one</td>
-    </tr>
+      {% endfor %}
+    {% endfor %}
   </tbody>
 </table>

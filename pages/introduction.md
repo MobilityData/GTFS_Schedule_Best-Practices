@@ -2,7 +2,7 @@
 ---
 # GTFS Data Best Practices
 
-<h2 id="introduction">Introduction</h2>
+## Introduction
 
 These are recommended practices for describing public transportation services in the [General Transit Feed Specification (GTFS)](https://gtfs.org). These practices have been synthesized from the experience of the [GTFS Best Practices working group](#working-group) members and [application-specific GTFS practice recommendations](http://www.transitwiki.org/TransitWiki/index.php/Best_practices_for_creating_GTFS). For further background, see the [Frequently Asked Questions](faq).
 
