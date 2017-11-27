@@ -28,10 +28,10 @@ table_data:
       - ID: 8
         tags: []
         text: |
-          "By default, `stop_name` should not contain generic or redundant words like “Station” or “Stop”, but some edge cases are allowed.
+          By default, `stop_name` should not contain generic or redundant words like “Station” or “Stop”, but some edge cases are allowed.
 
           * When it is actually part of the name (Union Station, Central Station)
-          * When the `stop_name` is too generic (such as if it is the name of the city). “Station”, “Terminal”, or other words make the meaning clear."
+          * When the `stop_name` is too generic (such as if it is the name of the city). “Station”, “Terminal”, or other words make the meaning clear.
   - field_name: stop_lat & stop_lon
     recommendations:
       - ID: 9
