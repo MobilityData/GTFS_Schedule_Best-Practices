@@ -1,0 +1,6 @@
+version: 2
+jobs:
+  build:
+    machine: true
+    steps:
+      - run: curl -v -X POST https://circleci.com/api/v1.1/project/github/itd-consortium/gtfs.org/tree/master?circle-token=$CIRCLE_TOKEN
