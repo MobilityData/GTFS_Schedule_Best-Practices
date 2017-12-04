@@ -7,13 +7,14 @@ table_data:
         text: |
           The full extent of a “vehicle round-trip” (see illustration [above](#lasso-route-fig)) consists of travel from A to B to B and back to A. An entire vehicle round-trip may be expressed by: <!-- (103) -->
 
-            * A __single__ `trip_id` value/record in `trips.txt`
-            * __Multiple__ `trip_id` values/records in `trips.txt`, with continuous travel indicated by `block_id`.
+          * A __single__ `trip_id` value/record in `trips.txt`
+          * __Multiple__ `trip_id` values/records in `trips.txt`, with continuous travel indicated by `block_id`.
   - field_name: stop_times.stop_headsign
     recommendations:
       - ID: 2
         tags: []
-        text: "The stops along the A-B section will be passed through in both directions. `stop_headsign` facilitates distinguishing travel direction. Therefore, providing `stop_headsign` is recommended for these trips. <!-- (94) -->"
+        text: |
+          The stops along the A-B section will be passed through in both directions. `stop_headsign` facilitates distinguishing travel direction. Therefore, providing `stop_headsign` is recommended for these trips. <!-- (94) -->
         example_table: |
           <table class="example">
             <thead>
@@ -69,7 +70,8 @@ table_data:
     recommendations:
       - ID: 3
         tags: []
-        text: "The trip headsign should be a global description of the trip, like displayed in the schedules. Could be “Linden to Linden via Loop” (Chicago example), or “A to A via B” (generic example). <!-- (95) -->"
+        text: |
+          The trip headsign should be a global description of the trip, like displayed in the schedules. Could be “Linden to Linden via Loop” (Chicago example), or “A to A via B” (generic example). <!-- (95) -->
 ---
 
 ### Lasso Routes
@@ -93,23 +95,25 @@ Lasso routes combine aspects of a loop route and directional route.
 | Bus Suburb to Downtown Routes ([St. Albert](https://stalbert.ca/uploads/PDF-infosheets/201_207_Fall_2016.pdf) or [Edmonton](http://webdocs.edmonton.ca/transit/route_schedules_and_maps/future/RT039.pdf)) |
 | CTA Brown Line ([CTA Website](http://www.transitchicago.com/brownline/) and [TransitFeeds](https://transitfeeds.com/p/chicago-transit-authority/165/latest/route/Brn)) |
 
-<table class="recommendation">
-  <thead>
-    <tr>
-      <th>Field Name</th>
-      <th>ID</th>
-      <th>Recommendation</th>
-    </tr>
-  </thead>
-  <tbody>
+<div class="table-wrapper">
+  <table class="recommendation">
+    <thead>
+      <tr>
+        <th>Field Name</th>
+        <th>ID</th>
+        <th>Recommendation</th>
+      </tr>
+    </thead>
+    <tbody>
     {% for field in page.table_data %}
       {% for recommendation in field.recommendations %}
-    <tr id="{{ page.slug }}_{{ recommendation.ID }}" class="anchor-row{% if forloop.first %} field-row{% endif %}{% for tag in recommendation.tags %} {{ tag }}{% endfor %}">
-      <td>{% if forloop.first %}<code>{{ field.field_name }}</code>{% endif %}</td>
-      <td>{{ recommendation.ID }}</td>
-      <td>{{ recommendation.text | markdownify }}{{ recommendation.example_table }}</td>
-    </tr>
+      <tr id="{{ page.slug }}_{{ recommendation.ID }}" class="anchor-row{% if forloop.first %} field-row{% endif %}{% for tag in recommendation.tags %} {{ tag }}{% endfor %}">
+        <td>{% if forloop.first %}<code>{{ field.field_name }}</code>{% endif %}</td>
+        <td><div class="anchor-node"><p>{{ recommendation.ID }}</p><a class="anchor-link" href="#{{ page.slug }}_{{ recommendation.ID }}"><i class="fa fa-link" aria-hidden="true"></i></a></div></td>
+        <td>{{ recommendation.text | markdownify }}{% if recommendation.example_table %}<div class="table-wrapper">{{ recommendation.example_table }}</div>{% endif %}</td>
+      </tr>
       {% endfor %}
     {% endfor %}
-  </tbody>
-</table>
+    </tbody>
+  </table>
+</div>

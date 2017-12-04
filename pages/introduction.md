@@ -22,20 +22,28 @@ Recommended practices are organized into three primary sections
 
 ### System Tags
 
-Five different tags are included throughout the list of practices. These tags indicate the type of systems that require the practice being described.
+The System Tags menu includes four different tags, each corresponding to a description below. Selecting one of these tags will highlight all applicable recommendations.
 
-<span class="tag trip-planners"></span>
+<hr/>
+
+<button class="system-tag-button trip-planners" data-target="trip-planners">Trip Planners</button>
 
 These practices improve customer experience in applications like Google Maps that are used for trip planning.
 
-<span class="tag human-readability"></span>
+<hr/>
+
+<button class="system-tag-button human-readability" data-target="human-readability">Human Readability</button>
 
 These practices help maintain the ability for a human reader to unzip and examine GTFS files.
 
-<span class="tag arrival-predictions"></span>
+<hr/>
 
-These practices allow arrival prediction software to create real-time arrival estimates related to the schedules in [`trips.txt`](#trips) and [`stop_times.txt`](#stop-times).
+<button class="system-tag-button arrival-predictions" data-target="arrival-predictions">Arrival Predictions</button>
 
-<span class="tag timetables"></span>
+These practices allow arrival prediction software to create real-time arrival estimates related to the schedules in [`trips.txt`](#trips) and [`stop_times.txt`](#stop_times).
+
+<hr/>
+
+<button class="system-tag-button timetables" data-target="timetables">Timetables</button>
 
 These practices support the creation of HTML timetables based on GTFS, such as with the GTFS-to-HTML software.
