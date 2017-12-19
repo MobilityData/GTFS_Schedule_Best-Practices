@@ -1,6 +1,4 @@
 ---
-layout: best-practices
-permalink: /best-practices/faq/
 ---
 
 # GTFS Best Practices

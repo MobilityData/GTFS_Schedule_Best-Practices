@@ -11,13 +11,20 @@ table_data:
         text: |
           If timetables and on-street signage represent two distinctly named routes (e.g. 1A and 1B), then present this as such in the GTFS, using the `route_short_name` and/or `route_long_name` fields. <!-- (97A) -->
 
-          Example: [GoDurham Transit routes 2, 2A, and 2B](/best-practices/branch-example-godurham) demonstrate branched routes with deviations and extensions.
+          Example:
+          GoDurham Transit [routes 2, 2A, and 2B](http://admin.gotransitnc.org/sites/default/files/godurham/aug2016/Route%202%20PDF%20August%202016.pdf) share a common alignment throughout the majority of the route, but they vary in several different aspects.
+
+          * Route 2 is core service, running most hours.
+          * Route 2 includes a deviation on Main Street nights, Sundays, and holidays.
+          * Routes 2A and 2B operate daytime hours Monday through Saturday.
+          * Route 2B serves additional stops in a deviation of the shared alignment path.
+
       - ID: 1B
         tags: []
         text: |
           If agency-provided information describes branches as the same named route, then utilize the `trips.trip_headsign`, `stop_times.stop_headsign`, and/or `trips.trip_short_name` fields. <!-- (97B) -->
 
-          Example: GoTriangle [route 300](http://admin.gotransitnc.org/sites/default/files/maps-and-schedules/gotriangle/RoutesAndSchedules-1561.pdf) travels to different locations depending on the time of day. During peak commuter hours extra legs are added onto the standard route to accommodate workers entering and leaving the city.
+          Example: GoTriangle [route 300](http://admin.gotransitnc.org/sites/default/files/GoTriangle-300-0817_1.pdf) travels to different locations depending on the time of day. During peak commuter hours extra legs are added onto the standard route to accommodate workers entering and leaving the city.
 ---
 ### Branches
 

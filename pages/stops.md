@@ -82,15 +82,15 @@ table_data:
             </thead>
             <tbody>
               <tr>
-                <td><a href='/images/chicago-union'>Chicago Union Station</a></td>
+                <td>Chicago Union Station</td>
                 <td>Chicago Union Station Platform 19</td>
               </tr>
               <tr>
-                <td><a href='/images/sf-ferry'>San Francisco Ferry Building Terminal</a></td>
+                <td>San Francisco Ferry Building Terminal</td>
                 <td>San Francisco Ferry Building Terminal Gate E</td>
               </tr>
               <tr>
-                <td><a href='/images/transit-center'>Downtown Transit Center</a></td>
+                <td>Downtown Transit Center</td>
                 <td>Downtown Transit Center Bay B</td>
               </tr>
             </tbody>

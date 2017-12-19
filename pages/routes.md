@@ -66,7 +66,7 @@ table_data:
             </thead>
             <tbody>
               <tr>
-                <td><a href='http://128bc.org/rev-hartwell-area-shuttle/'>“Hartwell Area Shuttle“</a></td>
+                <td><a href='https://128bc.org/schedules/rev-bus-hartwell-area/'>“Hartwell Area Shuttle“</a></td>
               </tr>
             </tbody>
           </table>
