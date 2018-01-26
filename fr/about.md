@@ -22,7 +22,6 @@ The GTFS Best Practices Working Group consists of public transportation provider
 
 Members of this working group include:
 
-* [Apple](http://www.apple.com/)
 * [Cambridge Systematics](https://www.camsys.com/)
 * [Capital Metro](https://www.capmetro.org/)
 * [Center for Urban Transportation Research at University of South Florida](https://www.cutr.usf.edu/)
