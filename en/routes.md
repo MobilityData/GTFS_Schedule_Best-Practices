@@ -1,30 +1,10 @@
----
-lang: en
+#### routes.txt
 
-table_data:
-  - field_name: agency_id
-    recommendations:
-      - ID: 1
-        tags: ['trip-planners', 'timetables']
-        text: |
-          Must be included if it is defined in `agency.txt`. <!-- (68) -->
-  - field_name: route_short_name
-    recommendations:
-      - ID: 2
-        tags: []
-        text: |
-          Include `route_short_name` if there is a brief service designation. This should be the commonly-known passenger name of the service, no longer than 12 characters. <!-- (71) -->
-  - field_name: route_long_name
-    recommendations:
-      - ID: 3
-        tags: []
-        text: |
-          The definition from Specification reference:
-
-          <q>This name is generally more descriptive than the <code>route_short_name</code> and will often include the route's destination or stop. At least one of <code>route_short_name</code> or <code>route_long_name</code> must be specified, or potentially both if appropriate. If the route does not have a long name, please specify a <code>route_short_name</code> and use an empty string as the value for this field.</q>
-
-          Examples of types of long names are below:  <!-- (73) -->
-        example_table: |
+| Field Name | Recommendation |
+| --- | --- |
+| agency_id | Must be included if it is defined in `agency.txt`. |
+| route_short_name | Include `route_short_name` if there is a brief service designation. This should be the commonly-known passenger name of the service, no longer than 12 characters. |
+| route_long_name | The definition from Specification reference: <q>This name is generally more descriptive than the <code>route_short_name</code> and will often include the route's destination or stop. At least one of <code>route_short_name</code> or <code>route_long_name</code> must be specified, or potentially both if appropriate. If the route does not have a long name, please specify a <code>route_short_name</code> and use an empty string as the value for this field.</q><br>Examples of types of long names are below:
           <table class='example'>
             <thead>
               <tr>
@@ -72,16 +52,11 @@ table_data:
               </tr>
             </tbody>
           </table>
-      - ID: 4
-        tags: []
-        text: |
-          `route_long_name` should not contain the `route_short_name`. <!-- (72) -->
-      - ID: 5
-        tags: []
-        text: |
-          Include the full designation including a service identity when populating `route_long_name`. <!-- (69) -->
+| | |          
+| --- | --- |          
+| | `route_long_name` should not contain the `route_short_name`. |
+| | Include the full designation including a service identity when populating `route_long_name`.
           Examples:
-        example_table: |
           <table class='example'>
             <thead>
               <tr>
@@ -103,46 +78,6 @@ table_data:
               </tr>
             </tbody>
           </table>
-  - field_name: route_id
-    recommendations:
-      - ID: 6
-        tags: []
-        text: |
-          All trips on a given named route should reference the same `route_id`. <!-- (74) -->
-
-          * Different directions of a route should not be separated into different `route_id` values.
-          * Different spans of operation of a route should not be separated into different `route_id` values. i.e. do not create different records in `routes.txt` for “Downtown AM” and “Downtown PM” services).
-      - ID: 7
-        tags: []
-        text: |
-          If a route group includes distinctly named branches (e.g. 1A and 1B), follow recommendations in the route [branches](/best-practices/#branches) case to determine `route_short_name` and `route_long_name`. <!-- (70) -->
-  - field_name: route_color & route_text_color
-    recommendations:
-      - ID: 8
-        tags: []
-        text: |
-          Should be consistent with signage and printed and online customer information (and thus not included if they do not exist in other places).  <!-- (76) -->
----
-
-<div class="table-wrapper">
-  <table class="recommendation">
-    <thead>
-      <tr>
-        <th>Field Name</th>
-        <th>ID</th>
-        <th>Recommendation</th>
-      </tr>
-    </thead>
-    <tbody>
-    {% for field in page.table_data %}
-      {% for recommendation in field.recommendations %}
-      <tr id="{{ page.slug }}_{{ recommendation.ID }}" class="anchor-row{% if forloop.first %} field-row{% endif %}{% for tag in recommendation.tags %} {{ tag }}{% endfor %}">
-        <td>{% if forloop.first %}<code>{{ field.field_name }}</code>{% endif %}</td>
-        <td><div class="anchor-node"><p>{{ recommendation.ID }}</p><a class="anchor-link" href="#{{ page.slug }}_{{ recommendation.ID }}"><i class="fa fa-link" aria-hidden="true"></i></a></div></td>
-        <td>{{ recommendation.text | markdownify }}{% if recommendation.example_table %}<div class="table-wrapper">{{ recommendation.example_table }}</div>{% endif %}</td>
-      </tr>
-      {% endfor %}
-    {% endfor %}
-    </tbody>
-  </table>
-</div>
+| route_id | All trips on a given named route should reference the same `route_id`. <li>Different directions of a route should not be separated into different `route_id` values.</li><li>Different spans of operation of a route should not be separated into different `route_id` values. i.e. do not create different records in `routes.txt` for “Downtown AM” and “Downtown PM” services).</li> |
+| | If a route group includes distinctly named branches (e.g. 1A and 1B), follow recommendations in the route [branches](/best-practices/#branches) case to determine `route_short_name` and `route_long_name`. |
+| route_color & route_text_color | Should be consistent with signage and printed and online customer information (and thus not included if they do not exist in other places). |
