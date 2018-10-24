@@ -1,8 +1,3 @@
----
-lang: en
-
----
-
 # GTFS Best Practices
 
 ## Frequently Asked Questions (FAQ)
