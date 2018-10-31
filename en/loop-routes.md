@@ -1,4 +1,4 @@
-## Practice Recommendations Organized by Case {#by-case}
+## Practice Recommendations Organized by Case
 
 This section covers particular cases with implications across files and fields.
 
@@ -7,9 +7,10 @@ This section covers particular cases with implications across files and fields.
 On loop routes, vehicles’ trips begin and end at the same location (sometimes a transit or transfer center). Vehicles usually operate continuously and allow passengers to stay onboard as the vehicle continues its loop.
 
 <figure id="loop-route-fig">
-<figcaption>Below: Loop route. The vehicle returns to the starting point in one trip. Some loop routes offer travel in one direction, and others in two directions.</figcaption>
-<img src="{{ "/best-practices/images/loop-route.svg" | prepend: site.baseurl }}" alt="A Loop Route">
+  <figcaption>Below: Loop route. The vehicle returns to the starting point in one trip. Some loop routes offer travel in one direction, and others in two directions.</figcaption>
+  <img src="loop-route.svg" alt="A Loop Route"></img>
 </figure>
+
 
 | Field Name | Recommendation |
 | --- | --- |

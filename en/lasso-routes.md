@@ -10,7 +10,7 @@ Lasso routes combine aspects of a loop route and directional route.
       <li>straight section from B to A.</li>
     </ul>
   </figcaption>
-  <img style="max-width: 30%" src="{{ "/best-practices/images/lasso-route.svg" | prepend: site.baseurl }}" alt="A Lasso Route">
+  <img src="lasso-route.svg" alt="A Lasso Route"></img>
 </figure>
 
 | Examples: |

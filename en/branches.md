@@ -4,7 +4,7 @@ Some routes may include branches. Alignment and stops are shared amongst these b
 
 <figure id="branching-fig">
 <figcaption>Below: Three potential configurations of route branches. Primary alignment is in black. Branch is colored gold.</figcaption>
-<img src="{{ "/best-practices/images/branching.svg" | prepend: site.baseurl }}" alt="Configurations of Route Branches">
+<img src="branching.svg" alt="Configurations of Route Branches">
 </figure>
 
 | Field Name | Recommendation |
