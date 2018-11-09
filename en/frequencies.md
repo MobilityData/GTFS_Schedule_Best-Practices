@@ -1,8 +1,10 @@
-#### frequencies.txt
+### frequencies.txt
+<div hidden>
 ###### trip-planners
 ###### arrival-predictions
 ###### timetables
 ###### human-readability
+</div>
 
 | Field Name | Recommendation |
 | --- | --- |

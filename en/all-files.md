@@ -1,4 +1,4 @@
-## Practice Recommendations Organized by File {#by-file}
+## Practice Recommendations Organized by File
 
 This section shows practices organized by file and field, aligning with the [GTFS reference](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md).
 

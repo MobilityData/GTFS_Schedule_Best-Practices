@@ -1,4 +1,4 @@
-#### transfers.txt
+### transfers.txt
 
 `transfers.transfer_type` can be one of four values [defined in the GTFS](https://developers.google.com/transit/gtfs/reference/transfers-file). These `transfer_type` definitions are quoted from the GTFS Specification below, _in italics_, with additional practice recommendations.
 

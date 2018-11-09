@@ -1,4 +1,4 @@
-#### feed_info.txt
+### feed_info.txt
 `feed_info.txt` should be included, with all fields below.
 
 | Field Name | Recommendation |
