@@ -3,8 +3,6 @@ lang: en
 
 ---
 
-# GTFS Best Practices
-
 ## Frequently Asked Questions (FAQ)
 
 ### Why are these GTFS Best Practices important?
