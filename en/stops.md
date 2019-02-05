@@ -4,7 +4,7 @@
 | --- | --- |
 | stop_id | Stops that are in different physical locations (i.e., different designated precise locations for vehicles on designated routes to stop, potentially distinguished by signs, shelters, or other such public information, located on different street corners or representing different boarding facility such as a platform or bus bay, even if nearby each other) should have different `stop_id`.
 | | `stop_id` is an internal ID, not intended to be shown to passengers. |
-| | Maintain consistent `stop_id` for the same stops across data iterations (see [Dataset Publishing & General Practices](#publishing)). |
+| | Maintain consistent `stop_id` for the same stops across data iterations (see [Dataset Publishing & General Practices](#dataset-publishing--general-practices)). |
 | stop_name | The `stop_name` should match the agency's public name for the stop, station, or boarding facility, e.g. what is printed on a timetable, published online, and/or presented at the location.  |
 | | When there is not a published stop name, follow consistent stop naming conventions throughout the feed.  |
 | | Avoid use of abbreviations other than for places that are most commonly called by an abbreviated name. See Abbreviations (#2) under [All Files](#all-files).  |

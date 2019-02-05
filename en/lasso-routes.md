@@ -15,7 +15,7 @@ Lasso routes combine aspects of a loop route and directional route.
 
 | Examples: |
 | -------- |
-| Subway Routes ([Chicago](http://www.transitchicago.com/assets/1/maps/L_Map_March_2016_s_lite.pdf)) |
+| Subway Routes ([Chicago](https://www.transitchicago.com/assets/1/6/ctamap_Lsystem.pdf)) |
 | Bus Suburb to Downtown Routes ([St. Albert](https://stalbert.ca/uploads/PDF-infosheets/RideGuide-201-207_Revised_Oct_2017.pdf) or [Edmonton](http://webdocs.edmonton.ca/transit/route_schedules_and_maps/future/RT039.pdf)) |
 | CTA Brown Line ([CTA Website](http://www.transitchicago.com/brownline/) and [TransitFeeds](https://transitfeeds.com/p/chicago-transit-authority/165/latest/route/Brn)) |
 
