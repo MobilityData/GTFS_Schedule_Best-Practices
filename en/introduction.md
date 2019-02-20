@@ -1,7 +1,3 @@
----
-lang: en
-
----
 # GTFS Data Best Practices
 
 ## Introduction
