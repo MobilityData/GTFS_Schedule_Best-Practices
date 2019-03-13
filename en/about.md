@@ -1,7 +1,3 @@
----
-lang: en
-
----
 ## About This Document
 
 ### Objectives
