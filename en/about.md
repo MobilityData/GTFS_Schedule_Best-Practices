@@ -1,4 +1,4 @@
-## About This Document -- NEW CONTENT STAGING TEST
+## About This Document
 
 ### Objectives
 
