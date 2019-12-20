@@ -1,16 +1,18 @@
-# GTFS Data Best Practices
+# Documentation
 
-## Introduction
+## Core GTFS
 
+This section describes the core files, fieLds and best practices for GTFS feed.
 These are recommended practices for describing public transportation services in the [General Transit Feed Specification (GTFS)](http://gtfs.org). These practices have been synthesized from the experience of the [GTFS Best Practices working group](#gtfs-best-practices-working-group) members and [application-specific GTFS practice recommendations](http://www.transitwiki.org/TransitWiki/index.php/Best_practices_for_creating_GTFS). For further background, see the [Frequently Asked Questions](#frequently-asked-questions-faq).
 
 ### Document Structure
 
-Recommended practices are organized into three primary sections
+Practices are organized into four primary sections:
 
-* __[Dataset Publishing & General Practices](#dataset-publishing--general-practices):__ These practices relate to the overall structure of the GTFS dataset and to the manner in which GTFS datasets are published.
-* __[Practice Recommendations Organized by File](#practice-recommendations-organized-by-file):__ Recommendations are organized by file and field in the GTFS to facilitate mapping practices back to the official GTFS reference.
-* __[Practice Recommendations Organized by Case](#practice-recommendations-organized-by-case):__ With particular cases, such as loop routes, practices may need to be applied across several files and fields. Such recommendations are consolidated in this section.
+* __[General Practices For Core Files](#dataset-publishing--general-practices):__ These practices relate to the overall structure of the GTFS dataset and to the manner in which GTFS datasets are published.
+* __[Practice Recommendations For GTFS Extensions](#practice-recommendations-organized-by-file):__ Recommendations are organized by file and field in the GTFS to facilitate mapping practices back to the official GTFS reference.
+* __[Technical Reference]__:
+* __[Changes in GTFS](#practice-recommendations-organized-by-case):__ With particular cases, such as loop routes, practices may need to be applied across several files and fields. Such recommendations are consolidated in this section.
 
 <div hidden> remove this
 ### System Tags
