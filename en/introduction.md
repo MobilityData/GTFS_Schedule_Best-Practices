@@ -8,10 +8,9 @@ These are recommended practices for describing public transportation services in
 
 Practices are organized into four primary sections:
 
-* __[General Practices For Core Files](#dataset-publishing--general-practices):__ These practices relate to the overall structure of the GTFS dataset and to the manner in which GTFS datasets are published.
-* __[Practice Recommendations For GTFS Extensions](#practice-recommendations-organized-by-file):__ Recommendations are organized by file and field in the GTFS to facilitate mapping practices back to the official GTFS reference.
-* __[Technical Reference]__:
-* __[Changes in GTFS](#practice-recommendations-organized-by-case):__ With particular cases, such as loop routes, practices may need to be applied across several files and fields. Such recommendations are consolidated in this section.
+* __[Dataset Publishing & General Practices](#dataset-publishing--general-practices):__ These practices relate to the overall structure of the GTFS dataset and to the manner in which GTFS datasets are published.
+* __[Practice Recommendations Organized by File](#practice-recommendations-organized-by-file):__ Recommendations are organized by file and field in the GTFS to facilitate mapping practices back to the official GTFS reference.
+* __[Practice Recommendations Organized by Case](#practice-recommendations-organized-by-case):__ With particular cases, such as loop routes, practices may need to be applied across several files and fields. Such recommendations are consolidated in this section.
 
 <div hidden> remove this
 ### System Tags
