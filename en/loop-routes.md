@@ -13,7 +13,7 @@ On loop routes, vehicles’ trips begin and end at the same location (sometimes 
 
 Headsigns recommendations should therefore be applied in order to show riders the direction in which the vehicle is going.
 
-To indicate the changing direction of travel, provide ```stop_headsigns``` in the ```stop_times.txt``` file. The ```stop_headsign``` describes the direction for trips departing from the stop for which it's defined. Adding ```stop_headsigns``` to each stop of a trip allows you to change the headsign information along a trip.
+To indicate the changing direction of travel, provide `stop_headsigns` in the `stop_times.txt` file. The `stop_headsign` describes the direction for trips departing from the stop for which it's defined. Adding `stop_headsigns` to each stop of a trip allows you to change the headsign information along a trip.
 
 Don’t define one single circular trip in the stop_times.txt file for a route that operates between two endpoints (such as when the same bus goes back and forth). Instead, split the trip into two separate trip directions.
   
