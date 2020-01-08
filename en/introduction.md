@@ -1,8 +1,8 @@
-# Documentation
+# Best Practices for GTFS
 
 ## Core GTFS
 
-These are recommended practices for describing public transportation services in the [General Transit Feed Specification (GTFS)](http://gtfs.org). These practices have been synthesized from the experience of the [GTFS Best Practices working group](#gtfs-best-practices-working-group) members and [application-specific GTFS practice recommendations](http://www.transitwiki.org/TransitWiki/index.php/Best_practices_for_creating_GTFS). For further background, see the [Frequently Asked Questions](#frequently-asked-questions-faq).
+These are recommended practices for describing public transportation services in the [General Transit Feed Specification (GTFS)](http://gtfs.org). These practices have been synthesized from the experience of the [GTFS Best Practices working group](#gtfs-best-practices-working-group) members and [application-specific GTFS practice recommendations](http://www.transitwiki.org/TransitWiki/index.php/Best_practices_for_creating_GTFS). For further background, see the [Frequently Asked Questions](/guides/#frequently-asked-questions).
 
 ### Document Structure
 
