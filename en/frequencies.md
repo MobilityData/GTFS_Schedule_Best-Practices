@@ -1,3 +1,8 @@
+---
+path: /frequencies/
+lang: en
+---
+
 ### frequencies.txt
 <div hidden>
 ###### trip-planners

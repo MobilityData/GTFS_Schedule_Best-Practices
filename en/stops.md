@@ -1,3 +1,8 @@
+---
+path: /stops/
+lang: en
+---
+
 ### stops.txt
 
 | Field Name | Recommendation |

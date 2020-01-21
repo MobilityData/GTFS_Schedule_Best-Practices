@@ -1,3 +1,8 @@
+---
+path: /calendar/
+lang: en
+---
+
 ### calendar.txt
 
 | Field Name | Recommendation |

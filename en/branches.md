@@ -1,3 +1,8 @@
+---
+path: /branches/
+lang: en
+---
+
 ### Branches
 
 Some routes may include branches. Alignment and stops are shared amongst these branches, but each also serves distinct stops and alignment sections. The relationship among branches may be indicated by route name(s), headsigns, and trip short name using the further guidelines below.
