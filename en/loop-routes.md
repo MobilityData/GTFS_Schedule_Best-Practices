@@ -1,3 +1,8 @@
+---
+path: /loop_routes/
+lang: en
+---
+
 ## Practice Recommendations Organized by Case
 
 This section covers particular cases with implications across files and fields.

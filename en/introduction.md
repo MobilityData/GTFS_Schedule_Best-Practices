@@ -1,3 +1,8 @@
+---
+path: /introduction/
+lang: en
+---
+
 # Best Practices for GTFS
 
 ## Core GTFS
