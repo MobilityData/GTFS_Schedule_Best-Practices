@@ -8,7 +8,7 @@ On loop routes, vehicles’ trips begin and end at the same location (sometimes 
 
 <figure id="loop-route-fig">
   <figcaption>Below: Loop route. The vehicle returns to the starting point in one trip. Some loop routes offer travel in one direction, and others in two directions.</figcaption>
-  <img src="loop-route.svg" alt="A Loop Route"></img>
+  <img src="loop-route.svg" alt="A Loop Route" width="20%"></img>
 </figure>
 
 Headsigns recommendations should therefore be applied in order to show riders the direction in which the vehicle is going.
