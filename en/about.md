@@ -1,7 +1,3 @@
----
-path: /about/
-lang: en
----
 ## About This Document
 
 ### Objectives

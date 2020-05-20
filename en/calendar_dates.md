@@ -1,8 +1,3 @@
----
-path: /calendar_dates/
-lang: en
----
-
 ### calendar_dates.txt
 
 | Field Name | Recommendation |

@@ -1,7 +1,3 @@
----
-path: /agency/
-lang: en
----
 
 | Field Name | Recommendation |
 | --- | --- |

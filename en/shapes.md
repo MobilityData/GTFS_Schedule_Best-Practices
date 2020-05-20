@@ -1,8 +1,3 @@
----
-path: /shapes/
-lang: en
----
-
 ### shapes.txt
 
 | Field Name | Recommendation |

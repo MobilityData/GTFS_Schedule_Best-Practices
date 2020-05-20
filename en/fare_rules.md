@@ -1,7 +1,3 @@
----
-path: /fare_rules/
-lang: en
----
 ### fare_rules.txt
 
 | Field Name | Recommendation |

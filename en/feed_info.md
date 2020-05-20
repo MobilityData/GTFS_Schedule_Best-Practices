@@ -1,8 +1,3 @@
----
-path: /feed_info/
-lang: en
----
-
 ### feed_info.txt
 `feed_info.txt` should be included, with all fields below.
 

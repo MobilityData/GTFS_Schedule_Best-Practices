@@ -1,8 +1,3 @@
----
-path: /fare_attributes/
-lang: en
----
-
 ### fare_attributes.txt
 
 | Field Name | Recommendation |

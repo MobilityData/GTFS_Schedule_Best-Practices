@@ -1,8 +1,3 @@
----
-path: /routes/
-lang: en
----
-
 ### routes.txt
 
 | Field Name | Recommendation |

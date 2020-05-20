@@ -1,8 +1,3 @@
----
-path: /transfers/
-lang: en
----
-
 ### transfers.txt
 
 `transfers.transfer_type` can be one of four values [defined in the GTFS](/reference/static/#transferstxt). These `transfer_type` definitions are quoted from the GTFS Specification below, _in italics_, with additional practice recommendations.
