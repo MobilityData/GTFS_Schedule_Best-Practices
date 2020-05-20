@@ -1,3 +1,8 @@
+---
+path: /trips/
+lang: en
+---
+
 ### trips.txt
 
 * __See special case for loop routes:__ Loop routes are cases where trips start and end at the same stop, as opposed to linear routes, which have two distinct termini. Loop routes must be described following specific practices. [See Loop route case.](/best-practices/#loop-routes)

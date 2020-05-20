@@ -1,3 +1,8 @@
+---
+path: /stop_times/
+lang: en
+---
+
 ### stop_times.txt
 
 Loop routes: Loop routes require special `stop_times` considerations. (See: [Loop route case](/best-practices/#loop-routes))

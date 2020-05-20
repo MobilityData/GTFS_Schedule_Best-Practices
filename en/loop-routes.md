@@ -1,3 +1,8 @@
+---
+path: /loop_routes/
+lang: en
+---
+
 ## Practice Recommendations Organized by Case
 
 This section covers particular cases with implications across files and fields.
@@ -11,6 +16,36 @@ On loop routes, vehicles’ trips begin and end at the same location (sometimes 
   <img src="loop-route.svg" alt="A Loop Route"></img>
 </figure>
 
+Headsigns recommendations should therefore be applied in order to show riders the direction in which the vehicle is going.
+
+To indicate the changing direction of travel, provide `stop_headsigns` in the `stop_times.txt` file. The `stop_headsign` describes the direction for trips departing from the stop for which it's defined. Adding `stop_headsigns` to each stop of a trip allows you to change the headsign information along a trip.
+
+Don’t define one single circular trip in the stop_times.txt file for a route that operates between two endpoints (such as when the same bus goes back and forth). Instead, split the trip into two separate trip directions.
+  
+__Examples of circular trip modeling:__
+
+- Circular trip with changing headsign for each stop
+
+| Trip_id | arrival_time | departure_time | stop_id | stop_sequence | stop_headsign |
+|---------|--------------|----------------|---------|---------------|---------------|
+| trip_1  | 06:10:00     | 06:10:00       | stop_A  | 1             | "B"           |
+| trip_1  | 06:15:00     | 06:15:00       | stop_B  | 2             | "C"           |
+| trip_1  | 06:20:00     | 06:20:00       | stop_C  | 3             | "D"           |
+| trip_1  | 06:25:00     | 06:25:00       | stop_D  | 4             | "E"           |
+| trip_1  | 06:30:00     | 06:30:00       | stop_E  | 5             | "A"           |
+| trip_1  | 06:35:00     | 06:35:00       | stop_A  | 6             | ""            |
+ 
+- Circular trip with two headsigns
+
+| Trip_id | arrival_time | departure_time | stop_id | stop_sequence | stop_headsign |
+|---------|--------------|----------------|---------|---------------|---------------|
+| trip_1  | 06:10:00     | 06:10:00       | stop_A  | 1             | "outbound"    |
+| trip_1  | 06:15:00     | 06:15:00       | stop_B  | 2             | "outbound"    |
+| trip_1  | 06:20:00     | 06:20:00       | stop_C  | 3             | "outbound"    |
+| trip_1  | 06:25:00     | 06:25:00       | stop_D  | 4             | "inbound"     |
+| trip_1  | 06:30:00     | 06:30:00       | stop_E  | 5             | "inbound"     |
+| trip_1  | 06:35:00     | 06:35:00       | stop_F  | 6             | "inbound"     |
+| trip_1  | 06:40:00     | 06:40:00       | stop_A  | 7             | ""            |
 
 | Field Name | Recommendation |
 | --- | --- |

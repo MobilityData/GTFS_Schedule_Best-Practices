@@ -1,3 +1,8 @@
+---
+path: /lasso_routes/
+lang: en
+---
+
 ### Lasso Routes
 
 Lasso routes combine aspects of a loop route and directional route.

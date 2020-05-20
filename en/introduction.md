@@ -1,12 +1,17 @@
-# GTFS Data Best Practices
+---
+path: /introduction/
+lang: en
+---
 
-## Introduction
+# Best Practices for GTFS
 
-These are recommended practices for describing public transportation services in the [General Transit Feed Specification (GTFS)](http://gtfs.org). These practices have been synthesized from the experience of the [GTFS Best Practices working group](#gtfs-best-practices-working-group) members and [application-specific GTFS practice recommendations](http://www.transitwiki.org/TransitWiki/index.php/Best_practices_for_creating_GTFS). For further background, see the [Frequently Asked Questions](#frequently-asked-questions-faq).
+## Core GTFS
+
+These are recommended practices for describing public transportation services in the [General Transit Feed Specification (GTFS)](http://gtfs.org). These practices have been synthesized from the experience of the [GTFS Best Practices working group](#gtfs-best-practices-working-group) members and [application-specific GTFS practice recommendations](http://www.transitwiki.org/TransitWiki/index.php/Best_practices_for_creating_GTFS). For further background, see the [Frequently Asked Questions](/guides/#frequently-asked-questions).
 
 ### Document Structure
 
-Recommended practices are organized into three primary sections
+Practices are organized into four primary sections:
 
 * __[Dataset Publishing & General Practices](#dataset-publishing--general-practices):__ These practices relate to the overall structure of the GTFS dataset and to the manner in which GTFS datasets are published.
 * __[Practice Recommendations Organized by File](#practice-recommendations-organized-by-file):__ Recommendations are organized by file and field in the GTFS to facilitate mapping practices back to the official GTFS reference.

@@ -1,3 +1,7 @@
+---
+path: /all_files/
+lang: en
+---
 ## Practice Recommendations Organized by File
 
 This section shows practices organized by file and field, aligning with the [GTFS reference](/reference).
