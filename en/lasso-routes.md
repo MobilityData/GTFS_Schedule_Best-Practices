@@ -11,7 +11,6 @@ Lasso routes combine aspects of a loop route and directional route.
     </ul>
   </figcaption>
   <img src="lasso-route.svg" alt="A Lasso Route" width="15%"></img>
-</figure>
 
 | Examples: |
 | -------- |
