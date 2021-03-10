@@ -48,3 +48,5 @@ __Examples of circular trip modeling:__
 | stop_times.stop_id | Include the first/last stop twice in `stop_times.txt` for the trip that is a loop. Example below. Often, a loop route may include first and last trips that do not travel the entire loop. Include these trips as well. <table class="example"><thead><tr><th><code>trip_id</code></th><th><code>stop_id</code></th><th><code>stop_sequence</code></th></tr></thead><tbody><tr><td>9000</td><td>101</td><td>1</td></tr><tr><td>9000</td><td>102</td><td>2</td></tr><tr><td>9000</td><td>103</td><td>3</td></tr><tr><td>9000</td><td>101</td><td>4</td></tr></tbody></table> |
 | trips.direction_id | If loop operates in opposite directions (i.e. clockwise and counterclockwise), then designate `direction_id` as `0` or `1`. |
 | trips.block_id | Indicate continuous loop trips with the same `block_id`. |
+
+As a fallback, `trips.trip_headsign` can be defined as "Loop".

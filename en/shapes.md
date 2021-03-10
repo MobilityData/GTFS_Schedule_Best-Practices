@@ -1,4 +1,5 @@
 ### shapes.txt
+Should be provided in every case.
 
 | Field Name | Recommendation |
 | --- | --- |
