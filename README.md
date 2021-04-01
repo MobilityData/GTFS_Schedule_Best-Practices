@@ -1,8 +1,8 @@
-# gtfs-best-practices
+# GTFS_Schedule_Best-Practices
 
 Best Practices for Structuring General Transit Feed Specification Data
 
-# Editing GTFS Best Practices
+# Editing GTFS Schedule Best Practices
 
 The Best Practices data are written in YAML variables. More information about YAML syntax and structure may be found [here](https://learnxinyminutes.com/docs/yaml/). Each variable is defined as follows:
 
