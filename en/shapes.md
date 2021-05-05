@@ -1,4 +1,5 @@
 ### shapes.txt
+`shapes.txt` should be included with a record for each alignment and stopping pattern combination.
 
 | Field Name | Recommendation |
 | --- | --- |
