@@ -1,15 +1,15 @@
-**Summary:**
+**Best Practice Proposal:**
 
-Summarize the changes in the pull request including how it relates to any issues (include the #number, or link them).
+Summarize the Best Practice being proposed in the pull request including how it relates to any issues (include the #number, or link them).
 
-**Expected behavior:** 
+**Use Cases:** 
 
-Explain and/or show screenshots for how you expect the pull request to work in your testing (in case other devices exhibit different behavior).
+Demonstrate the Best Practice proposal through real-life use cases. Use cases should cover a diversity of transit systems. At least 3 use cases should be provided.
 
+**Data Examples:**
 
-Please make sure these boxes are checked before submitting your pull request - thanks!
+Demonstrate how the Best Practice would appear in GTFS.
 
-- [x] ~~Run the unit tests with `npm test` to make sure you didn't break anything~~
-- [ ] Format the title like "Fix #<issue_number> - <short description of fix and changes>" (for example - "Fix #1111 - Check for null value before using field")
-- [ ] Linked all relevant issues
-- [ ] Include screenshot(s) showing how this pull request works and fixes the issue(s)
+**Public-facing Implementation (Optional):**
+
+Show a public-facing implementation of the proposed Best Practice to demonstrate its value.
