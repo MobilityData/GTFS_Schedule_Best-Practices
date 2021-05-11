@@ -49,11 +49,11 @@ To enable the evolution of the GTFS Schedule Best Practices, semantic versioning
 
 A whole integer increase is used for breaking changes (MAJOR changes). A decimal increase is used for non-breaking changes (MINOR changes or patches).
 
-Breaking changes may include:
+Breaking changes include:
 - Removing or changing a Best Practice.
 
-Non-breaking changes may include:
-- Adding Best Pracitces.
+Non-breaking changes include:
+- Adding Best Practices.
 - Modifying documentation language that clarifies semantics or structure.
 
 ## License
