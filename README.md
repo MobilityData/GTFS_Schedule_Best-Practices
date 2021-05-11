@@ -1,6 +1,6 @@
 # GTFS Schedule Best Practices
 
-Best Practices for Structuring General Transit Feed Specification Data.
+Best Practices for Structuring [GTFS Schedule](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md) Data.
 
 ## Current Version
 **The current release is v1.1**
