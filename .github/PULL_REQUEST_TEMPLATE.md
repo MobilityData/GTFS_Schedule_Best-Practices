@@ -8,7 +8,7 @@ Demonstrate the Best Practice proposal through real-life use cases. Use cases sh
 
 **Data Examples:**
 
-Demonstrate how the Best Practice would appear in GTFS.
+Demonstrate how the Best Practice would appear in GTFS Schedule.
 
 **Public-facing Implementation (Optional):**
 
