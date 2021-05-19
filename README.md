@@ -7,7 +7,7 @@ Best Practices for Structuring [GTFS Schedule](https://github.com/google/transit
 
 ## Documentation Structure
 
-The Best Practices data are written in YAML variables. More information about YAML syntax and structure may be found [here](https://learnxinyminutes.com/docs/yaml/). Each variable is defined as follows:
+The Best Practices are written in YAML variables. More information about YAML syntax and structure may be found [here](https://learnxinyminutes.com/docs/yaml/). Each variable is defined as follows:
 
 * `field_name`: The name of the GTFS field being described
 * `recommendations`: An array of the recommendations provided for each field_name
