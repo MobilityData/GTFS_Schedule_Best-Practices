@@ -3,8 +3,7 @@
 | Field Name | Recommendation |
 | --- | --- |
 | stop_id | `stop_id` is an internal ID, not intended to be shown to passengers. |
-| stop_name | When there is not a published stop name, follow consistent stop naming conventions throughout the feed.  |
-| | Avoid use of abbreviations other than for places that are most commonly called by an abbreviated name. See Abbreviations (#2) under [All Files](#all-files).  |
+| stop_name | When there is not a published stop name, follow consistent stop naming conventions throughout the feed.  | |
 | | Provide stop names in mixed case, following local conventions, as per recommendation for all customer-facing text fields.  |
 | | By default, `stop_name` should not contain generic or redundant words like “Station” or “Stop”, but some edge cases are allowed.<ul><li>When it is actually part of the name (Union Station, Central Station<li>When the `stop_name` is too generic (such as if it is the name of the city). “Station”, “Terminal”, or other words make the meaning clear.</ul> |
 | stop_lat & stop_lon | Stop locations should be as accurate possible. Stop locations should have an error of __no more__ than four meters when compared to the actual stop position. |
