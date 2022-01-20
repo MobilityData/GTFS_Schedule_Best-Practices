@@ -24,7 +24,7 @@ The working group anticipates that some GTFS Best Practices will eventually beco
 
 ### Do GTFS validator tools check for conformance with these Best Practices?
 
-No validator tool currently checks for conformance with all Best Practices. Various validator tools check for conformance with some of these best practices. For a list of GTFS validator tools, see [Testing Feeds](http://gtfs.org/testing/). If you write a GTFS validator tool that references these Best Practices, please email [gtfs@rmi.org](mailto:gtfs@rmi.org).
+No validator tool currently checks for conformance with all Best Practices. Various validator tools check for conformance with some of these best practices. For a list of GTFS validator tools, see [GTFS Validators](https://github.com/CUTR-at-USF/awesome-transit#gtfs-validators). If you write a GTFS validator tool that references these Best Practices, please email [specifications@mobilitydata.org](mailto:specifications@mobilitydata.org).
 
 ### I represent a transit agency. What steps can I take so that our software service providers and vendors follow these Best Practices?
 
@@ -36,8 +36,8 @@ Identify the contact for the feed, using the [proposed feed\_contact\_email or f
 
 ### I would like to propose a modification/addition to the Best Practices. How do I do this?
 
-Email [gtfs@rmi.org](mailto:gtfs@rmi.org) or open an issue or pull request in the [GitHub GTFS Best Practices repo](https://github.com/rocky-mountain-institute/gtfs-best-practices).
+Email [specifications@mobilitydata.org](mailto:specifications@mobilitydata.org) or open an issue or pull request in the [GitHub GTFS Best Practices repo](https://github.com/rocky-mountain-institute/gtfs-best-practices).
 
 ### How do I get involved?
 
-Email [gtfs@rmi.org](mailto:gtfs@rmi.org).
+Email [specifications@mobilitydata.org](mailto:specifications@mobilitydata.org).
