@@ -43,50 +43,6 @@ These practices support the creation of HTML timetables based on GTFS, such as w
 
 remove this</div>
 
-## Frequently Asked Questions (FAQ)
-
-### Why are these GTFS Best Practices important?
-
-The objectives of GTFS Best Practices are:
-
-* To improve end-user customer experience in public transportation apps
-* Support broad data interoperability to make it easier for software developers to deploy and scale applications, products, and services
-* Facilitate the use of GTFS in various application categories (beyond its original focus on trip planning)
-
-Without coordinated GTFS Best Practices, various GTFS-consuming applications may establish requirements and expectations in an uncoordinated way, which leads to diverging requirements and application-specific datasets and less interoperability. Prior to the release of the Best Practices, there was greater ambiguity and disagreement in what constitutes correctly-formed GTFS data.
-
-### How were they developed? Who developed them?
-
-These Best Practices were developed by a working group of 17 organizations involved in GTFS, including app providers & data consumers, transit providers, and consultants with extensive involvement in GTFS. The working group was convened and facilitated by [Rocky Mountain Institute](http://www.rmi.org/mobility).
-
-Working Group members voted on each Best Practice. Most Best Practices were approved by a unanimous vote. In a minority of cases, Best Practices were approved a large majority of organizations.
-
-### Why not just change the GTFS reference?
-
-Good question! The process of examining the Specification, data usage and needs did indeed trigger some changes to the Specification (see [closed pull requests in GitHub](https://github.com/google/transit/pulls?q=is%3Apr+is%3Aclosed)). Specification reference amendments are subject to a higher bar of scrutiny and comment than the Best Practices. However, there was still need to agree on a clear set of Best Practice recommendations.
-
-The working group anticipates that some GTFS Best Practices will eventually become part of the core GTFS reference.
-
-### Do GTFS validator tools check for conformance with these Best Practices?
-
-No validator tool currently checks for conformance with all Best Practices. Various validator tools check for conformance with some of these best practices. For a list of GTFS validator tools, see [GTFS Validators](https://github.com/CUTR-at-USF/awesome-transit#gtfs-validators). If you write a GTFS validator tool that references these Best Practices, please email [specifications@mobilitydata.org](mailto:specifications@mobilitydata.org).
-
-### I represent a transit agency. What steps can I take so that our software service providers and vendors follow these Best Practices?
-
-Refer your vendor or software service provider to these Best Practices. We recommend referencing the GTFS Best Practices URL, as well as core Spec Reference in procurement for GTFS-producing software.
-
-### What should I do if I notice a GTFS data feed does not conform to these Best Practices?
-
-Identify the contact for the feed, using the [proposed feed\_contact\_email or feed\_contact\_url](https://github.com/google/transit/pull/31/files) fields in *feed_info.txt* if they exist, or looking up contact information on the transit agency or feed producer website. When communicating the issue to the feed producer, link to the specific GTFS Best Practice under discussion. (See ["Linking to this Document"](#linking-to-this-document)).
-
-### I would like to propose a modification/addition to the Best Practices. How do I do this?
-
-Email [specifications@mobilitydata.org](mailto:specifications@mobilitydata.org) or open an issue or pull request in the [GitHub GTFS Best Practices repo](https://github.com/rocky-mountain-institute/gtfs-best-practices).
-
-### How do I get involved?
-
-Email [specifications@mobilitydata.org](mailto:specifications@mobilitydata.org).
-
 ## Dataset Publishing & General Practices
 
 | General Recommendations |
@@ -330,6 +286,50 @@ Some routes may include branches. Alignment and stops are shared amongst these b
 | All Fields | In naming branch routes, it is recommended to follow other passenger information materials. Below are descriptions and examples of two cases: |
 | If timetables and on-street signage represent two distinctly named routes (e.g. 1A and 1B), then present this as such in the GTFS, using the `route_short_name` and/or `route_long_name` fields. Example: GoDurham Transit [routes 2, 2A, and 2B](https://gotriangle.org/sites/default/files/brochure/godurham-route2-2a-2b_1.pdf) share a common alignment throughout the majority of the route, but they vary in several different aspects. <ul><li>Route 2 is core service, running most hours.</li><li>Route 2 includes a deviation on Main Street nights, Sundays, and holidays.</li><li>Routes 2A and 2B operate daytime hours Monday through Saturday.</li><li>Route 2B serves additional stops in a deviation of the shared alignment path.</li></ul> |
 | If agency-provided information describes branches as the same named route, then utilize the `trips.trip_headsign`, `stop_times.stop_headsign`, and/or `trips.trip_short_name` fields. Example: GoTriangle [route 300](https://gotriangle.org/sites/default/files/route_300_v.1.19.pdf) travels to different locations depending on the time of day. During peak commuter hours extra legs are added onto the standard route to accommodate workers entering and leaving the city. |
+
+## Frequently Asked Questions (FAQ)
+
+### Why are these GTFS Best Practices important?
+
+The objectives of GTFS Best Practices are:
+
+* To improve end-user customer experience in public transportation apps
+* Support broad data interoperability to make it easier for software developers to deploy and scale applications, products, and services
+* Facilitate the use of GTFS in various application categories (beyond its original focus on trip planning)
+
+Without coordinated GTFS Best Practices, various GTFS-consuming applications may establish requirements and expectations in an uncoordinated way, which leads to diverging requirements and application-specific datasets and less interoperability. Prior to the release of the Best Practices, there was greater ambiguity and disagreement in what constitutes correctly-formed GTFS data.
+
+### How were they developed? Who developed them?
+
+These Best Practices were developed by a working group of 17 organizations involved in GTFS, including app providers & data consumers, transit providers, and consultants with extensive involvement in GTFS. The working group was convened and facilitated by [Rocky Mountain Institute](http://www.rmi.org/mobility).
+
+Working Group members voted on each Best Practice. Most Best Practices were approved by a unanimous vote. In a minority of cases, Best Practices were approved a large majority of organizations.
+
+### Why not just change the GTFS reference?
+
+Good question! The process of examining the Specification, data usage and needs did indeed trigger some changes to the Specification (see [closed pull requests in GitHub](https://github.com/google/transit/pulls?q=is%3Apr+is%3Aclosed)). Specification reference amendments are subject to a higher bar of scrutiny and comment than the Best Practices. However, there was still need to agree on a clear set of Best Practice recommendations.
+
+The working group anticipates that some GTFS Best Practices will eventually become part of the core GTFS reference.
+
+### Do GTFS validator tools check for conformance with these Best Practices?
+
+No validator tool currently checks for conformance with all Best Practices. Various validator tools check for conformance with some of these best practices. For a list of GTFS validator tools, see [GTFS Validators](https://github.com/CUTR-at-USF/awesome-transit#gtfs-validators). If you write a GTFS validator tool that references these Best Practices, please email [specifications@mobilitydata.org](mailto:specifications@mobilitydata.org).
+
+### I represent a transit agency. What steps can I take so that our software service providers and vendors follow these Best Practices?
+
+Refer your vendor or software service provider to these Best Practices. We recommend referencing the GTFS Best Practices URL, as well as core Spec Reference in procurement for GTFS-producing software.
+
+### What should I do if I notice a GTFS data feed does not conform to these Best Practices?
+
+Identify the contact for the feed, using the [proposed feed\_contact\_email or feed\_contact\_url](https://github.com/google/transit/pull/31/files) fields in *feed_info.txt* if they exist, or looking up contact information on the transit agency or feed producer website. When communicating the issue to the feed producer, link to the specific GTFS Best Practice under discussion. (See ["Linking to this Document"](#linking-to-this-document)).
+
+### I would like to propose a modification/addition to the Best Practices. How do I do this?
+
+Email [specifications@mobilitydata.org](mailto:specifications@mobilitydata.org) or open an issue or pull request in the [GitHub GTFS Best Practices repo](https://github.com/rocky-mountain-institute/gtfs-best-practices).
+
+### How do I get involved?
+
+Email [specifications@mobilitydata.org](mailto:specifications@mobilitydata.org).
 
 ## About This Document
 
