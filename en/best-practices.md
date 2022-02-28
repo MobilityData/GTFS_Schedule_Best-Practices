@@ -8,7 +8,7 @@ For further background, see the [Frequently Asked Questions](#frequently-asked-q
 
 Practices are organized into four primary sections:
 
-* __[Dataset Publishing & General Practices](#dataset-publishing-general-practices):__ These practices relate to the overall structure of the GTFS dataset and to the manner in which GTFS datasets are published.
+* __[Dataset Publishing & General Practices](#dataset-publishing--general-practices):__ These practices relate to the overall structure of the GTFS dataset and to the manner in which GTFS datasets are published.
 * __[Practice Recommendations Organized by File](#practice-recommendations-organized-by-file):__ Recommendations are organized by file and field in the GTFS to facilitate mapping practices back to the official GTFS reference.
 * __[Practice Recommendations Organized by Case](#practice-recommendations-organized-by-case):__ With particular cases, such as loop routes, practices may need to be applied across several files and fields. Such recommendations are consolidated in this section.
 
