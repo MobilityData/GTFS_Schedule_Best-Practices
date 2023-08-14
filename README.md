@@ -2,6 +2,8 @@
 
 Best Practices for Structuring [GTFS Schedule](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md) Data.
 
+⚠️ NOTE: The best practices are in the process of being merged into the spec [(More info here)](https://github.com/google/transit/issues/396). If you'd like to suggest a new best practice, please go to https://github.com/google/transit/ to open an issue or create a PR. ⚠️
+
 ## Current Version
 **The current release is v1.1**
 
