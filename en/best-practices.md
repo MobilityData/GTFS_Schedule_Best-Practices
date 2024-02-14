@@ -231,8 +231,8 @@ Working Group members voted on each Best Practice. Most Best Practices were appr
 
 ### Why not just change the GTFS reference?
 
-Good question! The process of examining the Specification, data usage and needs did indeed trigger some changes to the Specification (see [closed pull requests in GitHub](https://github.com/google/transit/pulls?q=is%3Apr+is%3Aclosed)). 
-Specification reference amendments are subject to a higher bar of scrutiny and comment than the Best Practices. Certain Best Practices are being merged into the spec based on their level of adoption and community consensus. Eventually, all GTFS Best Practices could become part of the core GTFS Reference.
+Good question! The process of examining the Specification, data usage and needs did indeed trigger some changes to the Specification. Since then, certain Best Practices have been merged into the spec based on their level of adoption and community consensus. 
+Eventually, the GTFS Best Practices will become part of the core GTFS Reference. To contribute to this effort, please go to the [GTFS Reference GitHub repository](https://github.com/google/transit/), or contact [specifications@mobilitydata.org](mailto:specifications@mobilitydata.org).
 
 ### How to check for conformance with these Best Practices?
 
