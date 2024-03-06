@@ -247,7 +247,7 @@ Refer your vendor or software service provider to these Best Practices. We recom
 
 ### What should I do if I notice a GTFS data feed does not conform to the GTFS Best Practices?
 
-Identify the contact for the feed, using the `feed_contact_email` or `feed_contact_url` fields in [feed_info.txt](https://gtfs.org/schedule/reference/#feed_infotxt) if they are provided, or looking up contact information on the transit agency or feed producer website. When communicating the issue to the feed producer, link to the specific GTFS Best Practice that isn't being followed using this document (See ["Linking to this Document"](#linking-to-this-document)) or the Canonical GTFS Schedule Validator [documentation](https://gtfs-validator.mobilitydata.org/rules.html#duplicate_route_name-rule).
+Identify the contact for the feed, using the `feed_contact_email` or `feed_contact_url` fields in [feed_info.txt](https://gtfs.org/schedule/reference/#feed_infotxt) if they are provided, or looking up contact information on the transit agency or feed producer website. When communicating the issue to the feed producer, link to the specific GTFS Best Practice that isn't being followed using this document (See ["Linking to this Document"](#linking-to-this-document)) or [the appropriate warning](https://gtfs-validator.mobilitydata.org/rules.html#WARNING-table) in the Canonical GTFS Schedule Validator if available.
 
 ### How can I get involved?
 
