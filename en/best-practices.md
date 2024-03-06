@@ -238,7 +238,7 @@ Eventually, the GTFS Best Practices will become part of the core GTFS Reference.
 
 ### How to check for conformance with these Best Practices?
 
-The Canonical GTFS Schedule Validator checks for compliance against the GTFS Best Practices. Each WARNING corresponds to recommendations that are either explicitly suggested by the GTFS Schedule Reference, using the term “recommend” or “should,” or mentioned in this document.
+The Canonical GTFS Schedule Validator checks for compliance against the GTFS Best Practices that can be automatically verified. Each [warning](https://gtfs-validator.mobilitydata.org/rules.html#WARNING-table) corresponds to recommendations that are either explicitly suggested by the GTFS Schedule Reference, using the term “recommend” or “should,” or mentioned in this document.
 You can find more about this validation tool on the [validate page](https://gtfs.org/schedule/validate/).
 
 ### I represent a transit agency. What steps can I take so that our software service providers and vendors follow these Best Practices?
