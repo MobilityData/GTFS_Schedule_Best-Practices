@@ -1,6 +1,8 @@
 # GTFS Schedule Best Practices
 
-These are recommended practices for describing public transportation services in the [General Transit Feed Specification (GTFS)](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md). These practices have been synthesized from the experience of the [GTFS Best Practices working group](#gtfs-best-practices-working-group) members and [application-specific GTFS practice recommendations](http://www.transitwiki.org/TransitWiki/index.php/Best_practices_for_creating_GTFS). 
+These are recommended practices for describing public transportation services in the [GTFS Schedule Reference](https://gtfs.org/schedule/reference/) format. These complement the explicit recommendations outlined in the GTFS Schedule Reference using the terms “recommend” or “should”. Although not mandatory, following these best practices can significantly improve the quality of the data and the overall experience for riders.
+
+These practices have been synthesized from the experience of the [GTFS Best Practices working group](#gtfs-best-practices-working-group) members and [application-specific GTFS practice recommendations](http://www.transitwiki.org/TransitWiki/index.php/Best_practices_for_creating_GTFS). 
 
 For further background, see the [Frequently Asked Questions](#frequently-asked-questions-faq).
 
@@ -229,6 +231,8 @@ These Best Practices were developed by a working group of 17 organizations invol
 
 Working Group members voted on each Best Practice. Most Best Practices were approved by a unanimous vote. In a minority of cases, Best Practices were approved a large majority of organizations.
 
+Some GTFS Best Practices have been merged into the spec and have been removed from this document.
+
 ### Why not just change the GTFS reference?
 
 Good question! The process of examining the Specification, data usage and needs did indeed trigger some changes to the Specification. Since then, certain Best Practices have been merged into the spec based on their level of adoption and community consensus. 
@@ -236,17 +240,18 @@ Eventually, the GTFS Best Practices will become part of the core GTFS Reference.
 
 ### How to check for conformance with these Best Practices?
 
-The Canonical GTFS Schedule Validator checks for compliance against these Best Practices. You can find more about this validation tool on the [validate page](https://gtfs.org/schedule/validate/).
+The Canonical GTFS Schedule Validator checks for compliance against the GTFS Best Practices that can be automatically verified. Each [warning](https://gtfs-validator.mobilitydata.org/rules.html#WARNING-table) corresponds to recommendations that are either explicitly suggested by the GTFS Schedule Reference, using the term “recommend” or “should,” or mentioned in this document.
+You can find more about this validation tool on the [validate page](https://gtfs.org/schedule/validate/).
 
 ### I represent a transit agency. What steps can I take so that our software service providers and vendors follow these Best Practices?
 
 Refer your vendor or software service provider to these Best Practices. We recommend referencing the GTFS Best Practices URL, as well as core Spec Reference in procurement for GTFS-producing software.
 
-### What should I do if I notice a GTFS data feed does not conform to these Best Practices?
+### What should I do if I notice a GTFS data feed does not conform to the GTFS Best Practices?
 
-Identify the contact for the feed, using the [proposed feed\_contact\_email or feed\_contact\_url](https://github.com/google/transit/pull/31/files) fields in *feed_info.txt* if they exist, or looking up contact information on the transit agency or feed producer website. When communicating the issue to the feed producer, link to the specific GTFS Best Practice under discussion. (See ["Linking to this Document"](#linking-to-this-document)).
+Identify the contact for the feed, using the `feed_contact_email` or `feed_contact_url` fields in [feed_info.txt](https://gtfs.org/schedule/reference/#feed_infotxt) if they are provided, or looking up contact information on the transit agency or feed producer website. When communicating the issue to the feed producer, link to the specific GTFS Best Practice that isn't being followed using this document (See ["Linking to this Document"](#linking-to-this-document)) or [the appropriate warning](https://gtfs-validator.mobilitydata.org/rules.html#WARNING-table) in the Canonical GTFS Schedule Validator if available.
 
-### How do I get involved?
+### How can I get involved?
 
 Email [specifications@mobilitydata.org](mailto:specifications@mobilitydata.org).
 
