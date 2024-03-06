@@ -231,6 +231,8 @@ These Best Practices were developed by a working group of 17 organizations invol
 
 Working Group members voted on each Best Practice. Most Best Practices were approved by a unanimous vote. In a minority of cases, Best Practices were approved a large majority of organizations.
 
+Some GTFS Best Practices have been merged into the spec and have been removed from this document.
+
 ### Why not just change the GTFS reference?
 
 Good question! The process of examining the Specification, data usage and needs did indeed trigger some changes to the Specification. Since then, certain Best Practices have been merged into the spec based on their level of adoption and community consensus. 
