@@ -1,6 +1,6 @@
 # GTFS Schedule Best Practices
 
-These are recommended practices for describing public transportation services in the [General Transit Feed Specification (GTFS)](https://gtfs.org/schedule/reference/). These complement the explicit recommendations outlined in the GTFS Schedule Reference using the terms “recommend” or “should”. Although not mandatory, following these best practices can significantly improve the quality of the data and the overall experience for riders.
+These are recommended practices for describing public transportation services in the [GTFS Schedule Reference](https://gtfs.org/schedule/reference/) format. These complement the explicit recommendations outlined in the GTFS Schedule Reference using the terms “recommend” or “should”. Although not mandatory, following these best practices can significantly improve the quality of the data and the overall experience for riders.
 
 These practices have been synthesized from the experience of the [GTFS Best Practices working group](#gtfs-best-practices-working-group) members and [application-specific GTFS practice recommendations](http://www.transitwiki.org/TransitWiki/index.php/Best_practices_for_creating_GTFS). 
 
