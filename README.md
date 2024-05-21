@@ -1,3 +1,6 @@
+# ⚠️ THIS REPO IS NOW ARCHIVED.
+It will remain available in read-only access. May 21, 2024. Has been moved here: https://github.com/google/transit/blob/master/gtfs/best-practices/best-practices.md
+
 # GTFS Schedule Best Practices
 
 Best Practices for Structuring [GTFS Schedule](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md) Data.
